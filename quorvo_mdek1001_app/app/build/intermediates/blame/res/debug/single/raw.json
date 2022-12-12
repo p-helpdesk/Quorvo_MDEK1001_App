@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\WorkArea\\Android\\app\\build\\intermediates\\res\\merged\\debug\\raw\\dwm_core_fw1.bin",
+        "source": "C:\\WorkArea\\Android\\app\\src\\main\\res\\raw\\dwm_core_fw1.bin"
+    },
+    {
+        "merged": "C:\\WorkArea\\Android\\app\\build\\intermediates\\res\\merged\\debug\\raw\\dwm_core_fw2.bin",
+        "source": "C:\\WorkArea\\Android\\app\\src\\main\\res\\raw\\dwm_core_fw2.bin"
+    }
+]

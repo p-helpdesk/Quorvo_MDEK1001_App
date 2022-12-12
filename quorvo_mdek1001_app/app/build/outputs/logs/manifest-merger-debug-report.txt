@@ -1,0 +1,196 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:8:1-71:12
+	package
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:10:5-39
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:9:5-51
+	xmlns:android
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:8:11-69
+	android:versionCode
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:16:5-65
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:16:22-63
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:18:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:20:5-73
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:20:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:22:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:24:5-78
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:24:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:26:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.7] C:\Users\ybernard\.android\build-cache\0de8c3a68c8dc706d2d22a22b1adecd6812c1e27\output\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.4] C:\Users\ybernard\.android\build-cache\d833ade9d23094fe586d46dff7d2f12098c933c3\output\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.16] C:\Users\ybernard\.android\build-cache\55c6e86df3266ddc3aa1066f8251bda480db5a31\output\AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.3.12] C:\Users\ybernard\.android\build-cache\b1b94a1f9b9ce71a012ac44b640168eccbe2e4bc\output\AndroidManifest.xml:9:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.3.16] C:\Users\ybernard\.android\build-cache\57f0212ce7cbe6305f6914208d1a476ca5d5b90b\output\AndroidManifest.xml:29:5-67
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:26:22-64
+uses-feature#android.hardware.bluetooth_le
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:29:5-89
+	android:required
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:29:64-87
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:29:19-63
+application
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:32:5-69:19
+MERGED from [com.github.nisrulz:sensey:1.5.1] C:\Users\ybernard\.android\build-cache\0d40ff9dcfb9433816ca29155c4cd9c5e943be5f\output\AndroidManifest.xml:27:5-28:19
+MERGED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:25.4.0] C:\Users\ybernard\.android\build-cache\2fc8b8fa81aa5c161b985b3c2b6f10bf500dbb74\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\9af3d56804c839b7063efa079856f46b1a04bea2\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.2] C:\Users\ybernard\.android\build-cache\5a82e83c5e86ff5a9a6c9cd7c0a3a3e81491aee3\output\AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:support-v13:25.3.0] C:\Users\ybernard\.android\build-cache\5d981c03d07e0f0a56f0af695067c9ea647b1aaf\output\AndroidManifest.xml:29:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.7] C:\Users\ybernard\.android\build-cache\0de8c3a68c8dc706d2d22a22b1adecd6812c1e27\output\AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.4] C:\Users\ybernard\.android\build-cache\d833ade9d23094fe586d46dff7d2f12098c933c3\output\AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.16] C:\Users\ybernard\.android\build-cache\55c6e86df3266ddc3aa1066f8251bda480db5a31\output\AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.3.12] C:\Users\ybernard\.android\build-cache\b1b94a1f9b9ce71a012ac44b640168eccbe2e4bc\output\AndroidManifest.xml:11:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.3.16] C:\Users\ybernard\.android\build-cache\57f0212ce7cbe6305f6914208d1a476ca5d5b90b\output\AndroidManifest.xml:31:5-20
+MERGED from [Android:android-dialogs:unspecified:debug] C:\WorkArea\Android\android-dialogs\build\intermediates\bundles\debug\AndroidManifest.xml:26:5-29:19
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\b17fef4e23824078cf059ba2f06f845e02998cf4\output\AndroidManifest.xml:22:5-26:19
+MERGED from [Android:android-commons:unspecified:debug] C:\WorkArea\Android\android-commons\build\intermediates\bundles\debug\AndroidManifest.xml:26:5-29:19
+MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\ybernard\.android\build-cache\50c6f90d49ee4717c72fa7f51f100c495e3fbb4c\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:25.4.0] C:\Users\ybernard\.android\build-cache\9817d7a80c088b25782ab4eb318a44e76fad4dc6\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\ybernard\.android\build-cache\985ff216e6f1921fb788b947755d6d0e40487cac\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\ybernard\.android\build-cache\9639d0c56578a4c989cf62666aa3546ef043032d\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\ybernard\.android\build-cache\ca9d5226918ad70a12b3b6e8528152c7fc07e2bc\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\34364281db3ca79c3f909f441fd1e5a6188f6517\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\75eaf661d1e4ef7c420b69e94883f186e7eef76f\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\ybernard\.android\build-cache\5a2a3fa117ef5e467719452b083f7d4be1a3a57a\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\ybernard\.android\build-cache\542166d491317226948867e42a28d633d18777c1\output\AndroidManifest.xml:25:5-29:19
+	android:label
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:36:9-41
+	android:supportsRtl
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:37:9-35
+	tools:ignore
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:39:9-48
+	android:allowBackup
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:34:9-36
+	android:icon
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:35:9-43
+	android:theme
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:38:9-40
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:33:9-56
+activity#com.decawave.argomanager.ui.MainActivity
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:41:9-52:20
+	android:screenOrientation
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:44:13-49
+	android:label
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:43:13-45
+	android:windowSoftInputMode
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:45:13-55
+	android:theme
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:46:13-56
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:42:13-68
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:47:13-51:29
+action#android.intent.action.MAIN
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:50:17-77
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:50:27-74
+provider#android.support.v4.content.FileProvider
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:54:9-64:20
+	android:authorities
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:56:13-59
+	android:grantUriPermissions
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:58:13-47
+	android:exported
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:57:13-37
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:55:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:61:13-62:49
+	android:resource
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:62:17-46
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:61:24-74
+meta-data#io.fabric.ApiKey
+ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:66:9-68:72
+	android:value
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:68:13-69
+	android:name
+		ADDED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml:67:13-44
+uses-sdk
+INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [eu.davidea:flexible-adapter:5.0.0-rc2] C:\Users\ybernard\.android\build-cache\fbf45543a14b69de89f97d57fd2722f96e76cd64\output\AndroidManifest.xml:8:5-10:41
+MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0-b1] C:\Users\ybernard\.android\build-cache\5f5287a68964a7e14bb5445bdcbe78f47fa7fd91\output\AndroidManifest.xml:8:5-10:41
+MERGED from [eu.davidea:flipview:1.1.3] C:\Users\ybernard\.android\build-cache\612b38ad702ad226d9482bc2a2e28daf18e470c0\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\ybernard\.android\build-cache\a13bae0f7e97b9da5156b13619762cd2a1453d23\output\AndroidManifest.xml:5:5-43
+MERGED from [com.github.nisrulz:sensey:1.5.1] C:\Users\ybernard\.android\build-cache\0d40ff9dcfb9433816ca29155c4cd9c5e943be5f\output\AndroidManifest.xml:23:5-25:41
+MERGED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:25.4.0] C:\Users\ybernard\.android\build-cache\2fc8b8fa81aa5c161b985b3c2b6f10bf500dbb74\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\9af3d56804c839b7063efa079856f46b1a04bea2\output\AndroidManifest.xml:20:5-43
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.2] C:\Users\ybernard\.android\build-cache\5a82e83c5e86ff5a9a6c9cd7c0a3a3e81491aee3\output\AndroidManifest.xml:8:5-11:75
+MERGED from [com.android.support:support-v13:25.3.0] C:\Users\ybernard\.android\build-cache\5d981c03d07e0f0a56f0af695067c9ea647b1aaf\output\AndroidManifest.xml:21:5-23:55
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.3.0] C:\Users\ybernard\.android\build-cache\4c38fef26fee8bd0c621eb7c78180069602d4444\output\AndroidManifest.xml:12:5-14:41
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.7] C:\Users\ybernard\.android\build-cache\0de8c3a68c8dc706d2d22a22b1adecd6812c1e27\output\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.4] C:\Users\ybernard\.android\build-cache\d833ade9d23094fe586d46dff7d2f12098c933c3\output\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.16] C:\Users\ybernard\.android\build-cache\55c6e86df3266ddc3aa1066f8251bda480db5a31\output\AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.3.12] C:\Users\ybernard\.android\build-cache\b1b94a1f9b9ce71a012ac44b640168eccbe2e4bc\output\AndroidManifest.xml:7:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.3.16] C:\Users\ybernard\.android\build-cache\57f0212ce7cbe6305f6914208d1a476ca5d5b90b\output\AndroidManifest.xml:27:5-43
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\ybernard\.android\build-cache\1a4479a065c34d714d34520b972d1aa39404f977\output\AndroidManifest.xml:18:5-42
+MERGED from [Android:android-dialogs:unspecified:debug] C:\WorkArea\Android\android-dialogs\build\intermediates\bundles\debug\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\b17fef4e23824078cf059ba2f06f845e02998cf4\output\AndroidManifest.xml:20:5-43
+MERGED from [Android:android-commons:unspecified:debug] C:\WorkArea\Android\android-commons\build\intermediates\bundles\debug\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\ybernard\.android\build-cache\50c6f90d49ee4717c72fa7f51f100c495e3fbb4c\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.4.0] C:\Users\ybernard\.android\build-cache\9817d7a80c088b25782ab4eb318a44e76fad4dc6\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\ybernard\.android\build-cache\985ff216e6f1921fb788b947755d6d0e40487cac\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\ybernard\.android\build-cache\9639d0c56578a4c989cf62666aa3546ef043032d\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\ybernard\.android\build-cache\ca9d5226918ad70a12b3b6e8528152c7fc07e2bc\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\34364281db3ca79c3f909f441fd1e5a6188f6517\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\75eaf661d1e4ef7c420b69e94883f186e7eef76f\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\ybernard\.android\build-cache\5a2a3fa117ef5e467719452b083f7d4be1a3a57a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\ybernard\.android\build-cache\542166d491317226948867e42a28d633d18777c1\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\WorkArea\Android\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:25.4.0] C:\Users\ybernard\.android\build-cache\2fc8b8fa81aa5c161b985b3c2b6f10bf500dbb74\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\9af3d56804c839b7063efa079856f46b1a04bea2\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\ybernard\.android\build-cache\b17fef4e23824078cf059ba2f06f845e02998cf4\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\ybernard\.android\build-cache\50c6f90d49ee4717c72fa7f51f100c495e3fbb4c\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:25.4.0] C:\Users\ybernard\.android\build-cache\9817d7a80c088b25782ab4eb318a44e76fad4dc6\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\ybernard\.android\build-cache\985ff216e6f1921fb788b947755d6d0e40487cac\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\ybernard\.android\build-cache\9639d0c56578a4c989cf62666aa3546ef043032d\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\ybernard\.android\build-cache\ca9d5226918ad70a12b3b6e8528152c7fc07e2bc\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\34364281db3ca79c3f909f441fd1e5a6188f6517\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\ybernard\.android\build-cache\75eaf661d1e4ef7c420b69e94883f186e7eef76f\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\ybernard\.android\build-cache\5a2a3fa117ef5e467719452b083f7d4be1a3a57a\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\ybernard\.android\build-cache\542166d491317226948867e42a28d633d18777c1\output\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:25.4.0] C:\Users\ybernard\.android\build-cache\c8c4326c393528a9071b362dd8584cd96790e9b9\output\AndroidManifest.xml:27:13-51
