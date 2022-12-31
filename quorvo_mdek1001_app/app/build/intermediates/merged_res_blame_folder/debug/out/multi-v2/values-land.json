@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.decawave.argomanager.app-mergeDebugResources-21:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\d63b8c7275d831987b848be0773cc06c\\transformed\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "431"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\8a2f2f9c2ce79c9c89fb27f8aa3c11ee\\transformed\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}

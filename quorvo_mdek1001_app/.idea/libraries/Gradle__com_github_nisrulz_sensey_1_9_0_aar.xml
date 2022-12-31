@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.nisrulz:sensey:1.9.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6a70a0bfce1e124790e711f48756386c/transformed/jetified-sensey-1.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6a70a0bfce1e124790e711f48756386c/transformed/jetified-sensey-1.9.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nisrulz/sensey/1.9.0/a9deceb442d37699fae62efd15637fa049613836/sensey-1.9.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nisrulz/sensey/1.9.0/57eaf70ef4e03ea0178f8bf2d31918ad0eab4076/sensey-1.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

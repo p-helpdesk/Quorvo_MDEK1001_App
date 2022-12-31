@@ -1,0 +1,8 @@
+/*
+ * LEAPS - Low Energy Accurate Positioning System.
+ *
+ * Copyright (c) 2016-2017, LEAPS. All rights reserved.
+ */
+
+include ':app', ':android-commons', ':android-dialogs', ':argo-api'
+

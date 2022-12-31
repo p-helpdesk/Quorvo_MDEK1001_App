@@ -1,0 +1,35 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:18:1-33:12
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:18:1-33:12
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:18:1-33:12
+	package
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:19:11-46
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:21:11-36
+	xmlns:android
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:18:11-69
+	android:versionCode
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:20:11-34
+uses-sdk
+ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:23:5-25:41
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:23:5-25:41
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:23:5-25:41
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:23:5-25:41
+INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:23:5-25:41
+	android:targetSdkVersion
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:25:9-38
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:24:9-34
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:27:5-31:19
+	android:label
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:29:9-41
+	android:allowBackup
+		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\src\main\AndroidManifest.xml:28:9-36

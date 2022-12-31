@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+attr? stroke_color
+attr? stroke_width
+string app_name
+styleable SbRotatingProgress stroke_color stroke_width

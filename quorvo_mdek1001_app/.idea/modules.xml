@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android-commons/android-commons.iml" filepath="$PROJECT_DIR$/android-commons/android-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-dialogs/android-dialogs.iml" filepath="$PROJECT_DIR$/android-dialogs/android-dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/argo-api/argo-api.iml" filepath="$PROJECT_DIR$/argo-api/argo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quorvo_mdek1001_app.iml" filepath="$PROJECT_DIR$/.idea/modules/quorvo_mdek1001_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.iml" filepath="$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android-commons/quorvo_mdek1001_app.android-commons.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.iml" filepath="$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android-dialogs/quorvo_mdek1001_app.android-dialogs.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/quorvo_mdek1001_app.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.iml" filepath="$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/argo-api/quorvo_mdek1001_app.argo-api.test.iml" />
+    </modules>
+  </component>
+</project>

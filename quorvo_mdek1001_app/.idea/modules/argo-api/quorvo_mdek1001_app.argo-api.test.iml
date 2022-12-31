@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":argo-api:test" external.linked.project.path="$MODULE_DIR$/../../../argo-api" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="quorvo_mdek1001_app" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../argo-api/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../argo-api/src/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="quorvo_mdek1001_app.argo-api.main" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid:aar:2.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.10" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: org.jetbrains:annotations:16.0.2">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.2/dab5655eb9abe23f2245c34e66c9813c7daf4563/annotations-16.0.2.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.2/389de2aaeb8ddbab587e36183cd6a4ae585ecab2/annotations-16.0.2-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/16.0.2/11ef7b63fea95edbd3ea28f564d8bec5d86b5d0e/annotations-16.0.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Gradle: org.reactivestreams:reactive-streams:1.0.2" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="quorvo_mdek1001_app.argo-api.main" />
+</module>
