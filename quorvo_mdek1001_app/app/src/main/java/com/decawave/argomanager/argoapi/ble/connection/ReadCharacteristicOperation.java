@@ -19,9 +19,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
-import rx.functions.Action1;
-import rx.functions.Action2;
+//import rx.functions.Action1;
+//import rx.functions.Action2;
 
 /**
  * Argo project.
@@ -31,8 +33,8 @@ import rx.functions.Action2;
 class ReadCharacteristicOperation extends AsynchronousGattOperation {
 
     private ReadCharacteristicOperation(List<ReadCharacteristicRequest> readRequests,
-                                        @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                        @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                        @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                        @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                         @NotNull GattDecodeContext decodeContext,
                                         SequentialGattOperationQueue.Token dependsOn) {
 
@@ -45,15 +47,15 @@ class ReadCharacteristicOperation extends AsynchronousGattOperation {
                         decodeContext.setOperationMode(opMode);
                     }
                     // delegate to success callback
-                    if (onSuccess != null) onSuccess.call(syncBleGatt);
+                    if (onSuccess != null) onSuccess.accept(syncBleGatt);
                 }, onFail, dependsOn);
     }
 
     @SuppressWarnings("SameParameterValue")
     static SequentialGattOperationQueue.Token enqueue(SequentialGattOperationQueue queue,
                                                       ReadCharacteristicRequest readCharacteristicRequest,
-                                                      @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                                      @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                                      @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                                      @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                                       @NotNull GattDecodeContext context,
                                                       SequentialGattOperationQueue.Token dependsOn) {
         return queue.addOperation(new ReadCharacteristicOperation(Collections.singletonList(readCharacteristicRequest), onSuccess, onFail, context, dependsOn));
@@ -62,8 +64,8 @@ class ReadCharacteristicOperation extends AsynchronousGattOperation {
 
     static SequentialGattOperationQueue.Token enqueue(SequentialGattOperationQueue queue,
                                                       List<ReadCharacteristicRequest> readCharacteristicRequest,
-                                                      @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                                      @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                                      @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                                      @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                                       @NotNull GattDecodeContext context,
                                                       SequentialGattOperationQueue.Token dependsOn) {
         return queue.addOperation(new ReadCharacteristicOperation(readCharacteristicRequest, onSuccess, onFail, context, dependsOn));

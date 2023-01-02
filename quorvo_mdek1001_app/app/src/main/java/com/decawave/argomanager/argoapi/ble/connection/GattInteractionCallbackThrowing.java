@@ -51,27 +51,27 @@ class GattInteractionCallbackThrowing implements GattInteractionCallback {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    //@Override
     public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    //@Override
     public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    //@Override
     public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    //@Override
     public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    //@Override
     public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         throw new UnsupportedOperationException();
     }

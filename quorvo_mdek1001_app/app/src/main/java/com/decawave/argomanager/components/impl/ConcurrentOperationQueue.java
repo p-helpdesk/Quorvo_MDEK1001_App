@@ -6,18 +6,19 @@
 
 package com.decawave.argomanager.components.impl;
 
+import android.app.Notification;
+
 import com.decawave.argo.api.YesNoAsync;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import rx.functions.Action0;
-import rx.functions.Action1;
+import java.util.function.Consumer;
 
 /**
  * Operation queue able to limit number of concurrently executing operations/actions.
  *
- * Whenever the limit is reached, the new enqueued operation {@link #operationEnqueue(Action1, Priority, String)} is
+ * Whenever the limit is reached, the new enqueued operation {@link #operationEnqueue(Consumer, Priority, String)} is
  * postponed until one of the currently executing operations finishes {@link #onOperationFinished(Token)}.
  *
  * The passed operations may be asynchronous activities - they are not considered to be finished, once executed.
@@ -53,7 +54,7 @@ public interface ConcurrentOperationQueue {
      * @return unique per-enqueue token
      * @see #onOperationFinished(Token)
      */
-    Token operationEnqueue(@NotNull Action1<Token> tokenAwareOperation,
+    Token operationEnqueue(@NotNull Consumer<Token> tokenAwareOperation,
                            @NotNull Priority priority,
                            @Nullable String operationResource);
 
@@ -62,7 +63,7 @@ public interface ConcurrentOperationQueue {
      * Using this explicit notification, an operation might be an asynchronous activity.
      *
      * @param operationToken identifies the previously enqueued, now executed operation
-     * @see #operationEnqueue(Action1, Priority, String)
+     * @see #operationEnqueue(Consumer, Priority, String)
      */
     void onOperationFinished(Token operationToken);
 
@@ -79,7 +80,7 @@ public interface ConcurrentOperationQueue {
     @SuppressWarnings("UnusedReturnValue")
     int limitOperationExecutionByPriority(Priority priority, int limit);
 
-    void blockProcessing(Action0 onBlockCompleted);
+    void blockProcessing(Notification.Action onBlockCompleted);
 
     void unblockProcessing();
 

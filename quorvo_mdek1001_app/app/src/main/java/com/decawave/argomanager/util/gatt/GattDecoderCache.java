@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.util.gatt;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.decawave.argomanager.components.DecodeContextManager;
 import com.google.common.cache.CacheBuilder;

@@ -79,7 +79,7 @@ import eu.kryl.android.common.log.ComponentLog;
 /**
  * Network node connection implementation on top of GattInteractionFsm.
  */
-class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
+abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
     private static final byte[] BYTE_1 = {1};
     // logging
     public static final ComponentLog log = new ComponentLog(NetworkNodeBleConnectionImpl.class);
@@ -245,27 +245,27 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                     throw new IllegalStateException("general onFail() callback invocation should get passed to the upper-most callback only!");
                 }
 
-                @Override
+                //@Override
                 public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                @Override
+                //@Override
                 public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                @Override
+                //@Override
                 public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                @Override
+                //@Override
                 public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                @Override
+                //@Override
                 public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
@@ -419,7 +419,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         }
     }
 
-    private boolean decodeAndSaveNodeType(@NonNull Action1<Fail> onFail, boolean acceptNullNodeType) {
+    private boolean decodeAndSaveNodeType(@NonNull Consumer<Fail> onFail, boolean acceptNullNodeType) {
         try {
             GattDecoder.GattOperationMode opMode = getGattDecoder().getOperationMode(synchronousBleGatt);
             if (!acceptNullNodeType && (opMode == null || opMode.nodeType == null)) {
@@ -433,8 +433,8 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         return false;
     }
 
-    private void fireGetFullOtherSideEntity(@NonNull Action1<NetworkNode> onSuccess,
-                                            @NonNull Action1<Fail> onFail) {
+    private void fireGetFullOtherSideEntity(@NonNull Consumer<NetworkNode> onSuccess,
+                                            @NonNull Consumer<Fail> onFail) {
         if (Constants.DEBUG) {
             Preconditions.checkNotNull(nodeType, "nodeType must NOT be null!");
         }
@@ -442,8 +442,8 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         fireGetOtherSideEntityReadRequests(onSuccess, onFail, getRequests(nodeType, lastNetworkNodeSnapshot == null));
     }
 
-    private void fireGetOtherSideEntityReadRequests(Action1<NetworkNode> onSuccess,
-                                                    Action1<Fail> onFail,
+    private void fireGetOtherSideEntityReadRequests(Consumer<NetworkNode> onSuccess,
+                                                    Consumer<Fail> onFail,
                                                     Set<ReadCharacteristicRequest> readRequests) {
         if (!readRequests.isEmpty()) {
             ReadCharacteristicOperation.enqueue(gattOperationQueue,
@@ -455,7 +455,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                             NetworkNode diffNode = NodeFactory.newDiffingWrapper(node);
                             onNewEntityProperties(diffNode);
                             // now call the success callback
-                            onSuccess.call(diffNode);
+                            onSuccess.accept(diffNode);
                         } catch (GattRepresentationException exc) {
                             handleGattRepresentationException(onFail, exc);
                         }
@@ -467,18 +467,18 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         }
     }
 
-    private void handleGattRepresentationException(Action1<Fail> onFail,
+    private void handleGattRepresentationException(Consumer<Fail> onFail,
                                                    GattRepresentationException exc) {
         appLog.we(exc.getMessage(), ErrorCode.GATT_REPRESENTATION, exc);
         callFailConditionalDisconnect(onFail, new Fail(ErrorCode.GATT_REPRESENTATION, exc.getMessage()));
     }
 
-    private void callFailConditionalDisconnect(Action1<Fail> onFail, Fail failReason) {
+    private void callFailConditionalDisconnect(Consumer<Fail> onFail, Fail failReason) {
         callFailConditionalDisconnect(onFail, failReason, null);
     }
 
-    private void callFailConditionalDisconnect(Action1<Fail> onFail, Fail failReason, Action0 onConnectionKeptAction) {
-        onFail.call(failReason);
+    private void callFailConditionalDisconnect(Consumer<Fail> onFail, Fail failReason, Notification.Action onConnectionKeptAction) {
+        onFail.accept(failReason);
         if (fsm.doDisconnectOnProblem()) {
             if (failReason.errorCode == ErrorCode.GATT_BROKEN
                     || failReason.errorCode == ErrorCode.GATT_MISSING_DESCRIPTOR
@@ -491,7 +491,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                 disconnect();
             }
         } else {
-            if (onConnectionKeptAction != null) onConnectionKeptAction.call();
+            if (onConnectionKeptAction != null) onConnectionKeptAction.clone();
         }
     }
 
@@ -542,8 +542,8 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         }
     }
 
-    @Override
-    public void updateOtherSideEntity(NetworkNode networkNode, boolean nodeTypeChanged, final io.reactivex.functions.Consumer<WriteEffect> onSuccess, Action1<Fail> onFail) {
+    //@Override
+    public void updateOtherSideEntity(NetworkNode networkNode, boolean nodeTypeChanged, final Consumer<WriteEffect> onSuccess, Consumer<Fail> onFail) {
         if (Constants.DEBUG) {
             Preconditions.checkState(!fwUpdatePollIndicationSet, "cannot get other side entity while uploading firmware");
             Preconditions.checkArgument(networkNode != null, "networkNode");
@@ -554,14 +554,14 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         final List<WriteCharacteristicRequest> writeReq = convertNetworkNodeToWriteRequests(networkNode, nodeTypeChanged);
         if (writeReq.isEmpty()) {
             appLog.d("no change detected, disconnecting");
-            onSuccess.call(WriteEffect.WRITE_SKIPPED);
+            onSuccess.accept(WriteEffect.WRITE_SKIPPED);
         } else {
             writeCharacteristics(writeReq, onSuccess, onFail, null);
         }
     }
 
     private void writeCharacteristics(List<WriteCharacteristicRequest> writeReq,
-                                      Action1<WriteEffect> onSuccess, Action1<Fail> onFail,
+                                      Consumer<WriteEffect> onSuccess, Consumer<Fail> onFail,
                                       SequentialGattOperationQueue.Token dependsOn) {
         if (Constants.DEBUG) {
             Preconditions.checkState(!writeReq.isEmpty(), "write request list empty?");
@@ -611,12 +611,12 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         }
         WriteCharacteristicOperation.enqueue(gattOperationQueue, writeReq,
                 // notify the final callback about success/failingTask
-                gatt1 -> onSuccess.call(fWriteEffect),
+                gatt1 -> onSuccess.accept(fWriteEffect),
                 (gatt1, fail) -> callFailConditionalDisconnect(onFail, fail),
                 dep);
     }
 
-    @Override
+    //@Override
     public void changeMtu(int mtu, Notification.Action onSuccess, Consumer<Fail> onFailCallback) {
         if (Constants.DEBUG) {
             Preconditions.checkState(mtu >= 23, "MTU must be >= 23, given mtu: " + mtu);
@@ -624,16 +624,16 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
         Integer systemMtu = fsm.getLastNegotiatedSystemMtu();
         if (systemMtu == null || ChangeMtuOperation.getSystemMtu(mtu) != systemMtu) {
             ChangeMtuOperation.enqueue(gattOperationQueue, mtu, (gatt) -> {
-                if (onSuccess != null ) onSuccess.call();
+                if (onSuccess != null ) onSuccess.notify();
             }, onFailCallback);
         } else {
             // the MTU is already configured properly
-            if (onSuccess != null ) onSuccess.call();
+            if (onSuccess != null ) onSuccess.notify();
         }
     }
 
-    @Override
-    public void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData, io.reactivex.functions.@Nullable Action onSuccessCallback, io.reactivex.functions.@Nullable Consumer<Integer> progressListener, Action1<Fail> onFailCallback) {
+    //@Override
+    public void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData, @Nullable Notification.Action onSuccessCallback, @Nullable Consumer<Integer> progressListener, Consumer<Fail> onFailCallback) {
         appLog.d("initiating uploadFirmware: " + firmwareMeta);
         if (Constants.DEBUG) {
             Preconditions.checkState(fwUploadState == FwUploadState.OTHER, "current FW upload state = " + fwUploadState);
@@ -672,7 +672,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                     appLog.d("stopped FW poll command indication");
                     finalActions();
                     // notify the callback
-                    if (onSuccessCallback != null) onSuccessCallback.call();
+                    if (onSuccessCallback != null) onSuccessCallback.notify();
                 }
 
                 @Override
@@ -688,7 +688,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                     appLog.we(fail.message, fail.errorCode);
                     finalActions();
                     // delegate to application-level callback
-                    callFailConditionalDisconnect((aFail) -> { if (onFailCallback != null) onFailCallback.call(aFail); }, fail);
+                    callFailConditionalDisconnect((aFail) -> { if (onFailCallback != null) onFailCallback.accept(aFail); }, fail);
                 }
 
                 // processing commands from FW update poll characteristic
@@ -730,7 +730,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                         fwUploadBatchTag = new Object();
                         appLog.i("sending first chunk at offset " + fwBinaryDataAccessor.getCurrentPosition());
                         // let the progress listener know
-                        if (progressListener != null) progressListener.call(fwBinaryDataAccessor.getCurrentPosition());
+                        if (progressListener != null) progressListener.accept(fwBinaryDataAccessor.getCurrentPosition());
                         fwUploadSendNextChunk(fwUploadBatchTag);
                     }
 
@@ -741,7 +741,7 @@ class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection {
                                     "current FW upload state = " + fwUploadState);
                         }
                         // let the progress listener know
-                        if (progressListener != null) progressListener.call(fwBinaryDataAccessor.getCurrentPosition());
+                        if (progressListener != null) progressListener.accept(fwBinaryDataAccessor.getCurrentPosition());
                         // cancel indication
                         fwBinaryDataAccessor = null;
                         setFwUploadState(FwUploadState.CLEANUP);

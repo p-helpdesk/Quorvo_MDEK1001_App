@@ -8,8 +8,6 @@ package com.decawave.argomanager.argoapi.ble;
 
 import com.decawave.argomanager.ble.BleGattCharacteristic;
 
-import java.util.List;
-
 /**
  * Notification callback about the GATT interaction FSM events:
  * 1. driving lifecycle of {@link GattInteractionFsm}.
@@ -42,21 +40,21 @@ public interface GattInteractionCallback {
     /**
      * Called after the descriptor write have been successfully done.
      *
-     * @see GattInteractionFsm#writeCharacteristics(List)
+     * //@see GattInteractionFsm#writeCharacteristics(List)
      */
     void onDescriptorWriteComplete(SynchronousBleGatt gatt);
 
     /**
      * Called after the write have been successfully done.
      *
-     * @see GattInteractionFsm#writeCharacteristics(List)
+     * //@see GattInteractionFsm#writeCharacteristics(List)
      */
     void onCharacteristicWriteComplete(SynchronousBleGatt gatt);
 
     /**
      * Called after MTU has been successfully changed.
      *
-     * @see GattInteractionFsm#writeCharacteristics(List)
+     * //@see GattInteractionFsm#writeCharacteristics(List)
      */
     void onMtuChangeComplete(SynchronousBleGatt syncGatt);
 
@@ -65,46 +63,44 @@ public interface GattInteractionCallback {
      *
      * @param gatt gatt to be queried / used
      */
-    void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called if the read characteristic request failed.
      *
      * @param gatt identification of the gatt
      */
-    void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after the write sequence failed.
      *
      * @param gatt identification of the gatt
-     *
-     * @see GattInteractionFsm#writeCharacteristics(List)
+     * //@see GattInteractionFsm#writeCharacteristics(List)
      */
-    void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called if the read descriptor request failed.
      *
      * @param gatt identification of the gatt
      */
-    void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after the write sequence failed.
      *
      * @param gatt identification of the gatt
-     *
-     * @see GattInteractionFsm#writeDescriptors(List)
+     * //@see GattInteractionFsm#writeDescriptors(List)
      */
-    void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after MTU change request failed.
      *
      * @param gatt identification of the gatt
      */
-    void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    //void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * When we register for characteristic change event, we receive the changes via this callback.
@@ -113,4 +109,25 @@ public interface GattInteractionCallback {
      */
     void onCharacteristicChanged(SynchronousBleGatt gatt, BleGattCharacteristic characteristic, byte[] value);
 
+    static void onMtuChangeFailed(Object o) {
+
+    }
+
+    static void onDescriptorWriteFailed(Object o) {
+
+    }
+
+    static void onDescriptorReadFailed(Object o) {
+
+    }
+
+    static void onCharacteristicWriteFailed(Object o) {
+
+    }
+
+    static void onCharacteristicReadFailed(Object o) {
+
+    }
+
+    void onFail(Object o);
 }

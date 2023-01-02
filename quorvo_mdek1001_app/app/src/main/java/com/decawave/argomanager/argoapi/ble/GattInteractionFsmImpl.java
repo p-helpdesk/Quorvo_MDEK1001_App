@@ -6,6 +6,8 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
+import android.app.Notification;
+
 import com.decawave.argo.api.ConnectionState;
 import com.decawave.argo.api.interaction.ErrorCode;
 import com.decawave.argomanager.Constants;
@@ -34,12 +36,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 import eu.kryl.android.common.fsm.impl.FiniteStateMachineImpl;
 import eu.kryl.android.common.log.ComponentLog;
 import eu.kryl.android.common.log.LogLevel;
-import rx.functions.Action0;
-import rx.functions.Action3;
+//import rx.functions.Action0;
+//import rx.functions.Action3;
 
 /**
  * FSM helping to manage connection to particular BLE device.
@@ -110,7 +113,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
         }
     }
 
-    private BleGattCallback systemGattCallback = new BleGattCallback() {
+    private final BleGattCallback systemGattCallback = new BleGattCallback() {
 
         @Override
         public void onConnectionStateChange(BleGatt gatt, int status, ConnectionState newConnectionState) {
@@ -187,7 +190,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
 
         @Override
         public void onCharacteristicWritten(BleGatt gatt, BleGattCharacteristic characteristic, int status) {
-            if (shouldIgnoreCallback("onCharacteristicWritten()", GattInteractionState.WRITING_CHARACTERISTICS)) return;
+            if (shouldIgnoreCallback("onCharacteristicWritten()", GattInteractionState.WRITING_CHARACTERISTICS))
+                return;
             String charName = BleConstants.MAP_CHARACTERISTIC_TITLE.get(characteristic.getUuid());
             logSystemAsync("onCharacteristicWritten", status, null, "characteristic '" + charName + "' write failed");
             if (!gattInteractionCallbackWrapped.stillInterested()) {
@@ -214,7 +218,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
 
         @Override
         public void onDescriptorRead(BleGatt gatt, BleGattDescriptor descriptor, byte[] value, int status) {
-            if (shouldIgnoreCallback("onDescriptorRead()", GattInteractionState.READING_DESCRIPTORS)) return;
+            if (shouldIgnoreCallback("onDescriptorRead()", GattInteractionState.READING_DESCRIPTORS))
+                return;
             String descName = BleConstants.MAP_DESCRIPTOR_TITLE.get(descriptor.getUuid());
             logSystemAsync("onDescriptorRead", status, "value = " + GattEncoder.printByteArray(value), "descriptor '" + descName + "' read failed");
             if (!gattInteractionCallbackWrapped.stillInterested()) {
@@ -227,7 +232,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
                 }
                 ReadDescriptorRequest firstRequest = remainingDescReadRequests.remove(0);
                 // check that we have read the right descriptor
-                if (com.decawave.argomanager.Constants.DEBUG) {
+                if (Constants.DEBUG) {
                     Preconditions.checkState(firstRequest.descriptorUuid.equals(descriptor.getUuid()));
                     Preconditions.checkState(firstRequest.characteristicUuid.equals(descriptor.getCharacteristic().getUuid()));
                     Preconditions.checkState(firstRequest.serviceUuid.equals(descriptor.getCharacteristic().getService().getUuid()));
@@ -283,7 +288,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
 
         @Override
         public void onDescriptorWritten(BleGatt gatt, BleGattDescriptor descriptor, int status) {
-            if (shouldIgnoreCallback("onDescriptorWritten()", GattInteractionState.WRITING_DESCRIPTORS)) return;
+            if (shouldIgnoreCallback("onDescriptorWritten()", GattInteractionState.WRITING_DESCRIPTORS))
+                return;
             String descName = BleConstants.MAP_DESCRIPTOR_TITLE.get(descriptor.getUuid());
             logSystemAsync("onDescriptorWritten", status, null, "descriptor '" + descName + "' write failed");
             if (!gattInteractionCallbackWrapped.stillInterested()) {
@@ -315,7 +321,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
 
         @Override
         public void onCharacteristicRead(BleGatt gatt, BleGattCharacteristic characteristic, byte[] value, int status) {
-            if (shouldIgnoreCallback("onCharacteristicRead()", GattInteractionState.READING_CHARACTERISTICS)) return;
+            if (shouldIgnoreCallback("onCharacteristicRead()", GattInteractionState.READING_CHARACTERISTICS))
+                return;
             String charName = BleConstants.MAP_CHARACTERISTIC_TITLE.get(characteristic.getUuid());
             logSystemAsync("onCharacteristicRead", status, "value = " + GattEncoder.printByteArray(value), "characteristic '" + charName + "' read failed");
             // unschedule the timeout (if any)
@@ -334,7 +341,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
                 }
                 ReadCharacteristicRequest firstRequest = remainingCharsReadRequests.remove(0);
                 // check that we have read the right characteristic
-                if (com.decawave.argomanager.Constants.DEBUG) {
+                if (Constants.DEBUG) {
                     Preconditions.checkState(firstRequest.characteristicUuid.equals(characteristic.getUuid()));
                     Preconditions.checkState(firstRequest.serviceUuid.equals(characteristic.getService().getUuid()));
                 }
@@ -344,7 +351,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
                 // fail
                 int errorCode = status == BleStatus.GATT_TIMEOUT ? ErrorCode.BLE_READ_TIMEOUT : ErrorCode.GATT_ASYNC;
                 handleFail(() -> gattInteractionCallbackWrapped.onCharacteristicReadFailed(errorCode
-                        ,"failed to READ characteristic " + charName + ", status = " + status));
+                        , "failed to READ characteristic " + charName + ", status = " + status));
             }
         }
 
@@ -684,13 +691,13 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
         }
     }
 
-    private void handleFail(Action0 callbackNotifyAction) {
+    private void handleFail(Notification.Action callbackNotifyAction) {
         if (disconnectOnProblem) {
-            callbackNotifyAction.call();
+            callbackNotifyAction.notify();
             setState(GattInteractionState.DISCONNECTING);
         } else {
             setState(GattInteractionState.LAST_OPERATION_FAILED_CONNECTED);
-            callbackNotifyAction.call();
+            callbackNotifyAction.notify();
         }
     }
 
@@ -910,9 +917,10 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
             genericOnFail(errorCode, failMessage, delegate::onMtuChangeFailed, true);
         }
 
+        //SynchronousBleGatt, Integer, String
         private void genericOnFail(int errorCode,
                                    String failMessage,
-                                   Action3<SynchronousBleGatt, Integer, String> failAction, boolean goToIdle) {
+                                   Consumer<Object> failAction, boolean goToIdle) {
             sessionErrorCode = errorCode;
             appLog.we(failMessage, errorCode);
             if (checkTerminalState()) {
@@ -921,7 +929,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
                     makeSureIdle();
                 }
                 // invoke the callback now
-                failAction.call(getSyncGatt(), errorCode, failMessage);
+                Object obj = new Object[] {getSyncGatt(), errorCode, failMessage };
+                failAction.accept(obj);
             }
         }
 

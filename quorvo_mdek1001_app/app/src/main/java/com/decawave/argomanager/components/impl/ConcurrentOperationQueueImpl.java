@@ -6,8 +6,10 @@
 
 package com.decawave.argomanager.components.impl;
 
+import android.app.Notification;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argo.api.YesNoAsync;
 import com.decawave.argomanager.ArgoApp;
@@ -26,10 +28,9 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
-import rx.functions.Action1;
 
 /**
  * @see ConcurrentOperationQueue
@@ -44,14 +45,14 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
     private int counter;
 
     private class OperationInfo implements Comparable {
-        Action1<Token> executable;
+        @NotNull Consumer<Token> executable;
         Priority priority;
         String resource;
         Token token;
         boolean executing;
         final int serialId;
 
-        OperationInfo(Action1<Token> executable, Priority priority, String resource, int serialId) {
+        OperationInfo(@NotNull Consumer<Token> executable, Priority priority, String resource, int serialId) {
             this.executable = executable;
             this.priority = priority;
             this.resource = resource;
@@ -90,7 +91,7 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
         private EnumMap<Priority,AtomicInteger> limitsByPriority;
         // current state
         private int blockCounter;
-        private List<Action0> onBlockedCallbacks;
+        private List<Notification.Action> onBlockedCallbacks;
         private int overallCounter;
         private EnumMap<Priority,AtomicInteger> operationByPriorityCounter;
         private Set<String> usingResources;
@@ -113,7 +114,7 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
             this.overallCounter = 0;
         }
 
-        void block(Action0 onBlocked) {
+        void block(Notification.Action onBlocked) {
             this.blockCounter++;
             if (Constants.DEBUG) {
                 Preconditions.checkState(blockCounter == 1 || overallCounter == 0,
@@ -121,7 +122,7 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
             }
             if (overallCounter == 0) {
                 // we have satisfied the block request immediately
-                onBlocked.call();
+                onBlocked.notify();
             } else {
                 // there are some pending requests, store the callback for future reference
                 this.onBlockedCallbacks.add(onBlocked);
@@ -181,8 +182,8 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
             overallCounter--;
             if (overallCounter == 0 && blockCounter > 0 && !onBlockedCallbacks.isEmpty()) {
                 // the callbacks are awaiting to be called
-                for (Action0 onBlockedCallback : onBlockedCallbacks) {
-                    onBlockedCallback.call();
+                for (Notification.Action onBlockedCallback : onBlockedCallbacks) {
+                    onBlockedCallback.notify();
                 }
                 // do not call the callbacks again
                 onBlockedCallbacks.clear();
@@ -255,8 +256,8 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
         this.counter = 0;
     }
 
-    @Override
-    public Token operationEnqueue(@NotNull Action1<Token> operation,
+    //@Override
+    public Token operationEnqueue(@NotNull Consumer<Token> operation,
                                   @NotNull Priority priority, @Nullable String operationResource) {
         OperationInfo oi = new OperationInfo(operation, priority, operationResource, counter++);
         if (Constants.DEBUG) {
@@ -335,7 +336,7 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
     }
 
     @Override
-    public void blockProcessing(Action0 onBlockCompleted) {
+    public void blockProcessing(Notification.Action onBlockCompleted) {
         supervisor.block(onBlockCompleted);
     }
 
@@ -407,7 +408,7 @@ public class ConcurrentOperationQueueImpl implements ConcurrentOperationQueue {
         supervisor.onOperationStarting(oi);
         // set up oi execution flags
         oi.executing = true;
-        oi.executable.call(oi.token);
+        oi.executable.accept(oi.token);
     }
 
 }

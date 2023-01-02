@@ -42,10 +42,10 @@ class AsynchronousGattOperation implements GenericOperation {
         this.dependsOn = dependsOn;
     }
 
-    private AsynchronousGattOperation(Consumer<GattInteractionFsm> operation,
-                                      Consumer<SynchronousBleGatt> onSuccess,
-                                      BiConsumer<SynchronousBleGatt, Fail> onFail,
-                                      SequentialGattOperationQueue.Token dependsOn, Consumer<GattInteractionFsm> operation1, Consumer<GattInteractionFsm> operation2) {
+    public AsynchronousGattOperation(Consumer<GattInteractionFsm> operation,
+                                     Consumer<SynchronousBleGatt> onSuccess,
+                                     BiConsumer<SynchronousBleGatt, Fail> onFail,
+                                     SequentialGattOperationQueue.Token dependsOn) {
         this(operation, new Callback() {
             @Override
             public void onSuccess(SynchronousBleGatt gatt) {

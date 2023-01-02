@@ -14,9 +14,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
-import rx.functions.Action1;
-import rx.functions.Action2;
+//import rx.functions.Action1;
+//import rx.functions.Action2;
 
 /**
  * Argo project.
@@ -24,16 +26,16 @@ import rx.functions.Action2;
 class WriteCharacteristicOperation extends AsynchronousGattOperation {
 
     private WriteCharacteristicOperation(@NotNull List<WriteCharacteristicRequest> writeRequests,
-                                         @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                         @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                         @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                         @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                          SequentialGattOperationQueue.Token dependsOn) {
         super((gi) -> gi.writeCharacteristics(writeRequests),
                 onSuccess, onFail, dependsOn);
     }
 
     static void enqueue(SequentialGattOperationQueue queue, List<WriteCharacteristicRequest> writeRequests,
-                        @Nullable Action1<SynchronousBleGatt> onSuccess,
-                        @Nullable Action2<SynchronousBleGatt, Fail> onFail, SequentialGattOperationQueue.Token dependsOn) {
+                        @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                        @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail, SequentialGattOperationQueue.Token dependsOn) {
         queue.addOperation(new WriteCharacteristicOperation(writeRequests, onSuccess, onFail, dependsOn));
     }
 

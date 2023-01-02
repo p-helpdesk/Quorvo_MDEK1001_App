@@ -8,6 +8,10 @@ package com.decawave.argomanager.argoapi.ble.connection;
 
 //import android.support.annotation.NonNull;
 
+import android.app.Notification;
+
+import androidx.annotation.NonNull;
+
 import com.annimon.stream.function.BiConsumer;
 import com.decawave.argo.api.ConnectionState;
 import com.decawave.argo.api.YesNoAsync;
@@ -61,7 +65,7 @@ import eu.kryl.android.common.log.ComponentLog;
 /**
  * Android BLE connection API implementation.
  */
-public class BleConnectionApiImpl implements BleConnectionApi {
+public abstract class BleConnectionApiImpl implements BleConnectionApi {
     private static final ComponentLog log = new ComponentLog(BleConnectionApiImpl.class);
     // dependencies
     private final BleAdapter bleAdapter;
@@ -405,7 +409,7 @@ public class BleConnectionApiImpl implements BleConnectionApi {
                         // call the generic routine - skip state check if we have skipped on disconnecting
                         _onDisconnected(address);
                         // call the onDisconnected callback (if any) now
-                        if (onDisconnectedCallback != null) onDisconnectedCallback.call(connectionWrapper, sessionErrorCode == null ? ErrorCode.NO_ERROR : sessionErrorCode);
+                        if (onDisconnectedCallback != null) onDisconnectedCallback.accept(connectionWrapper, sessionErrorCode == null ? ErrorCode.NO_ERROR : sessionErrorCode);
                     }
 
                 });
@@ -429,7 +433,7 @@ public class BleConnectionApiImpl implements BleConnectionApi {
                     // let cleanup operations know
                     InterfaceHub.getHandlerHub(IhConnectionStateListener.class).onDisconnected(address, null);
                     // call the onDisconnected callback (if any)
-                    if (onDisconnectedCallback != null) onDisconnectedCallback.call(connectionWrapper, null);
+                    if (onDisconnectedCallback != null) onDisconnectedCallback.accept(connectionWrapper, null);
                     // let other connect requests pass through
                     connectQueue.onOperationFinished(connToken);
                 } else {
@@ -439,11 +443,11 @@ public class BleConnectionApiImpl implements BleConnectionApi {
                         // perform the connection attempt in the next UI handler loop - so that the calling
                         // code can first store the connection reference and then handle callback methods
                         ArgoApp.uiHandler.post(() -> // create the interaction -> connection wrapper
-                                gattInteractionFsm.initiateConnect(new GattInteractionToConnectionWrapperCallback(connectionWrapper, onFailCallback))
+                                gattInteractionFsm.initiateConnect(new GattInteractionToConnectionWrapperCallback(connectionWrapper, (java.util.function.BiConsumer<NetworkNodeConnection, Fail>) onFailCallback))
                         );
                     } else {
                         // do it immediately
-                        gattInteractionFsm.initiateConnect(new GattInteractionToConnectionWrapperCallback(connectionWrapper, onFailCallback));
+                        gattInteractionFsm.initiateConnect(new GattInteractionToConnectionWrapperCallback(connectionWrapper, (java.util.function.BiConsumer<NetworkNodeConnection, Fail>) onFailCallback));
                     }
                 }
                 // connect queue params
@@ -480,7 +484,7 @@ public class BleConnectionApiImpl implements BleConnectionApi {
     }
 
     @Override
-    public void blockConnectionRequests(Action onBlocked) {
+    public void blockConnectionRequests(Notification.Action onBlocked) {
         connectQueue.blockProcessing(onBlocked);
     }
 
