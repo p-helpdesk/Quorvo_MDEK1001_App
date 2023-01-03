@@ -135,86 +135,123 @@
 78            android:value="0f517e9224f309d90d822e1f8b2edb5bfda53c49" />
 78-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:69:13-69
 79
-80        <receiver
-80-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
-81            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-81-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
-82            android:enabled="true"
-82-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
+80        <service
+80-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:14:9-20:19
+81            android:name="com.google.firebase.components.ComponentDiscoveryService"
+81-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:15:13-84
+82            android:directBootAware="true"
+82-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
 83            android:exported="false" >
-83-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
-84        </receiver>
-85
-86        <service
-86-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
-87            android:name="com.google.android.gms.measurement.AppMeasurementService"
-87-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
-88            android:enabled="true"
-88-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
-89            android:exported="false" />
-89-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
-90        <service
-90-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
-91            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-91-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
-92            android:enabled="true"
-92-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
-93            android:exported="false"
-93-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
-94            android:permission="android.permission.BIND_JOB_SERVICE" />
-94-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
-95        <service
-95-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
-96            android:name="com.google.firebase.components.ComponentDiscoveryService"
-96-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:29:13-84
-97            android:directBootAware="true"
-97-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+83-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:16:13-37
+84            <meta-data
+84-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:17:13-19:85
+85                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+85-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:18:17-115
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-crashlytics:18.3.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\aeeff7d63aeeb191cb7c6be2348c696e\transformed\jetified-firebase-crashlytics-18.3.1\AndroidManifest.xml:19:17-82
+87            <meta-data
+87-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
+88                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+88-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-installations:17.0.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\72bdd48cbfb40ed5489d95236cc59e61\transformed\jetified-firebase-installations-17.0.3\AndroidManifest.xml:18:13-20:85
+91                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+91-->[com.google.firebase:firebase-installations:17.0.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\72bdd48cbfb40ed5489d95236cc59e61\transformed\jetified-firebase-installations-17.0.3\AndroidManifest.xml:19:17-127
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-installations:17.0.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\72bdd48cbfb40ed5489d95236cc59e61\transformed\jetified-firebase-installations-17.0.3\AndroidManifest.xml:20:17-82
+93        </service>
+94
+95        <receiver
+95-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
+96            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+96-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
+97            android:enabled="true"
+97-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
 98            android:exported="false" >
-98-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:30:13-37
-99            <meta-data
-99-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
-100                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-100-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
-101                android:value="com.google.firebase.components.ComponentRegistrar" />
-101-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91c8012fcd5dcd3f6b6b7b91da792fc2\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
-102            <meta-data
-102-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\5a3a6d8fb021f6190c0dc61c7b5e5161\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
-103                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-103-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\5a3a6d8fb021f6190c0dc61c7b5e5161\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
-104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\5a3a6d8fb021f6190c0dc61c7b5e5161\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
-105        </service>
-106
-107        <provider
-107-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
-108            android:name="com.google.firebase.provider.FirebaseInitProvider"
-108-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
-109            android:authorities="com.decawave.argomanager.firebaseinitprovider"
-109-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
-110            android:directBootAware="true"
-110-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
-111            android:exported="false"
-111-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
-112            android:initOrder="100" />
-112-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
-113
-114        <meta-data
-114-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-115            android:name="com.google.android.gms.version"
-115-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-116            android:value="@integer/google_play_services_version" />
-116-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+98-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
+99        </receiver>
+100
+101        <service
+101-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
+102            android:name="com.google.android.gms.measurement.AppMeasurementService"
+102-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
+103            android:enabled="true"
+103-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
+104            android:exported="false" />
+104-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
+105        <service
+105-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
+106            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+106-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
+107            android:enabled="true"
+107-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
+108            android:exported="false"
+108-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
+109            android:permission="android.permission.BIND_JOB_SERVICE" />
+109-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2c0d64cd8c0d5977d4aee74c0a9fdb1d\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
+110
+111        <provider
+111-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+112            android:name="com.google.firebase.provider.FirebaseInitProvider"
+112-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+113            android:authorities="com.decawave.argomanager.firebaseinitprovider"
+113-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+114            android:directBootAware="true"
+114-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+115            android:exported="false"
+115-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+116            android:initOrder="100" />
+116-->[com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4abeaf3657f093aab89f8c7ede17e87\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
 117
-118        <provider
-118-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-119            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-119-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-120            android:authorities="com.decawave.argomanager.lifecycle-process"
-120-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-121            android:exported="false"
-121-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-122            android:multiprocess="true" />
-122-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-123    </application>
-124
-125</manifest>
+118        <meta-data
+118-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+119            android:name="com.google.android.gms.version"
+119-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+120            android:value="@integer/google_play_services_version" />
+120-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\098f3f246763a00abb14ecf0591fa95a\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+121
+122        <service
+122-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+123            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+123-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+124            android:exported="false" >
+124-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+125            <meta-data
+125-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+126                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+126-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+127                android:value="cct" />
+127-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\6804a4906ef85fffe994f5ff1329525d\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+128        </service>
+129        <service
+129-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+130            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+130-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+131            android:exported="false"
+131-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+132            android:permission="android.permission.BIND_JOB_SERVICE" >
+132-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+133        </service>
+134
+135        <receiver
+135-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+136            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+136-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+137            android:exported="false" />
+137-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\7ac9cdbfee5bfbfe4bb812d8ce9e4fb1\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+138
+139        <provider
+139-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+140            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+140-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+141            android:authorities="com.decawave.argomanager.lifecycle-process"
+141-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+142            android:exported="false"
+142-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+143            android:multiprocess="true" />
+143-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\db5bd2236777e48c07ea043cd71030b6\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+144    </application>
+145
+146</manifest>

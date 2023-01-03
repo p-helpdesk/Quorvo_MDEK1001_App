@@ -8,6 +8,9 @@ package com.decawave.argomanager.argoapi.ble;
 
 import com.decawave.argomanager.ble.BleGattCharacteristic;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 /**
  * Argo project.
  */
@@ -45,44 +48,31 @@ class GattInteractionCallbackWrapper implements GattInteractionCallback {
     }
 
     //@Override
-//    public void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onFail(gatt, errorCode, failMessage);
-//    }
-    public void onFail(Object o) {
-        delegate.onFail(o);
+    public void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        delegate.onFail(gatt, errorCode, failMessage);
     }
 
     //@Override
-//    public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onCharacteristicReadFailed(gatt, errorCode, failMessage);
-//    }
-    public void onCharacteristicReadFailed(Object o) {
-        GattInteractionCallback.onCharacteristicReadFailed(o);
-    }
-
-    //@Override
-//    public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onCharacteristicWriteFailed(gatt, errorCode, failMessage);
-//    }
-    public void onCharacteristicWriteFailed(Object o) {
-        GattInteractionCallback.onCharacteristicWriteFailed(o);
+    public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        GattInteractionCallback.onCharacteristicReadFailed(gatt, errorCode, failMessage);
     }
 
 
     //@Override
-//    public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onDescriptorReadFailed(gatt, errorCode, failMessage);
-//    }
-    public void onDescriptorReadFailed(Object o) {
-        GattInteractionCallback.onDescriptorReadFailed(o);
+    public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        delegate.onCharacteristicWriteFailed(gatt, errorCode, failMessage);
+    }
+
+
+
+    //@Override
+    public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        GattInteractionCallback.onDescriptorReadFailed(gatt, errorCode, failMessage);
     }
 
     //@Override
-//    public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onDescriptorWriteFailed(gatt, errorCode, failMessage);
-//    }
-    public void onDescriptorWriteFailed(Object o) {
-        GattInteractionCallback.onDescriptorWriteFailed(o);
+    public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        delegate.onDescriptorWriteFailed(gatt, errorCode, failMessage);
     }
 
     @Override
@@ -91,15 +81,42 @@ class GattInteractionCallbackWrapper implements GattInteractionCallback {
     }
 
     @Override
+    public Function<Integer, Consumer<String>> onFail(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onCharacteristicReadFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onMtuChangeFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onCharacteristicWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onDescriptorReadFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onDescriptorWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
     public void onMtuChangeComplete(SynchronousBleGatt syncGatt) {
         delegate.onMtuChangeComplete(syncGatt);
     }
 
     //@Override
-//    public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-//        delegate.onMtuChangeFailed(gatt, errorCode, failMessage);
-//    }
-    public void onMtuChangeFailed(Object o) {
-        GattInteractionCallback.onMtuChangeFailed(o);
+    public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        delegate.onMtuChangeFailed(gatt, errorCode, failMessage);
     }
 }

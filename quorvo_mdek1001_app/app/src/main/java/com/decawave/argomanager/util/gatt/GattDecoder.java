@@ -6,7 +6,9 @@
 
 package com.decawave.argomanager.util.gatt;
 
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.annimon.stream.function.BiFunction;
 import com.decawave.argo.api.interaction.ErrorCode;
@@ -49,10 +51,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 import eu.kryl.android.common.Pair;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action4;
+//import rx.functions.Action4;
 
 /**
  * Various GATT / BLE utility routines.
@@ -442,15 +446,16 @@ public class GattDecoder {
         return builder.build();
     }
 
-    private static final Map<ReadCharacteristicRequest, Action4<GattDecoder, BleGattCharacteristic, NodeFactory.NodeBuilder, NodeType>>
+    private static final Map<ReadCharacteristicRequest, Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>>>
             CHARACTERISTIC_REQUEST_TO_BUILDER_INVOCATION;
 
     static {
         MappingBuilder builder = new MappingBuilder();
         builder.map(BleConstants.SERVICE_UUID_STD_GAP, BleConstants.CHARACTERISTIC_STD_LABEL,
-                (gattDecoder,gattCharacteristic,nodeBuilder,nodeType) -> nodeBuilder.setLabel(gattDecoder.decodeString(gattCharacteristic)))
+                (GattDecoder gattDecoder, BleGattCharacteristic gattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType)
+                        -> nodeBuilder.setLabel(gattDecoder.decodeString(gattCharacteristic)))
                 .map(BleConstants.CHARACTERISTIC_DEVICE_INFO,
-                (gattDecoder,gattCharacteristic,nodeBuilder,nodeType) -> {
+                (GattDecoder gattDecoder, BleGattCharacteristic gattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                     DeviceInfo deviceInfo = gattDecoder.decodeDeviceInfo(gattCharacteristic, nodeType);
                     Preconditions.checkNotNull(deviceInfo);
                     nodeBuilder.setProperty(NetworkNodeProperty.ID, deviceInfo.getId())
@@ -465,7 +470,7 @@ public class GattDecoder {
                 })
                 .map(BleConstants.CHARACTERISTIC_NETWORK_ID, NetworkNodeProperty.NETWORK_ID, GattDecoder::decodeShort, false)
                 .map(BleConstants.CHARACTERISTIC_LOCATION_DATA,
-                    (gattDecoder,gattCharacteristic,nodeBuilder,nodeType) -> {
+                    (GattDecoder gattDecoder, BleGattCharacteristic gattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                         LocationData locationData = gattDecoder.decodeLocationData(gattCharacteristic.getValue());
                         // location data might be null (if they are not known)
                         if (locationData != null && !locationData.isEmpty()) {
@@ -484,7 +489,7 @@ public class GattDecoder {
                    })
                 .map(BleConstants.CHARACTERISTIC_LOCATION_DATA_MODE, NetworkNodeProperty.LOCATION_DATA_MODE, GattDecoder::decodeLocationDataMode, true)
                 .map(BleConstants.CHARACTERISTIC_TAG_UPDATE_RATE,
-                (gattDecoder, bleGattCharacteristic, nodeBuilder, nodeType) -> {
+                (GattDecoder gattDecoder, BleGattCharacteristic bleGattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                     if (Constants.DEBUG) {
                         Preconditions.checkState(nodeType == NodeType.TAG);
                     }
@@ -497,7 +502,7 @@ public class GattDecoder {
                 .map(BleConstants.CHARACTERISTIC_STATISTICS, NetworkNodeProperty.NODE_STATISTICS, GattDecoder::decodeStatistics, true)
                 .map(BleConstants.CHARACTERISTIC_PASSWORD, NetworkNodeProperty.PASSWORD, GattDecoder::decodeString, false)
                 .map(BleConstants.CHARACTERISTIC_OPERATION_MODE,
-                (gattDecoder, bleGattCharacteristic, nodeBuilder, nodeType) -> {
+                (GattDecoder gattDecoder, BleGattCharacteristic bleGattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                     GattOperationMode gattOperationMode = gattDecoder.decodeOperationMode(bleGattCharacteristic);
                     Preconditions.checkNotNull(gattOperationMode);
                     nodeBuilder
@@ -522,7 +527,7 @@ public class GattDecoder {
                 })
                 .map(BleConstants.CHARACTERISTIC_ANCHOR_MAC_STATS, NetworkNodeProperty.ANCHOR_MAC_STATS, GattDecoder::decodeMacStats, true)
                 .map(BleConstants.CHARACTERISTIC_ANCHOR_CLUSTER_INFO,
-                (gattDecoder, bleGattCharacteristic, nodeBuilder, nodeType) -> {
+                (GattDecoder gattDecoder, BleGattCharacteristic bleGattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                     ClusterInfo clusterInfo = gattDecoder.decodeClusterInfo(bleGattCharacteristic);
                     Preconditions.checkNotNull(clusterInfo);
                     nodeBuilder.setProperty(NetworkNodeProperty.ANCHOR_SEAT, clusterInfo.seatNumber)
@@ -535,6 +540,7 @@ public class GattDecoder {
         // build the mapping
         CHARACTERISTIC_REQUEST_TO_BUILDER_INVOCATION = builder.mapping;
     }
+
 
     public List<ProxyPosition> decodeProxyPositionData(byte[] value) {
         if (value == null || value.length == 0) {
@@ -567,13 +573,17 @@ public class GattDecoder {
     }
 
     private static class MappingBuilder {
-        private Map<ReadCharacteristicRequest, Action4<GattDecoder, BleGattCharacteristic, NodeFactory.NodeBuilder, NodeType>> mapping;
+        private Map<ReadCharacteristicRequest, Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>>> mapping;
 
         MappingBuilder() {
             mapping = new HashMap<>();
         }
 
-        MappingBuilder map(UUID serviceUuid, UUID charUuid, Action4<GattDecoder, BleGattCharacteristic, NodeFactory.NodeBuilder, NodeType> action) {
+//        MappingBuilder map(UUID serviceUuid, UUID charUuid, Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>> action) {
+//            mapping.put(new ReadCharacteristicRequest(serviceUuid, charUuid), action);
+//            return this;
+//        }
+        MappingBuilder map(UUID serviceUuid, UUID charUuid, Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>> action) {
             mapping.put(new ReadCharacteristicRequest(serviceUuid, charUuid), action);
             return this;
         }
@@ -584,7 +594,7 @@ public class GattDecoder {
             return this;
         }
 
-        MappingBuilder map(UUID charUuid, Action4<GattDecoder, BleGattCharacteristic, NodeFactory.NodeBuilder, NodeType> action) {
+        MappingBuilder map(UUID charUuid, Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>> action) {
             mapping.put(new ReadCharacteristicRequest(BleConstants.SERVICE_UUID_NETWORK_NODE, charUuid), action);
             return this;
         }
@@ -592,7 +602,7 @@ public class GattDecoder {
         // shortened version of simple characteristic to property mapping
         MappingBuilder map(UUID charUuid, NetworkNodeProperty property, BiFunction<GattDecoder,BleGattCharacteristic,Object> decodeFunction, boolean nonNull) {
             map(charUuid,
-                    (gattDecoder,gattCharacteristic,nodeBuilder,nodeType) -> {
+                    (GattDecoder gattDecoder, BleGattCharacteristic gattCharacteristic, NodeFactory.NodeBuilder nodeBuilder, NodeType nodeType) -> {
                         Object value = decodeFunction.apply(gattDecoder, gattCharacteristic);
                         if (nonNull && value == null) {
                             throw new GattRepresentationException(gattDecoder.deviceBleAddress,
@@ -611,7 +621,7 @@ public class GattDecoder {
             SynchronousBleGatt synchronousBleGatt,
             NodeFactory.NodeBuilder builder,
             NodeType nodeType) {
-        Action4<GattDecoder, BleGattCharacteristic, NodeFactory.NodeBuilder, NodeType> invocation = CHARACTERISTIC_REQUEST_TO_BUILDER_INVOCATION.get(readRequest);
+        Function<GattDecoder, Function<BleGattCharacteristic, Function<NodeFactory.NodeBuilder, Consumer<NodeType>>>> invocation = CHARACTERISTIC_REQUEST_TO_BUILDER_INVOCATION.get(readRequest);
         if (Constants.DEBUG) {
             Preconditions.checkNotNull(invocation, "cannot find decode rule for " + readRequest);
         }
@@ -624,7 +634,7 @@ public class GattDecoder {
             throw new GattRepresentationException(deviceBleAddress, "GATT model problem: missing " + BleConstants.MAP_CHARACTERISTIC_TITLE.get(readRequest.characteristicUuid) + " characteristic");
         }
         // now call the decoding routine
-        invocation.call(this, characteristic, builder, nodeType);
+        invocation.apply(this).apply(characteristic).apply(builder).accept(nodeType);
     }
 
     @SuppressWarnings("WeakerAccess")

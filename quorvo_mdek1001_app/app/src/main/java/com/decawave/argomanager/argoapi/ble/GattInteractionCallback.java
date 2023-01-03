@@ -8,6 +8,9 @@ package com.decawave.argomanager.argoapi.ble;
 
 import com.decawave.argomanager.ble.BleGattCharacteristic;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 /**
  * Notification callback about the GATT interaction FSM events:
  * 1. driving lifecycle of {@link GattInteractionFsm}.
@@ -15,6 +18,26 @@ import com.decawave.argomanager.ble.BleGattCharacteristic;
  *
  */
 public interface GattInteractionCallback {
+
+    static Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> onMtuChangeFailed(GattInteractionCallback o) {
+        return null;
+    }
+
+    static Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> onCharacteristicReadFailed(GattInteractionCallback o) {
+        return null;
+    }
+
+    static Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> onCharacteristicWriteFailed(GattInteractionCallback o) {
+        return null;
+    }
+
+    static Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> onDescriptorReadFailed(GattInteractionCallback o) {
+        return null;
+    }
+
+    static Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> onDescriptorWriteFailed(GattInteractionCallback o) {
+        return null;
+    }
 
     /**
      * Information for this FSM whether it still makes sense to continue in it's lifecycle.
@@ -63,14 +86,16 @@ public interface GattInteractionCallback {
      *
      * @param gatt gatt to be queried / used
      */
-    //void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called if the read characteristic request failed.
      *
      * @param gatt identification of the gatt
      */
-    //void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    static void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+        
+    }
 
     /**
      * Called after the write sequence failed.
@@ -78,14 +103,16 @@ public interface GattInteractionCallback {
      * @param gatt identification of the gatt
      * //@see GattInteractionFsm#writeCharacteristics(List)
      */
-    //void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called if the read descriptor request failed.
      *
      * @param gatt identification of the gatt
      */
-    //void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    static void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
+
+    }
 
     /**
      * Called after the write sequence failed.
@@ -93,14 +120,14 @@ public interface GattInteractionCallback {
      * @param gatt identification of the gatt
      * //@see GattInteractionFsm#writeDescriptors(List)
      */
-    //void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after MTU change request failed.
      *
      * @param gatt identification of the gatt
      */
-    //void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
+    void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * When we register for characteristic change event, we receive the changes via this callback.
@@ -109,25 +136,15 @@ public interface GattInteractionCallback {
      */
     void onCharacteristicChanged(SynchronousBleGatt gatt, BleGattCharacteristic characteristic, byte[] value);
 
-    static void onMtuChangeFailed(Object o) {
+    Function<Integer, Consumer<String>> onFail(SynchronousBleGatt synchronousBleGatt);
 
-    }
+    Function<Integer, Consumer<String>> onCharacteristicReadFailed(SynchronousBleGatt synchronousBleGatt);
 
-    static void onDescriptorWriteFailed(Object o) {
+    Function<Integer, Consumer<String>> onMtuChangeFailed(SynchronousBleGatt synchronousBleGatt);
 
-    }
+    Function<Integer, Consumer<String>> onCharacteristicWriteFailed(SynchronousBleGatt synchronousBleGatt);
 
-    static void onDescriptorReadFailed(Object o) {
+    Function<Integer, Consumer<String>> onDescriptorReadFailed(SynchronousBleGatt synchronousBleGatt);
 
-    }
-
-    static void onCharacteristicWriteFailed(Object o) {
-
-    }
-
-    static void onCharacteristicReadFailed(Object o) {
-
-    }
-
-    void onFail(Object o);
+    Function<Integer, Consumer<String>> onDescriptorWriteFailed(SynchronousBleGatt synchronousBleGatt);
 }

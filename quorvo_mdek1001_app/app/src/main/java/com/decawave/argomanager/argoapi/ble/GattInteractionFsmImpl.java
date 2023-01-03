@@ -6,8 +6,6 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
-import android.app.Notification;
-
 import com.decawave.argo.api.ConnectionState;
 import com.decawave.argo.api.interaction.ErrorCode;
 import com.decawave.argomanager.Constants;
@@ -37,6 +35,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 import eu.kryl.android.common.fsm.impl.FiniteStateMachineImpl;
 import eu.kryl.android.common.log.ComponentLog;
@@ -210,9 +209,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
             } else {
                 String msg = "characteristic " + charName + " write failed";
                 // fail, disconnect
-                handleFail(() -> gattInteractionCallbackWrapped.onCharacteristicWriteFailed(
-                        ErrorCode.GATT_ASYNC,
-                        msg));
+                handleFail(() -> gattInteractionCallbackWrapped.onCharacteristicWriteFailed(ErrorCode.GATT_ASYNC, msg));
             }
         }
 
@@ -690,8 +687,8 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
             // wait for the asynchronous notification
         }
     }
-
-    private void handleFail(Notification.Action callbackNotifyAction) {
+    //Notification.Action instead of Runnable
+    private void handleFail( Runnable callbackNotifyAction) {
         if (disconnectOnProblem) {
             callbackNotifyAction.notify();
             setState(GattInteractionState.DISCONNECTING);
@@ -920,7 +917,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
         //SynchronousBleGatt, Integer, String
         private void genericOnFail(int errorCode,
                                    String failMessage,
-                                   Consumer<Object> failAction, boolean goToIdle) {
+                                   Function<SynchronousBleGatt, Function<Integer, Consumer<String>>> failAction, boolean goToIdle) {
             sessionErrorCode = errorCode;
             appLog.we(failMessage, errorCode);
             if (checkTerminalState()) {
@@ -929,8 +926,7 @@ public class GattInteractionFsmImpl extends FiniteStateMachineImpl<GattInteracti
                     makeSureIdle();
                 }
                 // invoke the callback now
-                Object obj = new Object[] {getSyncGatt(), errorCode, failMessage };
-                failAction.accept(obj);
+                failAction.apply(getSyncGatt()).apply(errorCode).accept(failMessage);
             }
         }
 

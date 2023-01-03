@@ -18,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 //import rx.functions.Action2;
 //import rx.functions.Action4;
@@ -118,7 +119,7 @@ abstract class GattInteractionToConnectionWrapperCallback implements GattInterac
 
     //@Override
     public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        delegateFailToConnection(gatt, errorCode, failMessage, o -> GattInteractionCallback.onMtuChangeFailed(o));
+        delegateFailToConnection(gatt, errorCode, failMessage, GattInteractionCallback::onMtuChangeFailed);
     }
 
     @Override
@@ -130,10 +131,9 @@ abstract class GattInteractionToConnectionWrapperCallback implements GattInterac
     private void delegateFailToConnection(SynchronousBleGatt gatt,
                                           int errorCode,
                                           String failMessage,
-                                          Consumer<Object> callbackFailMethod) {
+                                          Function<GattInteractionCallback, Function<SynchronousBleGatt, Function<Integer, Consumer<String>>>> callbackFailMethod) {
         // delegate the async processing on existing connection
-        Object obj = new Object[] {connectionWrapper.asGattCallback(), gatt, errorCode, failMessage};
-        callbackFailMethod.accept(obj);
+        callbackFailMethod.apply(connectionWrapper.asGattCallback()).apply(gatt).apply(errorCode).accept(failMessage);
     }
 
     private void delegateSuccessToConnection(SynchronousBleGatt gatt,

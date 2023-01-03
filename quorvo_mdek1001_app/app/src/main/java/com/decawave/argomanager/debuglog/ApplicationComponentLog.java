@@ -6,13 +6,15 @@
 
 package com.decawave.argomanager.debuglog;
 
+import static com.decawave.argomanager.ioc.IocContext.daCtx;
+
 import android.os.Looper;
 import android.os.SystemClock;
 
-import com.crashlytics.android.Crashlytics;
 import com.decawave.argo.api.interaction.Fail;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.error.ErrorCodeInterpreter;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -21,8 +23,6 @@ import javax.inject.Inject;
 
 import eu.kryl.android.common.android.AndroidValidate;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ioc.IocContext.daCtx;
 
 /**
  * Exposes the basic set of ComponentLog routines and those specific to application component log.
@@ -160,7 +160,7 @@ public class ApplicationComponentLog {
         }
         logCollector.add(new LogEntry(SystemClock.uptimeMillis(), msg, severity, errorCode, exception, tags));
         if (Constants.CRASH_REPORTS_ENABLED) {
-            Crashlytics.log(msg);
+            FirebaseCrashlytics.getInstance().log(msg);
         }
     }
 
