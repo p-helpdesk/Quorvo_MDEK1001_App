@@ -6,6 +6,10 @@
 
 package com.decawave.argomanager.debuglog;
 
+import static com.decawave.argomanager.ArgoApp.log;
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+import static com.decawave.argomanager.ArgoApp.workerSbHandler;
+
 import org.apache.commons.collections4.queue.CircularFifoQueue;
 
 import java.io.BufferedWriter;
@@ -13,16 +17,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
 
 import javax.inject.Singleton;
 
 import eu.kryl.android.common.android.AndroidValidate;
-import rx.functions.Action1;
-import rx.functions.Action3;
-
-import static com.decawave.argomanager.ArgoApp.log;
-import static com.decawave.argomanager.ArgoApp.uiHandler;
-import static com.decawave.argomanager.ArgoApp.workerSbHandler;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function3;
 
 /**
  * Generic log buffer.
@@ -77,8 +79,8 @@ class LogBufferImpl implements LogBuffer {
         return logEntries;
     }
 
-    @Override
-    public final void saveLogToFile(File file, Action3<LogEntry, Long, StringBuilder> logEntryFormatter, Action1<Void> onSuccess, Action1<Throwable> onFail) {
+    //@Override
+    public final void saveLogToFile(File file, Function3<LogEntry, Long, StringBuilder, StringBuilder> logEntryFormatter, Consumer<Void> onSuccess, Consumer<Throwable> onFail) {
         // create a copy for asynchronous processing
         ArrayList<LogEntry> lst = new ArrayList<>(logEntries);
         // pass onto worker handler
@@ -94,15 +96,15 @@ class LogBufferImpl implements LogBuffer {
                     long firstTime = lst.get(0).timeInMillis;
                     for (LogEntry logEntry : lst) {
                         sb.setLength(0);
-                        logEntryFormatter.call(logEntry, firstTime, sb);
+                        logEntryFormatter.invoke(logEntry,firstTime,sb);
                         bw.write(sb.toString());
                     }
                 }
                 // notify about the result on UI handler
-                uiHandler.post(() -> onSuccess.call(null));
+                uiHandler.post(() -> onSuccess.accept(null));
             } catch (IOException e) {
                 // notify about the result on UI handler
-                uiHandler.post(() -> onFail.call(e));
+                uiHandler.post(() -> onFail.accept(e));
             } finally {
                 if (bw != null) {
                     try {

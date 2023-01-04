@@ -7,13 +7,13 @@
 package com.decawave.argomanager.ui.dialog;
 
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+import static com.decawave.argomanager.ioc.IocContext.daCtx;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -24,6 +24,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
@@ -46,9 +50,6 @@ import eu.kryl.android.appcompat.dialogs.AlertDialog;
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.hub.InterfaceHubHandler;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
-import static com.decawave.argomanager.ioc.IocContext.daCtx;
 
 /** Dialog to pick a item */
 public class NetworkPickerDialogFragment extends DialogFragment {

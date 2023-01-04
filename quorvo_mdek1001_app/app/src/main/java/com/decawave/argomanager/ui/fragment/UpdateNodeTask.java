@@ -34,11 +34,12 @@ import com.google.common.base.Preconditions;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.function.BiConsumer;
+
 import eu.kryl.android.common.Constants;
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.hub.InterfaceHubHandler;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action2;
 
 /**
  * Task updating a network node.
@@ -405,7 +406,7 @@ class UpdateNodeTask {
                                   NodeFactory.TagNodeBuilder targetNodeBuilder,
                                   NetworkNode originalInput,
                                   Function<TagNode, Integer> updateRateGetter,
-                                  Action2<NodeFactory.TagNodeBuilder, Integer> updateRateSetter) {
+                                  BiConsumer<NodeFactory.TagNodeBuilder, Integer> updateRateSetter) {
         Integer iUpdateRate;
         if (updateRate != null) {
             iUpdateRate = updateRate.msValue;
@@ -417,7 +418,7 @@ class UpdateNodeTask {
             }
             iUpdateRate = originalUpdateRate != null ? originalUpdateRate : UpdateRate.DEFAULT.msValue;
         }
-        updateRateSetter.call(targetNodeBuilder, iUpdateRate);
+        updateRateSetter.accept(targetNodeBuilder, iUpdateRate);
     }
 
     private boolean isPropertyChanged(NetworkNode originalNetworkNode,

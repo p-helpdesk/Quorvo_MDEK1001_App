@@ -6,9 +6,10 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -50,6 +51,8 @@ import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 
 import javax.inject.Inject;
@@ -61,8 +64,6 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import eu.kryl.android.common.Constants;
 import eu.kryl.android.common.hub.InterfaceHub;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Displays node details.

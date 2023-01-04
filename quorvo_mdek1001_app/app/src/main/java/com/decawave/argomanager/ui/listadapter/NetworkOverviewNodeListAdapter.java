@@ -6,12 +6,11 @@
 
 package com.decawave.argomanager.ui.listadapter;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -23,6 +22,10 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.annimon.stream.function.Supplier;
 import com.decawave.argo.api.struct.NetworkNode;
@@ -80,8 +83,6 @@ import eu.kryl.android.common.Pair;
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.hub.InterfaceHubContract;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  *

@@ -6,16 +6,17 @@
 
 package com.decawave.argomanager.ui.layout;
 
-import android.support.design.widget.BaseTransientBottomBar;
-import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.core.view.ViewCompat;
+
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.ui.uiutil.ISnackbar;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 
 /**
  * Argo project.

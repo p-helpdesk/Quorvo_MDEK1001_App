@@ -73,10 +73,6 @@
                 android:resource="@xml/paths" />
         </provider>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="0f517e9224f309d90d822e1f8b2edb5bfda53c49" />
-
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"

@@ -6,14 +6,17 @@
 
 package com.decawave.argomanager.ui.actionbar;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.annimon.stream.function.Supplier;
 import com.decawave.argomanager.R;
@@ -22,8 +25,6 @@ import com.decawave.argomanager.ui.fragment.FragmentType;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 public class AbSpinnerAdapter<T extends Enum<T> & SpinnerItem> extends BaseAdapter {
 

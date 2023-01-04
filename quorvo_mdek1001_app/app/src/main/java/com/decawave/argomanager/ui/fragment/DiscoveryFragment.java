@@ -6,18 +6,20 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import static com.decawave.argomanager.util.Util.formatAsHexa;
+
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.view.ActionMode;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.Constants;
@@ -48,6 +50,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -59,8 +62,6 @@ import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.SelectableAdapter;
 import eu.davidea.flexibleadapter.common.FlexibleItemDecoration;
 import eu.davidea.flexibleadapter.helpers.ActionModeHelper;
-
-import static com.decawave.argomanager.util.Util.formatAsHexa;
 
 /**
  * Shows recyclerView of networks and unassigned nodes.
@@ -203,7 +204,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
     }
 
     void initializeActionModeHelper(@SelectableAdapter.Mode int mode) {
-        mActionModeHelper = new ActionModeHelper(adapter, R.menu.discovery_multi_select_menu, this) {
+        mActionModeHelper = new ActionModeHelper((FlexibleAdapter) adapter, R.menu.discovery_multi_select_menu, (androidx.appcompat.view.ActionMode.Callback) this) {
 
             @Override
             public void updateContextTitle(int count) {
@@ -221,7 +222,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
                 }
             }
         });
-        adapter.addListener((FlexibleAdapter.OnItemClickListener) position -> {
+        adapter.addListener((FlexibleAdapter.OnItemClickListener) (view, position) -> {
             if (adapter.isInMultiSelectMode() && mActionModeHelper != null) {
                 if (adapter.isItemUnknownNode(position)) {
                     boolean activate = mActionModeHelper.onClick(position);

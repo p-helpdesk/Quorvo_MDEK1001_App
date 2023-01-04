@@ -6,37 +6,37 @@
 
 package com.decawave.argomanager.components.impl;
 
-import android.os.SystemClock;
+    import android.os.SystemClock;
 
-import com.decawave.argo.api.DiscoveryApi;
-import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
-import com.decawave.argomanager.argoapi.ble.BleConstants;
-import com.decawave.argomanager.argoapi.ble.DiscoveryApiBleImpl;
-import com.decawave.argomanager.argoapi.ble.IhConnectionStateListener;
-import com.decawave.argomanager.argoapi.ble.connection.BleConnectionApiImpl;
-import com.decawave.argomanager.ble.signal.SignalStrengthInterpreterImpl;
-import com.decawave.argomanager.components.BlePresenceApi;
-import com.decawave.argomanager.components.NetworkNodeManager;
-import com.decawave.argomanager.components.ih.IhPresenceApiListener;
-import com.decawave.argomanager.components.struct.PresenceStatus;
-import com.google.common.base.Objects;
-import com.google.common.base.Preconditions;
+    import com.decawave.argo.api.DiscoveryApi;
+    import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
+    import com.decawave.argomanager.argoapi.ble.BleConstants;
+    import com.decawave.argomanager.argoapi.ble.DiscoveryApiBleImpl;
+    import com.decawave.argomanager.argoapi.ble.IhConnectionStateListener;
+    import com.decawave.argomanager.argoapi.ble.connection.BleConnectionApiImpl;
+    import com.decawave.argomanager.ble.signal.SignalStrengthInterpreterImpl;
+    import com.decawave.argomanager.components.BlePresenceApi;
+    import com.decawave.argomanager.components.NetworkNodeManager;
+    import com.decawave.argomanager.components.ih.IhPresenceApiListener;
+    import com.decawave.argomanager.components.struct.PresenceStatus;
+    import com.google.common.base.Objects;
+    import com.google.common.base.Preconditions;
 
-import org.jetbrains.annotations.NotNull;
+    import org.jetbrains.annotations.NotNull;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+    import java.util.Collections;
+    import java.util.HashMap;
+    import java.util.HashSet;
+    import java.util.Map;
+    import java.util.Set;
+    import java.util.function.Consumer;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
+    import javax.inject.Inject;
+    import javax.inject.Singleton;
 
-import eu.kryl.android.common.Constants;
-import eu.kryl.android.common.hub.InterfaceHub;
-import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action1;
+    import eu.kryl.android.common.Constants;
+    import eu.kryl.android.common.hub.InterfaceHub;
+    import eu.kryl.android.common.log.ComponentLog;
 
 /**
  * Argo project.
@@ -79,8 +79,8 @@ public class BlePresenceApiImpl implements BlePresenceApi, DiscoveryApiBleImpl.D
     private Map<String, Long> proxiedExpirations;
     private Set<String> directlyTrackedTags;
 
-    private Action1<String> nodePresentCallback;
-    private Action1<String> nodeMissingCallback;
+    private Consumer<String> nodePresentCallback;
+    private Consumer<String> nodeMissingCallback;
 
     class NodePresenceInfo {
         long expirationSysTime = 0;
@@ -173,20 +173,20 @@ public class BlePresenceApiImpl implements BlePresenceApi, DiscoveryApiBleImpl.D
         }
         // check callback
         if (nodeMissingCallback != null) {
-            nodeMissingCallback.call(bleAddress);
+            nodeMissingCallback.accept(bleAddress);
         }
         // now broadcast
         InterfaceHub.getHandlerHub(IhPresenceApiListener.class).onNodeMissing(bleAddress);
     }
 
-    void setNodeMissingCallback(Action1<String> nodeMissingCallback) {
+    void setNodeMissingCallback(Consumer<String> nodeMissingCallback) {
         if (Constants.DEBUG) {
             Preconditions.checkState(this.nodeMissingCallback == null, "double invocation of setNodeMissingCallback? FIXME!");
         }
         this.nodeMissingCallback = nodeMissingCallback;
     }
 
-    void setNodePresentCallback(Action1<String> nodePresentCallback) {
+    void setNodePresentCallback(Consumer<String> nodePresentCallback) {
         if (Constants.DEBUG) {
             Preconditions.checkState(this.nodePresentCallback == null, "double invocation of setNodePresentCallback? FIXME!");
         }
@@ -301,7 +301,7 @@ public class BlePresenceApiImpl implements BlePresenceApi, DiscoveryApiBleImpl.D
     private void broadcastNodePresent(String bleAddress) {
         // check callback
         if (nodePresentCallback != null) {
-            nodePresentCallback.call(bleAddress);
+            nodePresentCallback.accept(bleAddress);
         }
         // report the new node
         InterfaceHub.getHandlerHub(IhPresenceApiListener.class).onNodePresent(bleAddress);

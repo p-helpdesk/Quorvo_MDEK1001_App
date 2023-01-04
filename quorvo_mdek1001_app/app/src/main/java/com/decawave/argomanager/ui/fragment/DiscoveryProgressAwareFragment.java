@@ -7,11 +7,12 @@
 package com.decawave.argomanager.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.view.MenuItemCompat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.core.view.MenuItemCompat;
 
 import com.decawave.argo.api.DiscoveryApi;
 import com.decawave.argomanager.R;
@@ -70,7 +71,7 @@ public abstract class DiscoveryProgressAwareFragment extends AbstractArgoFragmen
     }
 
     @Override
-    public void onCreate(@android.support.annotation.Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }

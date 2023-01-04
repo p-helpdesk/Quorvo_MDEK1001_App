@@ -28,6 +28,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -174,6 +175,7 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
                 // on fail
                 (f) -> appLog.we("TAG/ANCHOR discovery failed", f),
                 // prefer nodes which we do not know at all
+//                (bleAddress) -> networkNodeManager.getNode(bleAddress) != null ? ConnectPriority.LOW : ConnectPriority.MEDIUM,
                 (bleAddress) -> networkNodeManager.getNode(bleAddress) != null ? ConnectPriority.LOW : ConnectPriority.MEDIUM,
                 // pass service data cache?
                 !serviceDataCache.isEmpty() ? serviceDataCache : null);
@@ -278,9 +280,9 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
 
     public @NotNull
     List<NetworkNode> getDiscoveredTransientOnlyNodes() {
-        return Stream.of(discoveredNodes).
+        return Objects.requireNonNull(Stream.of(discoveredNodes).
                 map((bleAddress) -> networkNodeManager.getNode(bleAddress).asPlainNode()).
-                collect(Collectors.toList());
+                collect(Collectors.toList()));
     }
 
     @Override

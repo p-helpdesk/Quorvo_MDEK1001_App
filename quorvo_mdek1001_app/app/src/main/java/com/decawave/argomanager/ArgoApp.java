@@ -6,14 +6,16 @@
 
 package com.decawave.argomanager;
 
+import static com.decawave.argomanager.ioc.IocContext.daCtx;
+
 import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
 import android.provider.Settings;
-import android.support.multidex.MultiDexApplication;
 
-import com.crashlytics.android.Crashlytics;
+import androidx.multidex.MultiDexApplication;
+
 import com.decawave.argomanager.components.BlePresenceApi;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.components.NetworkNodeManager;
@@ -27,6 +29,7 @@ import com.decawave.argomanager.prefs.AppPreference;
 import com.decawave.argomanager.prefs.IhAppPreferenceListener;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import javax.inject.Inject;
 
@@ -41,9 +44,6 @@ import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.hub.InterfaceHubFactory;
 import eu.kryl.android.common.log.ComponentLog;
 import eu.kryl.android.common.log.LogLevel;
-import io.fabric.sdk.android.Fabric;
-
-import static com.decawave.argomanager.ioc.IocContext.daCtx;
 
 
 /**
@@ -119,22 +119,23 @@ public class ArgoApp extends MultiDexApplication {
     }
 
     private void initializeFabric() {
-        Fabric.Builder b = new Fabric.Builder(this);
-        if (Constants.CRASH_REPORTS_ENABLED) {
-            // initialize crashlytics
-            b.kits(new Crashlytics());
-        }
-        Fabric.with(b.build());
-        if (Constants.CRASH_REPORTS_ENABLED) {
-            // set up the bits
-            Crashlytics.setUserIdentifier(ArgoApp.ANDROID_ID);
-            Crashlytics.setString("BuildConfig.BUILD_TIME", BuildConfig.BUILD_TIME);
-            Crashlytics.setString("BuildConfig.BUILD_TYPE", BuildConfig.BUILD_TYPE);
-            Crashlytics.setBool("BuildConfig.DEBUG", BuildConfig.DEBUG);
-            Crashlytics.setBool("Constants.DEBUG", Constants.DEBUG);
-            Crashlytics.setBool("Constants.ENFORCE_DEBUG_LOGGING_AND_ASSERTS", Constants.ENFORCE_DEBUG_LOGGING_AND_ASSERTS);
-            Crashlytics.setBool("Constants.ENFORCE_DEBUG_UI", Constants.ENFORCE_DEBUG_UI);
-        }
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
+//        Fabric.Builder b = new Fabric.Builder(this);
+//        if (Constants.CRASH_REPORTS_ENABLED) {
+//            // initialize crashlytics
+//            b.kits(new Crashlytics());
+//        }
+//        Fabric.with(b.build());
+//        if (Constants.CRASH_REPORTS_ENABLED) {
+//            // set up the bits
+//            Crashlytics.setUserIdentifier(ArgoApp.ANDROID_ID);
+//            Crashlytics.setString("BuildConfig.BUILD_TIME", BuildConfig.BUILD_TIME);
+//            Crashlytics.setString("BuildConfig.BUILD_TYPE", BuildConfig.BUILD_TYPE);
+//            Crashlytics.setBool("BuildConfig.DEBUG", BuildConfig.DEBUG);
+//            Crashlytics.setBool("Constants.DEBUG", Constants.DEBUG);
+//            Crashlytics.setBool("Constants.ENFORCE_DEBUG_LOGGING_AND_ASSERTS", Constants.ENFORCE_DEBUG_LOGGING_AND_ASSERTS);
+//            Crashlytics.setBool("Constants.ENFORCE_DEBUG_UI", Constants.ENFORCE_DEBUG_UI);
+//        }
     }
 
     private void initPresenceApi() {
@@ -227,7 +228,7 @@ public class ArgoApp extends MultiDexApplication {
 
     public static void reportSilentException(Throwable t) {
         log.e("reportSilentException", t);
-        Crashlytics.logException(t);
+        FirebaseCrashlytics.getInstance().log(t.toString());
     }
 
 

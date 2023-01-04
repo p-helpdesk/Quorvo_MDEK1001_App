@@ -6,6 +6,10 @@
 
 package com.decawave.argomanager.ui;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+import static com.decawave.argomanager.ioc.IocContext.daCtx;
+
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
@@ -14,19 +18,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +28,19 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
+//import android.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.annimon.stream.function.Function;
 import com.decawave.argomanager.ArgoApp;
@@ -64,6 +68,8 @@ import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.IhOnActivityResultListener;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
@@ -75,17 +81,13 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.hub.InterfaceHubContract;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action1;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
-import static com.decawave.argomanager.ArgoApp.uiHandler;
-import static com.decawave.argomanager.ioc.IocContext.daCtx;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, IhAppPreferenceListener,
@@ -266,10 +268,10 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private void showAbSpinnerPopup(final View anchorView, AbSpinnerAdapter spinnerAdapter, Action1<SpinnerItem> onSpinnerItemSelectedAction) {
+    private void showAbSpinnerPopup(final View anchorView, AbSpinnerAdapter spinnerAdapter, Consumer<SpinnerItem> onSpinnerItemSelectedAction) {
         dismissAbSpinnerPopup();
 
-        abSpinnerPopup = new AbSpinnerPopup(this, spinnerAdapter, onSpinnerItemSelectedAction::call);
+        abSpinnerPopup = new AbSpinnerPopup(this, spinnerAdapter, onSpinnerItemSelectedAction::accept);
         abSpinnerPopup.show(anchorView);
     }
 
@@ -397,7 +399,7 @@ public class MainActivity extends AppCompatActivity
         // register ourselves as main activity provider - but only after we are resumed
         uiHandler.post(() -> {
             if (isResumed) {
-                mainActivityProvider = (a) -> a.call(this);
+                mainActivityProvider = (a) -> a.accept(this);
                 InterfaceHub.registerHandler(mainActivityProvider);
             }
         });
@@ -463,7 +465,7 @@ public class MainActivity extends AppCompatActivity
                     showFragment(FragmentType.SETTINGS);
                     break;
                 case R.id.nav_instructions:
-                    showFragment(FragmentType.INSTRUCTIONS);
+                    //showFragment(FragmentType.INSTRUCTIONS);
                     break;
                 default:
                     throw new IllegalStateException("unexpected item clicked: " + id);
@@ -557,7 +559,7 @@ public class MainActivity extends AppCompatActivity
         return false;
     }
 
-    public static Fragment createNewFragmentInstance(FragmentType fragmentType, Bundle fragArgs) {
+    public static AbstractArgoFragment createNewFragmentInstance(FragmentType fragmentType, Bundle fragArgs) {
         if (Constants.DEBUG) {
             log.d("createFragment " + fragmentType);
         }
@@ -589,11 +591,11 @@ public class MainActivity extends AppCompatActivity
         updateDrawerLockedState(fragmentType);
         // check if the fragment type has onFragmentLeft
         if (mLastDisplayedFragment != null && mLastDisplayedFragment.onFragmentLeft != null) {
-            mLastDisplayedFragment.onFragmentLeft.call(fragmentType);
+            mLastDisplayedFragment.onFragmentLeft.accept(fragmentType);
         }
         // check if the fragment type has onFragmentEntered
         if (fragmentType.onFragmentEntered != null) {
-            fragmentType.onFragmentEntered.call(mLastDisplayedFragment);
+            fragmentType.onFragmentEntered.accept(mLastDisplayedFragment);
         }
         // finally save what was the last displayed fragment
         mLastDisplayedFragment = fragmentType;
@@ -775,6 +777,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // broadcast
+        super.onActivityResult(requestCode, resultCode, data);
         InterfaceHub.getHandlerHub(IhOnActivityResultListener.class).onActivityResult(this, requestCode, resultCode, data);
     }
 

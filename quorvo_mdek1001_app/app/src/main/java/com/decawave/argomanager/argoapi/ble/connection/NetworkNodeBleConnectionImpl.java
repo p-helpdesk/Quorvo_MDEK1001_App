@@ -276,6 +276,36 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
                     NetworkNodeBleConnectionImpl.this.onCharacteristicChanged(characteristic, value);
                 }
 
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onFail(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onCharacteristicReadFailed(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onMtuChangeFailed(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onCharacteristicWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onDescriptorReadFailed(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
+                @Override
+                public java.util.function.Function<Integer, Consumer<String>> onDescriptorWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+                    return null;
+                }
+
             };
         }
         return gattInteractionCallback;
@@ -477,7 +507,7 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
         callFailConditionalDisconnect(onFail, failReason, null);
     }
 
-    private void callFailConditionalDisconnect(Consumer<Fail> onFail, Fail failReason, Notification.Action onConnectionKeptAction) {
+    private void callFailConditionalDisconnect(Consumer<Fail> onFail, Fail failReason, Runnable onConnectionKeptAction) {
         onFail.accept(failReason);
         if (fsm.doDisconnectOnProblem()) {
             if (failReason.errorCode == ErrorCode.GATT_BROKEN
@@ -491,7 +521,7 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
                 disconnect();
             }
         } else {
-            if (onConnectionKeptAction != null) onConnectionKeptAction.clone();
+            //if (onConnectionKeptAction != null) onConnectionKeptAction.clone();
         }
     }
 

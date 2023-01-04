@@ -8,9 +8,9 @@ package com.decawave.argomanager.ui.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.decawave.argomanager.ArgoApp;
 import com.decawave.argomanager.Constants;
@@ -18,6 +18,8 @@ import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.ioc.IocContext;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.ui.MainActivity;
+
+import org.jetbrains.annotations.Nullable;
 
 import javax.inject.Inject;
 

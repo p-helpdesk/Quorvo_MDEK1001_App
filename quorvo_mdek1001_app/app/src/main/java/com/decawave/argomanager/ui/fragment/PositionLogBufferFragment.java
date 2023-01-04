@@ -12,7 +12,7 @@ import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;
 import com.decawave.argomanager.debuglog.LogEntry;
-import com.decawave.argomanager.ui.listadapter.LogMessageHolder;
+import com.decawave.argomanager.ui.listadapter.DebugLogBufferEntryAdapter;
 import com.decawave.argomanager.ui.listadapter.PositionLogBufferEntryAdapter;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
@@ -32,7 +32,7 @@ public class PositionLogBufferFragment extends LogBufferFragment {
     }
 
     @Override
-    protected RecyclerView.Adapter<LogMessageHolder> createAdapter() {
+    protected DebugLogBufferEntryAdapter createAdapter() {
         return new PositionLogBufferEntryAdapter(getLogBuffer());
     }
 

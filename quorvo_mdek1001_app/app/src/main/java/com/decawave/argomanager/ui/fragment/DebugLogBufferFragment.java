@@ -6,12 +6,9 @@
 
 package com.decawave.argomanager.ui.fragment;
 
-import android.support.v7.widget.RecyclerView;
-
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;
 import com.decawave.argomanager.ui.listadapter.DebugLogBufferEntryAdapter;
-import com.decawave.argomanager.ui.listadapter.LogMessageHolder;
 
 /**
  * Fragment showing debug logs.
@@ -28,7 +25,7 @@ public class DebugLogBufferFragment extends LogBufferFragment {
     }
 
     @Override
-    protected RecyclerView.Adapter<LogMessageHolder> createAdapter() {
+    protected DebugLogBufferEntryAdapter createAdapter() {
         return new DebugLogBufferEntryAdapter(getLogBuffer());
     }
 

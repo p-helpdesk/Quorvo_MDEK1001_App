@@ -7,18 +7,21 @@
 package com.decawave.argomanager.ui.dialog;
 
 
+import static com.decawave.argomanager.ioc.IocContext.daCtx;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.components.NetworkNodeManager;
@@ -28,8 +31,6 @@ import org.jetbrains.annotations.NotNull;
 import javax.inject.Inject;
 
 import eu.kryl.android.appcompat.dialogs.AlertDialog;
-
-import static com.decawave.argomanager.ioc.IocContext.daCtx;
 
 /** List preference dialog fragment */
 public class RenameNetworkDialogFragment extends DialogFragment {

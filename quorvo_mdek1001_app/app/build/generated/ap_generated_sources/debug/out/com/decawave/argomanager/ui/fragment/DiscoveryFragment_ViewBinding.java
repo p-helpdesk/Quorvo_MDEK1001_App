@@ -4,6 +4,7 @@ package com.decawave.argomanager.ui.fragment;
 import android.view.View;
 import androidx.annotation.CallSuper;
 import androidx.annotation.UiThread;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.decawave.argomanager.R;

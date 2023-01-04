@@ -85,7 +85,7 @@ public interface NetworkNodeManager {
 
     NetworkNodeEnhanced getNode(long nodeId);
 
-    NetworkNodeEnhanced getNode(String bleAddress);
+    boolean getNode(String bleAddress);
 
     void updateAnchorPosition(long nodeId, Position position);
 

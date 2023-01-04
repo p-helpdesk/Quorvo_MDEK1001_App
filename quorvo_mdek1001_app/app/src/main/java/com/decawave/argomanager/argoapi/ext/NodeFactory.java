@@ -6,7 +6,9 @@
 
 package com.decawave.argomanager.argoapi.ext;
 
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argo.api.interaction.LocationData;
 import com.decawave.argo.api.struct.AnchorNode;

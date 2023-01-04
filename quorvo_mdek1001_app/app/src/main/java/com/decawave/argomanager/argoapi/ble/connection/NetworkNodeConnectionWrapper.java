@@ -7,7 +7,8 @@
 package com.decawave.argomanager.argoapi.ble.connection;
 
 import android.app.Notification;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argo.api.ConnectionState;
 import com.decawave.argo.api.YesNoAsync;
@@ -25,15 +26,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.InputStream;
-
-import rx.functions.Action0;
-import rx.functions.Action1;
+import java.util.function.Consumer;
 
 /**
  * Argo project.
  */
 
-class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
+abstract class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
     private NetworkNodeBleConnectionImpl delegate;
     private GattInteractionCallback gattCallback;
     private final String bleAddress;
@@ -113,8 +112,8 @@ class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
     }
 
     @Override
-    public void getOtherSideEntity(io.reactivex.functions.@NotNull Consumer<NetworkNode> onSuccess,
-                                   io.reactivex.functions.@NotNull Consumer<Fail> onFail,
+    public void getOtherSideEntity(@NotNull Consumer<NetworkNode> onSuccess,
+                                   @NotNull Consumer<Fail> onFail,
                                    NetworkNodeProperty... properties) {
         if (delegate != null) delegate.getOtherSideEntity(onSuccess, onFail, properties);
         else throw new IllegalStateException("cannot get other side entity if just connecting!");
@@ -140,8 +139,8 @@ class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
     @Override
     public void updateOtherSideEntity(NetworkNode networkNode,
                                       boolean operationModeChange,
-                                      io.reactivex.functions.Consumer<WriteEffect> onSuccess,
-                                      Action1<Fail> onFail) {
+                                      Consumer<WriteEffect> onSuccess,
+                                      Consumer<Fail> onFail) {
         if (delegate != null) delegate.updateOtherSideEntity(networkNode, operationModeChange, onSuccess, onFail);
         else throw new IllegalStateException("cannot update other side entity if just connecting!");
     }
@@ -149,9 +148,9 @@ class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
     @Override
     public void uploadFirmware(FirmwareMeta firmwareMeta,
                                InputStream firmwareData,
-                               io.reactivex.functions.@Nullable Action onSuccessCallback,
-                               io.reactivex.functions.@Nullable Consumer<Integer> progressListener,
-                               @Nullable Action1<Fail> onFailCallback) {
+                               @Nullable Notification.Action onSuccessCallback,
+                               @Nullable Consumer<Integer> progressListener,
+                               @Nullable Consumer<Fail> onFailCallback) {
         if (delegate != null) delegate.uploadFirmware(firmwareMeta, firmwareData, onSuccessCallback, progressListener, onFailCallback);
         else throw new IllegalStateException("cannot upload firmware if just connecting!");
     }

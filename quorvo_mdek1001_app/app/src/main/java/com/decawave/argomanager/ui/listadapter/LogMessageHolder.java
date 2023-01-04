@@ -6,9 +6,10 @@
 
 package com.decawave.argomanager.ui.listadapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.util.Util;

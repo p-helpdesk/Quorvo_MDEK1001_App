@@ -8,18 +8,18 @@ package com.decawave.argomanager.argoapi.ble.connection;
 
 import com.decawave.argomanager.argoapi.ble.GattInteractionFsm;
 
-import rx.functions.Action1;
-import rx.functions.Func1;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * Argo project.
  */
 
 class SynchronousOperation implements GenericOperation {
-    private final Func1<GattInteractionFsm,Boolean> operation;
+    private final Function<GattInteractionFsm,Boolean> operation;
     private final SequentialGattOperationQueue.Token dependsOn;
 
-    private SynchronousOperation(Func1<GattInteractionFsm, Boolean> operation, SequentialGattOperationQueue.Token dependsOn) {
+    private SynchronousOperation(Function<GattInteractionFsm, Boolean> operation, SequentialGattOperationQueue.Token dependsOn) {
         this.operation = operation;
         this.dependsOn = dependsOn;
     }
@@ -31,16 +31,16 @@ class SynchronousOperation implements GenericOperation {
 
     @Override
     public Result execute(GattInteractionFsm gattInteractionFsm) {
-        return operation.call(gattInteractionFsm) ? Result.SYNCHRONOUS_SUCCESS : Result.SYNCHRONOUS_FAIL;
+        return operation.apply(gattInteractionFsm) ? Result.SYNCHRONOUS_SUCCESS : Result.SYNCHRONOUS_FAIL;
     }
 
-    static SequentialGattOperationQueue.Token enqueue(SequentialGattOperationQueue queue, Func1<GattInteractionFsm,Boolean> operation, SequentialGattOperationQueue.Token dependsOn) {
+    static SequentialGattOperationQueue.Token enqueue(SequentialGattOperationQueue queue, Function<GattInteractionFsm,Boolean> operation, SequentialGattOperationQueue.Token dependsOn) {
         return queue.addOperation(new SynchronousOperation(operation, dependsOn));
     }
 
-    static SequentialGattOperationQueue.Token enqueueAction(SequentialGattOperationQueue queue, Action1<GattInteractionFsm> operation, SequentialGattOperationQueue.Token dependsOn) {
+    static SequentialGattOperationQueue.Token enqueueAction(SequentialGattOperationQueue queue, Consumer<GattInteractionFsm> operation, SequentialGattOperationQueue.Token dependsOn) {
         return enqueue(queue, gattInteractionFsm -> {
-            operation.call(gattInteractionFsm);
+            operation.accept(gattInteractionFsm);
             return true;
         }, dependsOn);
     }

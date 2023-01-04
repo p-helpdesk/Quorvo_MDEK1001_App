@@ -6,8 +6,9 @@
 
 package com.decawave.argomanager.ui;
 
+import java.util.function.Consumer;
+
 import eu.kryl.android.common.hub.SingletonHandler;
-import rx.functions.Action1;
 
 /**
  * Argo project.
@@ -15,6 +16,6 @@ import rx.functions.Action1;
 
 public interface IhMainActivityProvider extends SingletonHandler {
 
-    void provideMainActivity(Action1<MainActivity> actionOnMainActivity);
+    void provideMainActivity(Consumer<MainActivity> actionOnMainActivity);
 
 }

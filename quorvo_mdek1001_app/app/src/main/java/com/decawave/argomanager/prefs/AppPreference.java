@@ -6,9 +6,12 @@
 
 package com.decawave.argomanager.prefs;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.telephony.TelephonyManager;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argomanager.Constants;
 import com.google.common.base.Preconditions;
@@ -18,8 +21,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Locale;
 import java.util.concurrent.Callable;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 
 /**

@@ -6,12 +6,13 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
+import android.app.Notification;
+
 import com.decawave.argomanager.ble.BleDevice;
 
 import org.jetbrains.annotations.NotNull;
 
-import rx.functions.Action0;
-import rx.functions.Action1;
+import java.util.function.Consumer;
 
 /**
  * Scanning API is built around BLE adapter and it's scanning capabilities.
@@ -24,7 +25,7 @@ public interface PeriodicBleScanner {
      *  @param scanSemaphore semaphore determining when it is safe to start scanning
      * @param callback notification about asynchronous events
      */
-    void startPeriodicScan(@NotNull Action1<Action0> scanSemaphore,
+    void startPeriodicScan(@NotNull Consumer<Notification.Action> scanSemaphore,
                            Callback callback);
 
     /**

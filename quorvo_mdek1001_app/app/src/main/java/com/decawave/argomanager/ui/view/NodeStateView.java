@@ -6,6 +6,11 @@
 
 package com.decawave.argomanager.ui.view;
 
+import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DIP_SCALING_FACTOR;
+import static com.decawave.argomanager.ui.view.GridView.DEG_TO_RAD;
+import static com.decawave.argomanager.ui.view.SignalStrengthView.asMsMode;
+
+import android.app.Notification;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -28,11 +33,6 @@ import butterknife.BindColor;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
-
-import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DIP_SCALING_FACTOR;
-import static com.decawave.argomanager.ui.view.GridView.DEG_TO_RAD;
-import static com.decawave.argomanager.ui.view.SignalStrengthView.asMsMode;
 
 /**
  * Argo project.
@@ -77,7 +77,7 @@ public class NodeStateView extends View {
     private State previousState;
     private State state;
     private boolean passive;
-    private Action0 onClickAction;
+    private Notification.Action onClickAction;
 
 
     public NodeStateView(Context context) {
@@ -119,8 +119,8 @@ public class NodeStateView extends View {
         TAG
     }
 
-    public void setOnClickAction(Action0 onClickListener) {
-        this.onClickAction = onClickListener;
+    public void setOnClickAction(Runnable onClickListener) {
+        this.onClickAction = (Notification.Action) onClickListener;
         setClickable(onClickListener != null);
     }
 
@@ -442,7 +442,7 @@ public class NodeStateView extends View {
     @OnClick
     public void onClick() {
         if (onClickAction != null) {
-            onClickAction.call();
+            onClickAction.notify();
         }
     }
 

@@ -6,7 +6,9 @@
 
 package com.decawave.argomanager.util.gatt;
 
-import android.support.annotation.Nullable;
+//import android.support.annotation.Nullable;
+
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Argo project.

@@ -40,7 +40,6 @@ import com.decawave.argomanager.debuglog.LogEntryTag;
 import com.decawave.argomanager.debuglog.LogEntryTagFactory;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.ui.listadapter.DebugLogBufferEntryAdapter;
-import com.decawave.argomanager.ui.listadapter.LogMessageHolder;
 import com.decawave.argomanager.ui.view.NodeStateView;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
@@ -125,7 +124,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
     }
 
     @Override
-    protected RecyclerView.Adapter<LogMessageHolder> createAdapter() {
+    protected DebugLogBufferEntryAdapter createAdapter() {
         return new DebugLogBufferEntryAdapter(getLogBuffer());
     }
 

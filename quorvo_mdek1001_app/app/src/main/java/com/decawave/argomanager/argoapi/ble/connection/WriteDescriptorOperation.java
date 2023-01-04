@@ -14,9 +14,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-
-import rx.functions.Action1;
-import rx.functions.Action2;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 /**
  * Operation capable of writing descriptors.
@@ -24,15 +23,15 @@ import rx.functions.Action2;
 class WriteDescriptorOperation extends AsynchronousGattOperation {
 
     private WriteDescriptorOperation(@NotNull List<WriteDescriptorRequest> writeRequests,
-                                     @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                     @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                     @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                     @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                      @Nullable SequentialGattOperationQueue.Token dependsOn) {
         super((gi) -> gi.writeDescriptors(writeRequests), onSuccess, onFail, dependsOn);
     }
 
     static SequentialGattOperationQueue.Token enqueue(SequentialGattOperationQueue queue, List<WriteDescriptorRequest> writeDescriptorRequests,
-                                                      @Nullable Action1<SynchronousBleGatt> onSuccess,
-                                                      @Nullable Action2<SynchronousBleGatt, Fail> onFail,
+                                                      @Nullable Consumer<SynchronousBleGatt> onSuccess,
+                                                      @Nullable BiConsumer<SynchronousBleGatt, Fail> onFail,
                                                       SequentialGattOperationQueue.Token dependsOn) {
         return queue.addOperation(new WriteDescriptorOperation(writeDescriptorRequests, onSuccess, onFail, dependsOn));
     }

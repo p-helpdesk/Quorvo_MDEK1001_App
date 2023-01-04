@@ -486,7 +486,7 @@ public class NetworkNodeManagerImpl implements NetworkNodeManager {
 
 
     @Override
-    public NetworkNodeEnhanced getNode(String bleAddress) {
+    public boolean getNode(String bleAddress) {
         return nodes.getNode(bleAddress);
     }
 

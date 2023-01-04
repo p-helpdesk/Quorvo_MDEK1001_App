@@ -9,9 +9,9 @@ package com.decawave.argomanager.debuglog;
 import org.apache.commons.collections4.queue.CircularFifoQueue;
 
 import java.io.File;
+import java.util.function.Consumer;
 
-import rx.functions.Action1;
-import rx.functions.Action3;
+import kotlin.jvm.functions.Function2;
 
 /**
  * Argo project.
@@ -38,6 +38,6 @@ public interface LogBuffer {
      */
     CircularFifoQueue<LogEntry> getLogEntries();
 
-    void saveLogToFile(File file, Action3<LogEntry, Long, StringBuilder> logEntryFormatter, Action1<Void> onSuccess, Action1<Throwable> onFail);
+    void saveLogToFile(File file, Function2<LogEntry, Long, StringBuilder> logEntryFormatter, Consumer<Void> onSuccess, Consumer<Throwable> onFail);
 
 }

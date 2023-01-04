@@ -13,7 +13,7 @@ import com.decawave.argomanager.ble.BleGattCharacteristic;
 /**
  *
  */
-class GattInteractionCallbackThrowing implements GattInteractionCallback {
+abstract class GattInteractionCallbackThrowing implements GattInteractionCallback {
 
 
     @Override

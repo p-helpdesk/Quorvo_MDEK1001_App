@@ -6,20 +6,22 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import static com.decawave.argomanager.util.Util.shareUriContent;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.content.FileProvider;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
@@ -28,17 +30,17 @@ import com.decawave.argomanager.debuglog.LogEntry;
 import com.decawave.argomanager.debuglog.LogEntryCollector;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.ui.layout.NpaLinearLayoutManager;
+import com.decawave.argomanager.ui.listadapter.DebugLogBufferEntryAdapter;
 import com.decawave.argomanager.ui.listadapter.LogMessageHolder;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
 
 import org.apache.commons.collections4.queue.CircularFifoQueue;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 
 import javax.inject.Inject;
-
-import static com.decawave.argomanager.util.Util.shareUriContent;
 
 /**
  * Common predecessor for fragment showing debug logs.
@@ -88,7 +90,7 @@ public abstract class LogBufferFragment extends AbstractArgoFragment {
     protected void handleOnCreate(Bundle savedInstanceState) {
     }
 
-    protected abstract RecyclerView.Adapter<LogMessageHolder> createAdapter();
+    protected abstract DebugLogBufferEntryAdapter createAdapter();
 
     // may be overridden
     protected void formatLogEntry(StringBuilder sb, LogEntry logEntry) {
@@ -140,7 +142,7 @@ public abstract class LogBufferFragment extends AbstractArgoFragment {
         }
         File f = new File(parentDir, logFilename);
         getLogBuffer().saveLogToFile(f,
-                (logEntry, firstTime, sb) -> formatLogEntry(sb, logEntry),
+                ( LogEntry logEntry, boolean firstTime, StringBuilder sb) -> formatLogEntry(sb, logEntry),
                 (success) -> {
                     Uri providerUri = FileProvider.getUriForFile(daApp, "com.decawave.argomanager", f);
                     if (Constants.DEBUG) log.d("generated provider URI for " + logTitle + ": " + providerUri);

@@ -6,6 +6,8 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import android.os.SystemClock;
 
 import com.decawave.argo.api.ConnectionState;
@@ -31,16 +33,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action1;
-import rx.functions.Action2;
-import rx.functions.Func1;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Stateless discovery API - BLE implementation.
@@ -70,14 +71,14 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
     private final PeriodicBleScanner bleScanner;
     private final BleConnectionApi bleConnectionApi;
     private final GattDecoderCache gattDecoderCache;
-    private Func1<String, ConnectPriority> priorityResolver;
+    private Function<String, ConnectPriority> priorityResolver;
 
     // discovery FSM
     private DeviceDiscoveryFsm deviceDiscoveryFsm;
 
     // application level callback
-    private Action2<ServiceData, NetworkNode> successCallback;
-    private Action1<Fail> failCallback;
+    private BiConsumer<ServiceData, NetworkNode> successCallback;
+    private Consumer<Fail> failCallback;
     private Map<String, ServiceData> cachedServiceData;
     private DiscoveryEventListener discoveryEventListener;
     // lower level scan/discovery callback - common
@@ -139,9 +140,9 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
     }
 
     private class ConnectionCallbackSet {
-        Action1<String> onDisconnected;
-        Action2<Fail,String> onFail;
-        Action2<NetworkNode,ServiceData> onGetOtherSideEntity;
+        Consumer<String> onDisconnected;
+        BiConsumer<Fail,String> onFail;
+        BiConsumer<NetworkNode,ServiceData> onGetOtherSideEntity;
 
         boolean stillInterested() {
             // make sure this is still the 'current' session
@@ -163,11 +164,11 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
         }
 
         public void onDisconnected(NetworkNodeConnection networkNodeConnection, Integer errorCode) {
-            onDisconnected.call(networkNodeConnection.getOtherSideAddress());
+            onDisconnected.accept(networkNodeConnection.getOtherSideAddress());
         }
 
         public void onFail(NetworkNodeConnection connection,Fail fail) {
-            onFail.call(fail,connection.getOtherSideAddress());
+            onFail.accept(fail,connection.getOtherSideAddress());
         }
 
         void onGetOtherSideEntity(NetworkNodeConnection connection, NetworkNode possiblyIncompleteNetworkNode) {
@@ -177,7 +178,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                 if (Constants.DEBUG) {
                     Preconditions.checkNotNull(nodeIc, "missing node interaction context for " + connection.getOtherSideAddress());
                 }
-                onGetOtherSideEntity.call(possiblyIncompleteNetworkNode, nodeIc.serviceData);
+                onGetOtherSideEntity.accept(possiblyIncompleteNetworkNode, nodeIc.serviceData);
             }
             // initiate disconnect in each case
             connection.disconnect();
@@ -272,7 +273,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                 // we have read all necessary characteristics
                 appLog.imp("notifying about " + node, LogEntryTagFactory.getDeviceLogEntryTag(node.getBleAddress()));
                 // notify the application callback
-                successCallback.call(serviceData, node);
+                successCallback.accept(serviceData, node);
                 // let the connection API ignore any errors - we have successfully notified
                 bleConnectionApi.ignoreSessionErrors(node.getBleAddress());
             };
@@ -295,7 +296,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
             sessionCommonCallbackSet.onFail = (fail, bleAddress) -> {
                 if (sessionCommonCallbackSet.stillInterested()) {
                     // it still makes sense to propagate to application level fail callback
-                    failCallback.call(fail);
+                    failCallback.accept(fail);
                 }
                 // set the next connect attempt if appropriate
                 NodeInteractionContext nodeIc = sessionNodeInteractionContextMap.get(bleAddress);
@@ -398,8 +399,8 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                     nodeIc.nextConnectAttempt = Long.MAX_VALUE;
                     nodeIc.lastConnectEndedUpInError = null;
                     // setup it's own connection (but with a common callback)
-                    nodeIc.connection = bleConnectionApi.connect(bluetoothDevice.getAddress(), priorityResolver.call(bleAddress),
-                            sessionCommonCallbackSet::onConnected,
+                    nodeIc.connection = bleConnectionApi.connect(bluetoothDevice.getAddress(), priorityResolver.apply(bleAddress),
+                            (Consumer<NetworkNodeConnection>) sessionCommonCallbackSet::onConnected,
                             sessionCommonCallbackSet::onFail,
                             sessionCommonCallbackSet::onDisconnected);
                 }
@@ -518,9 +519,21 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
         }
     }
 
+
+
+
     @Override
     public boolean isDiscovering() {
         return deviceDiscoveryFsm != null && deviceDiscoveryFsm.getState() != BleDeviceDiscoveryState.STOPPED;
+    }
+
+    @Override
+    public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> serviceDataListener, Consumer<Fail> onFailCallback, @NotNull BiConsumer<String, ConnectPriority> priorityResolver, @Nullable Map<String, ServiceData> initialServiceData) {
+
+    }
+    @Override
+    public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> onNodeDiscoveredCallback, @NotNull Consumer<Fail> onFailCallback, @NotNull Predicate<String> priorityResolver, @Nullable Map<String, ServiceData> initialServiceData) {
+
     }
 
     @Override
@@ -528,10 +541,10 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
         return deviceDiscoveryFsm != null && deviceDiscoveryFsm.getState() == BleDeviceDiscoveryState.STOPPING;
     }
 
-    @Override
-    public void startDiscovery(io.reactivex.functions.@NotNull BiConsumer<ServiceData, NetworkNode> serviceDataListener,
+    //@Override
+    public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> serviceDataListener,
                                Consumer<Fail> onFailCallback,
-                               @NotNull Func1<String, ConnectPriority> priorityResolver,
+                               @NotNull Function<String, ConnectPriority> priorityResolver, // Func1
                                @Nullable Map<String, ServiceData> initialServiceData) {
         if (Constants.DEBUG) {
             log.d("startDiscovery: " + "onSuccessCallback = [" + serviceDataListener + "], onFailCallback = [" + onFailCallback + "], initialServiceData = [" + initialServiceData + "]");

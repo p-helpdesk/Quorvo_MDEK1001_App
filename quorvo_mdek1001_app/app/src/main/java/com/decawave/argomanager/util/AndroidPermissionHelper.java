@@ -6,9 +6,11 @@
 
 package com.decawave.argomanager.util;
 
+import android.app.Notification;
+
 import com.decawave.argomanager.ui.MainActivity;
 
-import rx.functions.Action0;
+//import rx.functions.Action0;
 
 /**
  * Argo project.
@@ -27,9 +29,9 @@ public interface AndroidPermissionHelper {
      *
      * @return true if all is set up, false otherwise - means that asynchronous grant process has just started
      */
-    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Action0 grantSuccessListener, Action0 grantFailListener);
+    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Notification.Action grantSuccessListener, Notification.Action grantFailListener);
 
-    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Action0 grantSuccessListener);
+    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Runnable grantSuccessListener);
 
     void startActivityToEnableLocationService(MainActivity mainActivity);
 
