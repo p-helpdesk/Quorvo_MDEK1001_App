@@ -10,5 +10,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1045;
   public static final String VERSION_NAME = "14";
   // Field from build type: debug
-  public static final String BUILD_TIME = "01/04/2023 14:09:55";
+  public static final String BUILD_TIME = "01/05/2023 16:06:14";
 }

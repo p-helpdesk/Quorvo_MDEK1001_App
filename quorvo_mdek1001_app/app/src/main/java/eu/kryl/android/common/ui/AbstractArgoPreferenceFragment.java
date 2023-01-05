@@ -17,7 +17,6 @@
 package eu.kryl.android.common.ui;
 
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +24,8 @@ import android.view.ViewStub;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.ui.fragment.AbstractArgoFragment;

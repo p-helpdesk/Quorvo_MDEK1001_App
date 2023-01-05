@@ -9,8 +9,7 @@ package com.decawave.argomanager.components;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 
 import java.util.Collection;
-
-import rx.functions.Action2;
+import java.util.function.BiConsumer;
 
 /**
  * Network model storage/persistence.
@@ -20,5 +19,6 @@ public interface NetworksNodesStorage {
     void save(Collection<NetworkNodeEnhanced> nodes,
               Collection<NetworkModel> networks);
 
-    void load(Action2<Collection<NetworkNodeEnhanced>, Collection<NetworkModel>> callback);
+    void load(BiConsumer<Collection<NetworkNodeEnhanced>, Collection<NetworkModel>> callback);
+
 }

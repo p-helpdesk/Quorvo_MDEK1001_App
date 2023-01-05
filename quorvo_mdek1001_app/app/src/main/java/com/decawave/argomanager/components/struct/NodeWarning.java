@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.components.struct;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.google.common.collect.Sets;
 

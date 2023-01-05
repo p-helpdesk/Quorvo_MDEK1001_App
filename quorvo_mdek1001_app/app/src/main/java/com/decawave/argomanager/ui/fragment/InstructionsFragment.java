@@ -7,7 +7,6 @@
 package com.decawave.argomanager.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,8 @@ import android.webkit.WebView;
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
+
+import org.jetbrains.annotations.Nullable;
 
 import javax.inject.Inject;
 
@@ -36,7 +37,7 @@ public class InstructionsFragment extends AbstractArgoFragment {
     WebView webView;
 
     public InstructionsFragment() {
-        super(FragmentType.INSTRUCTIONS);
+        super(FragmentType.DISCOVERY); // INSTRUCTIONS
     }
 
     public static Bundle getBundleForAnchor(@SuppressWarnings("SameParameterValue") String anchorName) {

@@ -6,6 +6,8 @@
 
 package com.decawave.argomanager.components.impl;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import com.annimon.stream.Collectors;
 import com.annimon.stream.Stream;
 import com.annimon.stream.function.BiFunction;
@@ -46,14 +48,12 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action1;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Argo project.
@@ -270,7 +270,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         // connect & retrieve MAC status
         String bleAddress = node.getBleAddress();
         managedConnections.put(node.getBleAddress(),
-                bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM, connection -> {
+                bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM, (Consumer<NetworkNodeConnection>) connection -> {
                     if (this.tag != launchTag) {
                         // obsolete
                         connection.disconnect();
@@ -348,7 +348,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
                 ConnectPriority.MEDIUM,
                 // onSuccess (connected)
-                (nnc) -> {
+                (Consumer<NetworkNodeConnection>) (nnc) -> {
                     if (tag != launchTag) {
                         // obsolete
                         nnc.disconnect();
@@ -510,7 +510,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
                 ConnectPriority.MEDIUM,
                 // onSuccess (connected)
-                (nnc) -> {
+                (Consumer<NetworkNodeConnection>) (nnc) -> {
                     if (tag != launchTag) {
                         // obsolete
                         nnc.disconnect();
@@ -521,7 +521,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                                 if (tag == launchTag) {
                                     // retrieve location data
                                     // check that there is proper mode set first
-                                    Action1<NetworkNode> successCallback = nnode -> {
+                                    Consumer<NetworkNode> successCallback = nnode -> {
                                         // on success
                                         if (!nnode.isAnchor()) {
                                             failed[0] = true;
@@ -570,7 +570,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                                     } else {
                                         // there is already set proper location data mode, we should have also received proper distances
                                         // call success callback immediately
-                                        successCallback.call(networkNode);
+                                        successCallback.accept(networkNode);
                                     }
                                 }
                             },
@@ -621,7 +621,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         nnc.observeLocationData(distanceCollector);
     }
 
-    private void retrieveDistances(NetworkNodeConnection nnc, Action1<NetworkNode> successCallback, Action1<Fail> failCallback) {
+    private void retrieveDistances(NetworkNodeConnection nnc, Consumer<NetworkNode> successCallback, Consumer<Fail> failCallback) {
         if (Constants.DEBUG) {
             log.d("retrieving distances");
         }
@@ -794,29 +794,29 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
                     ConnectPriority.MEDIUM,
                     // onConnected
-                    (nnc) -> {
-                        if (tag != launchTag) {
-                            // obsolete
-                            nnc.disconnect();
-                            return;
-                        }
-                        nnc.updateOtherSideEntity(b.build(), false, (writeEffect) -> {
-                                    // onSuccess
-                                    // regardless launch tag, this went through!
-                                    // save the position to our node copy
-                                    node.setPosition(computedPosition);
-                                    // let the model manager know that there is a change
-                                    networkNodeManager.updateAnchorPosition(node.getId(), computedPosition);
-                                    // disconnect now
-                                    nnc.disconnect();
-                                    failed[0] = false;
-                                }, (fail) -> {
-                                    // we will get disconnected automatically
-                                    appLog.we("failed to save position", fail.errorCode, deviceTag);
-                                    failed[0] = true;
-                                }
-                        );
-                    },
+                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                    if (tag != launchTag) {
+                        // obsolete
+                        nnc.disconnect();
+                        return;
+                    }
+                    nnc.updateOtherSideEntity(b.build(), false, (writeEffect) -> {
+                                // onSuccess
+                                // regardless launch tag, this went through!
+                                // save the position to our node copy
+                                node.setPosition(computedPosition);
+                                // let the model manager know that there is a change
+                                networkNodeManager.updateAnchorPosition(node.getId(), computedPosition);
+                                // disconnect now
+                                nnc.disconnect();
+                                failed[0] = false;
+                            }, (fail) -> {
+                                // we will get disconnected automatically
+                                appLog.we("failed to save position", fail.errorCode, deviceTag);
+                                failed[0] = true;
+                            }
+                    );
+                },
                     // onFail (connect)
                     (connection,fail) -> {
                         if (failed[0] == null) {

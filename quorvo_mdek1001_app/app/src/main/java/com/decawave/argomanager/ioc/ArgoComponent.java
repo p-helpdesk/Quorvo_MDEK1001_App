@@ -11,7 +11,6 @@ import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.components.AutoPositioningManager;
 import com.decawave.argomanager.components.DiscoveryManager;
 import com.decawave.argomanager.components.NetworkNodeManager;
-import com.decawave.argomanager.components.impl.UniqueReorderingStack;
 import com.decawave.argomanager.debuglog.ApplicationComponentLog;
 import com.decawave.argomanager.ui.MainActivity;
 import com.decawave.argomanager.ui.dialog.NetworkPickerDialogFragment;
@@ -32,7 +31,6 @@ import com.decawave.argomanager.ui.fragment.NodeDetailFragment;
 import com.decawave.argomanager.ui.fragment.OverviewFragment;
 import com.decawave.argomanager.ui.fragment.SettingsFragment;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
-import com.decawave.argomanager.util.gatt.GattDecoderCache;
 
 import javax.inject.Singleton;
 
@@ -87,7 +85,7 @@ public interface ArgoComponent {
 
     void inject(InstructionsFragment instructionsFragment);
 
-    UniqueReorderingStack<Short> getActiveNetworkIdStack();
+    //UniqueReorderingStack<Short> getActiveNetworkIdStack();
 
     BleConnectionApi getBleConnectionApi();
 
@@ -99,6 +97,6 @@ public interface ArgoComponent {
 
     NetworkNodeManager getNetworkNodeManager();
 
-    GattDecoderCache getGattDecoderCache();
+    //GattDecoderCache getGattDecoderCache();
 
 }

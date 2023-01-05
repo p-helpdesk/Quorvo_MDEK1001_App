@@ -6,6 +6,9 @@
 
 package com.decawave.argomanager.components.impl;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+import static java.lang.Math.signum;
+
 import android.os.SystemClock;
 
 import com.annimon.stream.Stream;
@@ -43,15 +46,13 @@ import com.google.common.collect.Maps;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import eu.kryl.android.common.Constants;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
-import static java.lang.Math.signum;
 
 /**
  * The only responsibility of this observer is to get more frequent location
@@ -93,7 +94,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         public void run() {
             if (Constants.DEBUG) log.d("rescanObserveAndSchedule");
             Stream.of(blePresenceApi.getPresentNodes())
-                    .map(networkNodeManager::getNode)
+                    .map( n -> networkNodeManager.getNode(Long.parseLong(n)))
                     // bugfix: it is possible that the node is not registered/persisted in repository yet
                     .filter(LocationDataObserverImpl::nonNull)
                     .filter(LocationDataObserverImpl.this::observableCandidate)
@@ -286,7 +287,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
                     String pendingNodeAddress = pendingProxyConnection.getOtherSideAddress();
                     float pendingNodeFitness = fitnessEvaluator.getNodeFitness(pendingNodeAddress);
                     float candidateFitness = fitnessEvaluator.getNodeFitness(bleAddress);
-                    NetworkNodeEnhanced pendingNode = networkNodeManager.getNode(pendingNodeAddress);
+                    NetworkNodeEnhanced pendingNode = networkNodeManager.getNode(Long.parseLong(pendingNodeAddress));
                     if (candidateFitness > pendingNodeFitness || !pendingNode.isAnchor() || pendingNode.asPlainNode().getUwbMode() != UwbMode.PASSIVE) {
                         if (Constants.DEBUG) {
                             log.d("found a new proxy candidate " + bleAddress
@@ -304,7 +305,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         } else {
             // this node is a tag
             // check if this is a tag configured to be tracked directly
-            TrackMode trackMode = networkNodeManager.getNode(bleAddress).getTrackMode();
+            TrackMode trackMode = networkNodeManager.getNode(Long.parseLong(bleAddress)).getTrackMode();
             if (trackMode == TrackMode.TRACKED_POSITION_AND_RANGING) {
                 // we must track this node directly
                 startDirectLocationDataObservation(node);
@@ -324,7 +325,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
 
     private List<NetworkNodeConnection> getConnections(Predicate<NetworkNodeEnhanced> filter) {
         return Stream.of(connectionByNetworkNodeId.values())
-                .filter((conn) -> filter.test(networkNodeManager.getNode(conn.getOtherSideAddress())))
+                .filter((conn) -> filter.test(networkNodeManager.getNode(Long.parseLong(conn.getOtherSideAddress()))))
                 .toList();
     }
 
@@ -337,7 +338,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         // connect and start observation
         NetworkNodeConnection newConnection = bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM,
                 // onConnected
-                (nodeConnection) -> {
+                (Consumer<NetworkNodeConnection>) (nodeConnection) -> {
                     if (tag != LocationDataObserverImpl.this.tag) {
                         // ignore
                         log.d("ignoring overlapping observe callback invocation");
@@ -428,7 +429,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         // connect and start observation
         NetworkNodeConnection newConnection = bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.HIGH,
                 // onConnected
-                (nodeConnection) -> {
+                (Consumer<NetworkNodeConnection>) (nodeConnection) -> {
                     if (tag != LocationDataObserverImpl.this.tag) {
                         // ignore
                         log.d("ignoring overlapping observe callback invocation");

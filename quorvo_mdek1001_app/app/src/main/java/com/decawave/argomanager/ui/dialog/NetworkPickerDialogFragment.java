@@ -44,7 +44,6 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.kryl.android.appcompat.dialogs.AlertDialog;
 import eu.kryl.android.common.hub.InterfaceHub;
@@ -74,9 +73,8 @@ public class NetworkPickerDialogFragment extends DialogFragment {
     // * INPUT
     // ***************************
 
-    @SuppressWarnings("NullableProblems")
     @NotNull
-    private NetworkModel[] networks;
+    private final NetworkModel[] networks;
 
     @Nullable
     // we have integer here because we want to represent new network with a special out-of-range value
@@ -122,7 +120,7 @@ public class NetworkPickerDialogFragment extends DialogFragment {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle bundle) {
+    public void onSaveInstanceState(@NotNull Bundle bundle) {
         super.onSaveInstanceState(bundle);
         if (selectedNetworkId != null) {
             bundle.putInt(BK_SELECTED_NETWORK_ID, selectedNetworkId);
@@ -241,7 +239,7 @@ public class NetworkPickerDialogFragment extends DialogFragment {
 
 
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public @NotNull ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             View v;
             switch (viewType) {
@@ -267,7 +265,7 @@ public class NetworkPickerDialogFragment extends DialogFragment {
         }
 
         @Override
-        public void onBindViewHolder(final ViewHolder holder, int position) {
+        public void onBindViewHolder(final @NotNull ViewHolder holder, int position) {
             if (Constants.DEBUG) log.d("onBindViewHolder: position = " + position);
             holder.bind(networks[position]);
         }
@@ -279,6 +277,7 @@ public class NetworkPickerDialogFragment extends DialogFragment {
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @SuppressWarnings("ConstantConditions")
     private void onNewSelectedNetwork() {
         if (Constants.DEBUG) log.d("onNewSelectedNetwork");
@@ -310,18 +309,19 @@ public class NetworkPickerDialogFragment extends DialogFragment {
      * View holder
      */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.radio)
+        //@BindView(R.id.radio)
         RadioButton rb;
-        @BindView(R.id.tvNetworkName) @Nullable
+        //@BindView(R.id.tvNetworkName) @Nullable
         TextView tvNetworkName;
-        @BindView(R.id.etNewNetworkName) @Nullable
+        //@BindView(R.id.etNewNetworkName) @Nullable
         EditText etNewNetworkName;
-        @BindView(R.id.focusableView) @Nullable
+        //@BindView(R.id.focusableView) @Nullable
         View focusableView;
         private View container;
         // data bean
         NetworkModel network;
 
+        @SuppressLint("ClickableViewAccessibility")
         ViewHolder(View v) {
             super(v);
             // extract references to visual elements

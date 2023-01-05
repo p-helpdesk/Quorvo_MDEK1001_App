@@ -6,6 +6,11 @@
 
 package com.decawave.argomanager.ui.view;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DENSITY_SCALING_FACTOR;
+import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DIP_SCALING_FACTOR;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,8 +20,6 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.Typeface;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -26,7 +29,11 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+
 import com.annimon.stream.Stream;
+import com.annimon.stream.function.Consumer;
 import com.annimon.stream.function.Function;
 import com.annimon.stream.function.Supplier;
 import com.decawave.argo.api.struct.AnchorNode;
@@ -63,12 +70,6 @@ import butterknife.ButterKnife;
 import eu.kryl.android.common.Animator;
 import eu.kryl.android.common.Constants;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action1;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
-import static com.decawave.argomanager.ArgoApp.uiHandler;
-import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DENSITY_SCALING_FACTOR;
-import static com.decawave.argomanager.ui.DisplayMetrics.LCD_DIP_SCALING_FACTOR;
 
 /**
  * Network view.
@@ -218,7 +219,7 @@ public class GridView extends View {
     private boolean visibleNodesIndexingScheduled;
     private FloorPlan floorPlan;
     private boolean floorPlanBound = true;
-    private Action1<FloorPlan> floorPlanChangedCallback;
+    private Consumer<FloorPlan> floorPlanChangedCallback;
     private long firstShowSysTime;
 
 
@@ -244,7 +245,7 @@ public class GridView extends View {
     // gesture detectors
     private ScaleGestureDetector mScaleGestureDetector;
     private GestureDetector mGestureDetector;
-    private Action1<NetworkNode> nodeClickListener;
+    private Consumer<NetworkNode> nodeClickListener;
 
     //
     private Function<Short, NetworkNode> networkNodeByShortIdResolver;
@@ -430,7 +431,7 @@ public class GridView extends View {
                                 Supplier<Boolean> highlightInconsistentRangingDistances,
                                 Function<String, Boolean> anchorPresenceResolver,
                                 Function<String, Boolean> tagPresenceResolver,
-                                Action1<FloorPlan> floorPlanChangedCallback,
+                                Consumer<FloorPlan> floorPlanChangedCallback,
                                 LengthUnit lengthUnit) {
         this.networkNodeByShortIdResolver = networkNodeByShortIdResolver;
         this.trackModeResolver = trackModeResolver;
@@ -1277,7 +1278,7 @@ public class GridView extends View {
                         setupBaseFpMatrixFromFpProperties();
                         setupDrawFpMatrix();
                         // notify callback
-                        if (floorPlanChangedCallback != null) floorPlanChangedCallback.call(floorPlan);
+                        if (floorPlanChangedCallback != null) floorPlanChangedCallback.accept(floorPlan);
                     }
                     invalidate();
                     return true;
@@ -1319,7 +1320,7 @@ public class GridView extends View {
             //
             NetworkNode node = lookupClosest(x, y);
             if (node != null && nodeClickListener != null) {
-                nodeClickListener.call(node);
+                nodeClickListener.accept(node);
             }
             return true;
         }
@@ -1362,7 +1363,7 @@ public class GridView extends View {
                     setupBaseFpMatrixFromFpProperties();
                     setupDrawFpMatrix();
                     // notify callback
-                    if (floorPlanChangedCallback != null) floorPlanChangedCallback.call(floorPlan);
+                    if (floorPlanChangedCallback != null) floorPlanChangedCallback.accept(floorPlan);
                 }
             }
             invalidate();
@@ -2067,7 +2068,7 @@ public class GridView extends View {
         }
     }
 
-    public void setNodeClickListener(Action1<NetworkNode> nodeClickListener) {
+    public void setNodeClickListener(Consumer<NetworkNode> nodeClickListener) {
         this.nodeClickListener = nodeClickListener;
     }
 

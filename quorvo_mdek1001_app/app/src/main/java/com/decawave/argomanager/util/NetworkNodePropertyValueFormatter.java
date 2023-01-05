@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.util;
 
-import com.annimon.stream.function.FunctionalInterface;
+//import com.annimon.stream.function.FunctionalInterface;
 
 /**
  * Argo project.

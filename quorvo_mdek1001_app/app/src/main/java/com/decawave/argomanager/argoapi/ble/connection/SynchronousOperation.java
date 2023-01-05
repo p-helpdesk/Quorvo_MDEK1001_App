@@ -8,6 +8,8 @@ package com.decawave.argomanager.argoapi.ble.connection;
 
 import com.decawave.argomanager.argoapi.ble.GattInteractionFsm;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -46,7 +48,7 @@ class SynchronousOperation implements GenericOperation {
     }
 
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return "SynchronousOperation{" +
                 "dependsOn=" + dependsOn +
                 '}';

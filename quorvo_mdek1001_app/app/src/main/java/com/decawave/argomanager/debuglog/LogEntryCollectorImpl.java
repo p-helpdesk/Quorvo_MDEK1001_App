@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.debuglog;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.decawave.argomanager.components.ErrorManager;
 

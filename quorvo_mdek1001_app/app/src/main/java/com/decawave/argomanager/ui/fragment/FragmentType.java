@@ -80,7 +80,7 @@ public enum FragmentType {
             }
         }
     }),
-    AP_PREVIEW(R.string.ap_preview, (x) -> new ApPreviewFragment());
+    AP_PREVIEW(R.string.ap_preview, (x) -> new ApPreviewFragment()), INSTRUCTIONS(R.string.screen_title_instructions, (x) -> new InstructionsFragment());
     //INSTRUCTIONS(R.string.screen_title_instructions, (x) -> new InstructionsFragment());
 
     public final boolean mainScreen;

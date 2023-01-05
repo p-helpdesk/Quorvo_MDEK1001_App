@@ -10,7 +10,8 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argomanager.ble.BleDevice;
 import com.decawave.argomanager.ble.BleGatt;

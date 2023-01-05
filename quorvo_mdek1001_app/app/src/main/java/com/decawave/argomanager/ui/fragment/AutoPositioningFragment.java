@@ -6,11 +6,8 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +16,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.annimon.stream.Collectors;
 import com.annimon.stream.Stream;
@@ -44,6 +45,8 @@ import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
 import com.emtronics.dragsortrecycler.DragSortRecycler;
 import com.google.common.base.Preconditions;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Set;
 
@@ -87,9 +90,9 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
 
     // adapter + node list
     private AutoPositioningNodeListAdapter adapter;
-    private boolean snackbarShown;
+    //private boolean snackbarShown;
 
-    private IhConnectionStateListener connectionStateListener = new IhConnectionStateListener() {
+    private final IhConnectionStateListener connectionStateListener = new IhConnectionStateListener() {
 
         @Override
         public void onConnecting(String bleAddress) {
@@ -115,7 +118,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
 
     };
 
-    private IhAutoPositioningManagerListener autoPositioningManagerListener = new IhAutoPositioningManagerListener() {
+    private final IhAutoPositioningManagerListener autoPositioningManagerListener = new IhAutoPositioningManagerListener() {
 
         @Override
         public void onNodeStateChanged(long nodeId) {
@@ -141,6 +144,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
             doCompleteUpdate();
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         private void doCompleteUpdate() {
             if (adapter != null) {
                 adapter.notifyDataSetChanged();
@@ -149,7 +153,6 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         }
 
     };
-    private DragSortRecycler dragSortRecycler;
 
     public AutoPositioningFragment() {
         super(FragmentType.AUTO_POSITIONING);
@@ -170,7 +173,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
     }
 
     public static void showApInstructions(FragmentManager fragmentManager) {
-        MainActivity.showFragment(FragmentType.INSTRUCTIONS, fragmentManager, InstructionsFragment.getBundleForAnchor("autopositioning"));
+        MainActivity.showFragment(FragmentType.DISCOVERY, fragmentManager, InstructionsFragment.getBundleForAnchor("autopositioning"));
     }
 
     @Nullable
@@ -182,7 +185,8 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         // TODO: is this visually OK?
         //((SimpleItemAnimator) nodeList.getItemAnimator()).setSupportsChangeAnimations(false);
         // drag-n-drop support
-        dragSortRecycler = new DragSortRecycler() {
+        // propagate
+        DragSortRecycler dragSortRecycler = new DragSortRecycler() {
             @Override
             protected boolean canDragOver(int position) {
                 return position > 0;
@@ -256,6 +260,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onResume() {
         super.onResume();
@@ -294,7 +299,6 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
     }
 
     private void setupAdapter() {
-        //noinspection Convert2MethodRef
         adapter = new AutoPositioningNodeListAdapter(
                 getMainActivity(),
                 autoPositioningManager,
@@ -307,13 +311,16 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         boolean allDisconnected = bleConnectionApi.allConnectionsClosed();
         switch (autoPositioningManager.getApplicationState()) {
             case CHECKING_INITIATOR:
+            case COLLECTING_DISTANCES:
                 setButtonState(true, R.string.btn_cancel);
                 break;
             case INITIATOR_CHECK_FAILED:
             case INITIATOR_CHECK_MISSING:
-                setButtonState(allDisconnected, false);
-                break;
             case INITIATOR_CHECK_TERMINATED:
+            case DISTANCE_COLLECTION_SUCCESS_POSITION_COMPUTE_FAIL:
+            case NOT_STARTED:
+            case DISTANCE_COLLECTION_TERMINATED:
+            case POSITIONS_SAVE_SUCCESS:
                 setButtonState(allDisconnected, false);
                 break;
             case DISTANCE_COLLECTION_FAILED:
@@ -322,21 +329,6 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
                 } else {
                     setButtonState(allDisconnected, false);
                 }
-                break;
-            case DISTANCE_COLLECTION_SUCCESS_POSITION_COMPUTE_FAIL:
-                setButtonState(allDisconnected, false);
-                break;
-            case NOT_STARTED:
-                setButtonState(allDisconnected, false);
-                break;
-            case DISTANCE_COLLECTION_TERMINATED:
-                setButtonState(allDisconnected, false);
-                break;
-            case POSITIONS_SAVE_SUCCESS:
-                setButtonState(allDisconnected, false);
-                break;
-            case COLLECTING_DISTANCES:
-                setButtonState(true, R.string.btn_cancel);
                 break;
             case SAVING_POSITIONS:
                 setButtonState(R.string.btn_cancel);
@@ -347,8 +339,6 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
                 setButtonState(allDisconnected, enableSave && allDisconnected);
                 break;
             case POSITIONS_SAVE_FAILED:
-                setButtonState(allDisconnected, allDisconnected);
-                break;
             case POSITIONS_SAVE_TERMINATED:
                 setButtonState(allDisconnected, allDisconnected);
                 break;
@@ -426,6 +416,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onNewZAxisValue(String zAxisValue) {
         autoPositioningManager.setZaxis(Util.parseLength(zAxisValue, appPreferenceAccessor.getLengthUnit()));

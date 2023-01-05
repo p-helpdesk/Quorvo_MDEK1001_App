@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.ui.listadapter.discovery;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.annimon.stream.function.Predicate;
 import com.annimon.stream.function.Supplier;

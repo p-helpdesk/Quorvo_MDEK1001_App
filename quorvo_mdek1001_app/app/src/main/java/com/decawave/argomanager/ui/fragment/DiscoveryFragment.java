@@ -8,6 +8,7 @@ package com.decawave.argomanager.ui.fragment;
 
 import static com.decawave.argomanager.util.Util.formatAsHexa;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
@@ -53,10 +54,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.SelectableAdapter;
@@ -116,7 +117,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
     @Inject
     BleConnectionApi bleConnectionApi;
 
-    @BindView(R.id.swipeRefreshLayout)
+    //@BindView(R.id.swipeRefreshLayout)
     SwipeRefreshLayout refreshLayout;
 
     // state
@@ -162,7 +163,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
         recyclerView.setLayoutManager(new NpaLinearLayoutManager(getActivity()));
         // decorate with proper spacing
         recyclerView.addItemDecoration(
-                new FlexibleItemDecoration(getActivity())
+                new FlexibleItemDecoration(Objects.requireNonNull(getActivity()))
                 .addItemViewType(R.layout.li_discovery_info, 0, 0, 0, 4)
                 .addItemViewType(R.layout.li_discovered_network, 0, 4, 0, 4)
                 .withSectionGapOffset(16)
@@ -174,7 +175,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
                 .withSectionGapOffset(16)
                 .withEdge(true));
                 // do not blink on item change - turn off animations
-        ((SimpleItemAnimator) recyclerView.getItemAnimator()).setSupportsChangeAnimations(false);
+        ((SimpleItemAnimator) Objects.requireNonNull(recyclerView.getItemAnimator())).setSupportsChangeAnimations(false);
         // configure the adapter
         Preconditions.checkState(recyclerView.getAdapter() == null);
         adapter = new DiscoveryListAdapter(networkNodeManager, discoveryManager, getMainActivity(), appPreferenceAccessor,
@@ -182,7 +183,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
         adapter.setDisplayHeadersAtStartUp(true).setStickyHeaders(true);
 
         recyclerView.setAdapter(adapter);
-        initializeActionModeHelper(SelectableAdapter.Mode.IDLE);
+        initializeActionModeHelper();
         //
         if (savedInstanceState != null) {
             adapter.onRestoreInstanceState(savedInstanceState);
@@ -203,7 +204,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
         return v;
     }
 
-    void initializeActionModeHelper(@SelectableAdapter.Mode int mode) {
+    void initializeActionModeHelper() {
         mActionModeHelper = new ActionModeHelper((FlexibleAdapter) adapter, R.menu.discovery_multi_select_menu, (androidx.appcompat.view.ActionMode.Callback) this) {
 
             @Override
@@ -213,7 +214,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
                 }
             }
 
-        }.withDefaultMode(mode);
+        }.withDefaultMode(SelectableAdapter.Mode.IDLE);
         adapter.addListener((FlexibleAdapter.OnItemLongClickListener) position -> {
             // allow multi-select only when a previous assignment is not running
             if (networkAssignmentRunner == null || networkAssignmentRunner.getOverallStatus().terminal) {
@@ -240,6 +241,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
         });
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onResume() {
         super.onResume();
@@ -351,7 +353,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NotNull Bundle outState) {
         adapter.onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }

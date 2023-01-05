@@ -21,6 +21,7 @@ import com.decawave.argo.api.interaction.LocationData;
 import com.decawave.argo.api.interaction.NetworkNodeConnection;
 import com.decawave.argo.api.interaction.ProxyPosition;
 import com.decawave.argo.api.struct.ConnectPriority;
+import com.decawave.argo.api.struct.FirmwareMeta;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argo.api.struct.RangingAnchor;
 import com.decawave.argo.api.struct.TagNode;
@@ -47,14 +48,13 @@ import com.google.common.base.Preconditions;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
-
-import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
@@ -79,10 +79,10 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
     private final ConcurrentOperationQueue concurrentQueue;
     // serializes connect routine (parallelism = 1)
     private final ConcurrentOperationQueue connectQueue;
-    private ConnectionContainer connections;
-    private Set<String> inError;
-    private Set<String> ignoreSessionErrors;
-    private Map<String, Boolean> lastSessionSuccessful;
+    private final ConnectionContainer connections;
+    private final Set<String> inError;
+    private final Set<String> ignoreSessionErrors;
+    private final Map<String, Boolean> lastSessionSuccessful;
     private ObservationListener observationListener;
 
 
@@ -98,7 +98,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
 
     }
 
-    @Inject
+    //@Inject
     BleConnectionApiImpl(BleAdapter bleAdapter,
                          NetworkNodeManager networkNodeManager,
                          LogBlockStatus logBlockStatus,
@@ -188,7 +188,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
         };
     }
 
-    private static int getProxyPresenceTimeout(TagNode tagNode) {
+    private static int getProxyPresenceTimeout(@NotNull TagNode tagNode) {
         // 5s is default minimum
         int i = 5000;
         Integer[] bis = { tagNode.getStationaryUpdateRate(), tagNode.getUpdateRate() };
@@ -214,7 +214,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
             log.d("connectToNetworkNode: " + "address = [" + address + "]");
         }
         // initiate the connection with concurrent operation limit
-        ConcurrentOperationQueue.Token token[] = { null };
+        ConcurrentOperationQueue.Token[] token = { null };
         BleDevice bleDevice = bleAdapter.getRemoteDevice(address);
         // create the connection wrapper
         NetworkNodeConnectionWrapper connectionWrapper = new NetworkNodeConnectionWrapper(address);
@@ -264,6 +264,16 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
                                 () -> gattDecoderCache.getDecoder(address),
                                 bleAddress -> processOnDisconnecting(bleAddress, false),
                                 commonNetworkNodeInterceptor) {
+
+                            @Override
+                            public void changeMtu(int mtu, Runnable onSuccessCallback, Consumer<Fail> onFailCallback) {
+
+                            }
+
+                            @Override
+                            public void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData, @Nullable Runnable onSuccessCallback, @Nullable Consumer<Integer> progressListener, @Nullable Consumer<Fail> onFailCallback) {
+
+                            }
 
                             // override the location observation - we need to be notified about start/stop events
                             @Override
@@ -356,10 +366,10 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
                             reportedOnDisconnecting = true;
                             // did the notification arrive from low-level
                             if (notifyConnection) {
-                                NetworkNodeConnection delegate = connectionWrapper.getDelegate();
+                                NetworkNodeBleConnectionImpl delegate = connectionWrapper.getDelegate();
                                 if (delegate != null) {
                                     // let the instance know - directly
-                                    ((NetworkNodeBleConnectionImpl) delegate).onDisconnecting();
+                                    delegate.onDisconnecting();
                                 }
                             }
                             _onDisconnecting(address);
@@ -372,10 +382,10 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
                             Preconditions.checkState(innerConnectReported, address);
                         }
                         // propagate to callbacks now
-                        NetworkNodeConnection delegate = connectionWrapper.getDelegate();
+                        NetworkNodeBleConnectionImpl delegate = connectionWrapper.getDelegate();
                         if (delegate != null) {
                             // let the instance know - directly
-                            ((NetworkNodeBleConnectionImpl) delegate).onDisconnected();
+                            delegate.onDisconnected();
                         } else {
                             // we have just the wrapper
                             connectionWrapper.setInjectedState(ConnectionState.CLOSED);

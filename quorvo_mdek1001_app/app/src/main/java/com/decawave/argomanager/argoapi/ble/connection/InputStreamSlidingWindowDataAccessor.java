@@ -85,7 +85,6 @@ class InputStreamSlidingWindowDataAccessor implements SlidingWindowDataAccessor 
     private void skipAhead(int diff, int absolutePosition) throws IOException {
         if (Constants.DEBUG) {
             // reset position never decreases
-            Preconditions.checkNotNull(resetPosition <= absolutePosition);
         }
         long skipped = stream.skip(diff);
         if (skipped != diff) {

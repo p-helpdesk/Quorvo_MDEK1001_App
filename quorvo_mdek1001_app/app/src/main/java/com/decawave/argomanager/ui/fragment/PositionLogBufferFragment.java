@@ -6,8 +6,6 @@
 
 package com.decawave.argomanager.ui.fragment;
 
-import android.support.v7.widget.RecyclerView;
-
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;

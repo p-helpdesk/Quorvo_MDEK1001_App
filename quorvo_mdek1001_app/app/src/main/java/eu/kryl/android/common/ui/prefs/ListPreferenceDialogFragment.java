@@ -20,9 +20,10 @@ package eu.kryl.android.common.ui.prefs;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 
 import eu.kryl.android.appcompat.dialogs.AlertDialog;
 import eu.kryl.android.common.hub.InterfaceHub;

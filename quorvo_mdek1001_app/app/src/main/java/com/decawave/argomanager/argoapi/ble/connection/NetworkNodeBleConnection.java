@@ -27,8 +27,6 @@ import java.util.function.Consumer;
  */
 public interface NetworkNodeBleConnection extends NetworkNodeConnection {
 
-    void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData, io.reactivex.functions.@Nullable Action onSuccessCallback, @Nullable Consumer<Integer> progressListener, @Nullable Consumer<Fail> onFailCallback);
-
     void uploadFirmware(FirmwareMeta firmwareMeta,
                         InputStream firmwareData,
                         @Nullable Notification.Action onSuccessCallback,
@@ -39,4 +37,5 @@ public interface NetworkNodeBleConnection extends NetworkNodeConnection {
 
     void changeMtu(int mtu, @Nullable Notification.Action onSuccessCallback, @Nullable Consumer<Fail> onFailCallback);
 
+    void changeMtu(int mtu, Runnable onSuccessCallback, Consumer<Fail> onFailCallback);
 }

@@ -8,7 +8,6 @@ package com.decawave.argomanager.ui.fragment;
 
 import android.graphics.PointF;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,8 @@ import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.ui.view.FloorPlan;
 import com.decawave.argomanager.ui.view.GridView;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 

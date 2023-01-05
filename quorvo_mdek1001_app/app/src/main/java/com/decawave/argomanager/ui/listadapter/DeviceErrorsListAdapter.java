@@ -6,13 +6,16 @@
 
 package com.decawave.argomanager.ui.listadapter;
 
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.components.ErrorManager;
@@ -32,8 +35,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  *

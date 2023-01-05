@@ -6,6 +6,7 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -65,9 +66,11 @@ import com.decawave.argomanager.util.ConnectionUtil;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
 import com.decawave.argomanager.util.Util;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -120,12 +123,12 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
     private MenuItem renameNetworkMenuItem;
     private MenuItem firmwareStatusMenuItem;
     private MenuItem autoPositioningMenuItem;
-    private Set<String> ignoredNodeChanges = new HashSet<>();
+    private final Set<String> ignoredNodeChanges = new HashSet<>();
     //
     private Bundle savedInstanceState;
     private View noNetworkView;
     private SwipeRefreshLayout refreshLayout;
-    private IhPresenceApiListener presenceApiListener = new IhPresenceApiListener() {
+    private final IhPresenceApiListener presenceApiListener = new IhPresenceApiListener() {
         @Override
         public void onNodePresent(String bleAddress) {
             if (Constants.DEBUG) {
@@ -165,8 +168,9 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
 
     };
 
-    private IhNetworkChangeListener networkChangeListener = new IhNetworkChangeListenerAdapter() {
+    private final IhNetworkChangeListener networkChangeListener = new IhNetworkChangeListenerAdapter() {
 
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         public void onNetworkUpdated(short networkId) {
             if (!networkNodeManager.isActiveNetworkId(networkId)) {
@@ -187,7 +191,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
 
     };
 
-    private IhPersistedNodeChangeListener persistedNodeChangeListener = new IhPersistedNodeChangeListener() {
+    private final IhPersistedNodeChangeListener persistedNodeChangeListener = new IhPersistedNodeChangeListener() {
 
         @Override
         public void onNodeUpdatedAndOrAddedToNetwork(short networkId, NetworkNodeEnhanced node) {
@@ -229,8 +233,8 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
         }
 
         @Override
-        public int getSwipeDirs(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-            int position = viewHolder.getAdapterPosition();
+        public int getSwipeDirs(@NotNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+            int position = viewHolder.getBindingAdapterPosition();
             if (position == 0) {
                 // swipe not allowed on summary
                 return 0;
@@ -243,12 +247,12 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
         }
 
         @Override
-        public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+        public boolean onMove(@NotNull RecyclerView recyclerView, RecyclerView.@NotNull ViewHolder viewHolder, RecyclerView.@NotNull ViewHolder target) {
             throw new IllegalStateException("drag not supported");
         }
 
         @Override
-        public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+        public void onSwiped(RecyclerView.@NotNull ViewHolder viewHolder, int direction) {
             Long nodeId = adapter.getNodeIdBehindViewHolder(viewHolder);
             if (nodeId != null) {
                 String nodeBle = networkNodeManager.idToBle(nodeId);
@@ -369,7 +373,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.overview, container, false);
         nodeList = (RecyclerView) v.findViewById(R.id.nodeList);
-        ((SimpleItemAnimator) nodeList.getItemAnimator()).setSupportsChangeAnimations(false);
+        ((SimpleItemAnimator) Objects.requireNonNull(nodeList.getItemAnimator())).setSupportsChangeAnimations(false);
         noNetworkView = v.findViewById(R.id.noNetwork);
         refreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipeRefreshLayout);
         refreshLayout.setDistanceToTriggerSync(DISTANCE_TO_TRIGGER_SYNC);
@@ -419,6 +423,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void updateUi() {
         NetworkModel network = networkNodeManager.getActiveNetwork();
         if (network == null) {
@@ -489,7 +494,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
             if (nodeBle != null) {
                 Integer position = adapter.getNodePosition(nodeBle);
                 if (position != null) {
-                    nodeList.getLayoutManager().scrollToPosition(position);
+                    Objects.requireNonNull(nodeList.getLayoutManager()).scrollToPosition(position);
                 }
             }
         }
@@ -549,9 +554,11 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
         Integer position = adapter == null ? null : adapter.getNodePosition(bleAddress);
         if (position != null) {
             LinearLayoutManager layoutManager = (LinearLayoutManager) nodeList.getLayoutManager();
+            assert layoutManager != null;
             if (position >= layoutManager.findFirstVisibleItemPosition() && position <= layoutManager.findLastVisibleItemPosition()) {
                 // let the consumer modify the view/viewholder
                 View view = nodeList.getLayoutManager().findViewByPosition(position);
+                assert view != null;
                 if (bleAddress.equals(view.getTag())) {
                     NetworkOverviewNodeListAdapter.NetworkNodeListItemHolder viewHolder = (NetworkOverviewNodeListAdapter.NetworkNodeListItemHolder) nodeList.getChildViewHolder(view);
                     updateViewConsumer.accept(viewHolder);
@@ -601,7 +608,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NotNull Bundle outState) {
         if (adapter != null) {
             outState.putBundle(BK_ADAPTER_STATE, adapter.saveState());
         }
@@ -652,7 +659,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
 
     @Override
     public void onConnecting(String bleAddress) {
-        NetworkNodeEnhanced node = networkNodeManager.getNode(bleAddress);
+        NetworkNodeEnhanced node = networkNodeManager.getNode(Long.parseLong(bleAddress));
         if (ignoredNodeChanges.contains(bleAddress) || node == null || !networkNodeManager.isInActiveNetwork(node)) {
             return;
         }
@@ -661,7 +668,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
 
     @Override
     public void onDisconnected(String bleAddress, Boolean sessionSuccess) {
-        NetworkNodeEnhanced node = networkNodeManager.getNode(bleAddress);
+        NetworkNodeEnhanced node = networkNodeManager.getNode(Long.parseLong(bleAddress));
         if (ignoredNodeChanges.contains(bleAddress) || node == null || !networkNodeManager.isInActiveNetwork(node)) {
             return;
         }

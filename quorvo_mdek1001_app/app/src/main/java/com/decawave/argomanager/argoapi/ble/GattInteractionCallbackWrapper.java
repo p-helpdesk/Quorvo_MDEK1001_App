@@ -47,30 +47,30 @@ class GattInteractionCallbackWrapper implements GattInteractionCallback {
         delegate.onCharacteristicWriteComplete(gatt);
     }
 
-    //@Override
+    @Override
     public void onFail(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         delegate.onFail(gatt, errorCode, failMessage);
     }
 
-    //@Override
+    @Override
     public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        GattInteractionCallback.onCharacteristicReadFailed(gatt, errorCode, failMessage);
+        //GattInteractionCallback.onCharacteristicReadFailed(gatt, errorCode, failMessage);
     }
 
 
-    //@Override
+    @Override
     public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         delegate.onCharacteristicWriteFailed(gatt, errorCode, failMessage);
     }
 
 
 
-    //@Override
+    @Override
     public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        GattInteractionCallback.onDescriptorReadFailed(gatt, errorCode, failMessage);
+        //GattInteractionCallback.onDescriptorReadFailed(gatt, errorCode, failMessage);
     }
 
-    //@Override
+    @Override
     public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         delegate.onDescriptorWriteFailed(gatt, errorCode, failMessage);
     }
@@ -115,7 +115,7 @@ class GattInteractionCallbackWrapper implements GattInteractionCallback {
         delegate.onMtuChangeComplete(syncGatt);
     }
 
-    //@Override
+    @Override
     public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
         delegate.onMtuChangeFailed(gatt, errorCode, failMessage);
     }

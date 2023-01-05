@@ -93,9 +93,9 @@ public interface GattInteractionCallback {
      *
      * @param gatt identification of the gatt
      */
-    static void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        
-    }
+
+
+    void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after the write sequence failed.
@@ -110,9 +110,8 @@ public interface GattInteractionCallback {
      *
      * @param gatt identification of the gatt
      */
-    static void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
 
-    }
+    void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage);
 
     /**
      * Called after the write sequence failed.

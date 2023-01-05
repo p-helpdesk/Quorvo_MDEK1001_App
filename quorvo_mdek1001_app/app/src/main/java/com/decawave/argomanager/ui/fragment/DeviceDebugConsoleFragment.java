@@ -6,9 +6,9 @@
 
 package com.decawave.argomanager.ui.fragment;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,17 +44,18 @@ import com.decawave.argomanager.ui.view.NodeStateView;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Fragment showing debug logs.
@@ -63,7 +64,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
     private static final ComponentLog log = new ComponentLog(DeviceDebugConsoleFragment.class);
     private static final String BK_DEVICE_BLE_ADDRESS = "DEVICE_BLE";
 
-    private ApplicationComponentLog appLog = ApplicationComponentLog.newComponentLog(log, "CONSOLE");
+    private final ApplicationComponentLog appLog = ApplicationComponentLog.newComponentLog(log, "CONSOLE");
 
     @Inject
     BleConnectionApi bleConnectionApi;
@@ -135,6 +136,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
             Preconditions.checkState(getArguments().containsKey(BK_DEVICE_BLE_ADDRESS), "must set BLE_ADDRESS argument for device");
         }
         // extract device BLE address
+        assert getArguments() != null;
         deviceBleAddress = getArguments().getString(BK_DEVICE_BLE_ADDRESS);
         if (Constants.DEBUG) {
             Preconditions.checkNotNull(deviceBleAddress, "please use getArgsForDevice() to retrieve initial bundle");
@@ -240,7 +242,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
                     Integer oldCounter = proxyPositionCounter.get(proxyPosition.nodeId);
                     proxyPositionCounter.put(proxyPosition.nodeId, oldCounter == null ? 1 : oldCounter + 1);
                 }
-                appLog.d("proxy position notification: " + sb.toString(), deviceTag());
+                appLog.d("proxy position notification: " + sb, deviceTag());
             }
 
             @Override
@@ -269,7 +271,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
     }
 
     private ObserveMode getObserveMode() {
-        NetworkNode node = networkNodeManager.getNode(deviceBleAddress).asPlainNode();
+        NetworkNode node = networkNodeManager.getNode(Long.parseLong(deviceBleAddress)).asPlainNode();
         return node.isAnchor() && node.getUwbMode() == UwbMode.PASSIVE ? ObserveMode.PROXY_POSITIONS : ObserveMode.LOCATION_DATA;
     }
 
@@ -311,7 +313,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
             // create a new connection
             connection = bleConnectionApi.connect(deviceBleAddress,
                     ConnectPriority.HIGH,
-                    (c) -> {
+                    (Consumer<NetworkNodeConnection>) (c) -> {
                         logImp("established connection");
                         // do not disconnect automatically in case of a problem - let the user decide what does
                         // he want to do next
@@ -355,7 +357,7 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
         // disconnect if we are still connected to some other node
         closeConnectionIfOpen(deviceBleAddress, false);
         //
-        NetworkNodeEnhanced networkNode = networkNodeManager.getNode(deviceBleAddress);
+        NetworkNodeEnhanced networkNode = networkNodeManager.getNode(Long.parseLong(deviceBleAddress));
         if (networkNode != null) {
             nodeStateView.setVisibility(View.VISIBLE);
             nodeStateView.setNetworkNode(networkNode.asPlainNode());

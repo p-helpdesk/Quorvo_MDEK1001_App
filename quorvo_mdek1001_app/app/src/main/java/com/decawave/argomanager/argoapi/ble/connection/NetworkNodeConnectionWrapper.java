@@ -32,7 +32,7 @@ import java.util.function.Consumer;
  * Argo project.
  */
 
-abstract class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
+class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection {
     private NetworkNodeBleConnectionImpl delegate;
     private GattInteractionCallback gattCallback;
     private final String bleAddress;
@@ -148,7 +148,7 @@ abstract class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection 
     @Override
     public void uploadFirmware(FirmwareMeta firmwareMeta,
                                InputStream firmwareData,
-                               @Nullable Notification.Action onSuccessCallback,
+                               @Nullable Runnable onSuccessCallback,
                                @Nullable Consumer<Integer> progressListener,
                                @Nullable Consumer<Fail> onFailCallback) {
         if (delegate != null) delegate.uploadFirmware(firmwareMeta, firmwareData, onSuccessCallback, progressListener, onFailCallback);
@@ -216,6 +216,11 @@ abstract class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection 
     }
 
     @Override
+    public void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData, Notification.@Nullable Action onSuccessCallback, @Nullable Consumer<Integer> progressListener, @Nullable Consumer<Fail> onFailCallback) {
+
+    }
+
+    @Override
     public void setConnectionSpeed(@NonNull ConnectionSpeed connectionSpeed) {
         if (Constants.DEBUG) {
             Preconditions.checkNotNull(connectionSpeed);
@@ -225,11 +230,16 @@ abstract class NetworkNodeConnectionWrapper implements NetworkNodeBleConnection 
     }
 
     @Override
-    public void changeMtu(int mtu, Notification.Action onSuccessCallback, Consumer<Fail> onFailCallback) {
+    public void changeMtu(int mtu, Notification.@Nullable Action onSuccessCallback, @Nullable Consumer<Fail> onFailCallback) {
+
+    }
+
+    @Override
+    public void changeMtu(int mtu, Runnable onSuccessCallback, Consumer<Fail> onFailCallback) {
         if (Constants.DEBUG) {
             Preconditions.checkState(mtu >= 23);
         }
-        if (delegate != null) delegate.changeMtu(mtu, onSuccessCallback, onFailCallback);
+        if (delegate != null) delegate.changeMtu(mtu, (Notification.Action) onSuccessCallback, onFailCallback);
         else throw new IllegalStateException("cannot change MTU on non-connected connection!");
     }
 

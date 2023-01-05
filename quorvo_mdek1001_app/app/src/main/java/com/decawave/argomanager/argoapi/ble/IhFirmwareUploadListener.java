@@ -6,18 +6,13 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
-import com.decawave.argo.api.struct.FirmwareMeta;
-
-import java.io.InputStream;
-
 import eu.kryl.android.common.hub.InterfaceHubHandler;
-import rx.functions.Action0;
-import rx.functions.Action1;
+//import rx.functions.Action1;
 
 /**
  * Listens to firmware update events.
  *
- * @see com.decawave.argo.api.interaction.NetworkNodeConnection#uploadFirmware(FirmwareMeta, InputStream, io.reactivex.functions.Action, io.reactivex.functions.Consumer, Action1)
+ * @see //com.decawave.argo.api.interaction.NetworkNodeConnection#uploadFirmware(FirmwareMeta, InputStream, Notification.Action, Consumer, Consumer)
  */
 public interface IhFirmwareUploadListener extends InterfaceHubHandler {
 

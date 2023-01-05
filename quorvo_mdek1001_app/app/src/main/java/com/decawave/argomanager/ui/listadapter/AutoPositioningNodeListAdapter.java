@@ -6,10 +6,9 @@
 
 package com.decawave.argomanager.ui.listadapter;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -20,6 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.annimon.stream.Collectors;
 import com.annimon.stream.Stream;
@@ -54,8 +57,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import eu.kryl.android.common.Pair;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  *

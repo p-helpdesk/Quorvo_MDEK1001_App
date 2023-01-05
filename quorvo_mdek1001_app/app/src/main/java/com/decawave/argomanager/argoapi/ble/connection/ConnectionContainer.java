@@ -14,14 +14,13 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
 
 import java.util.Collection;
-import java.util.Iterator;
 
 /**
  * Argo project.
  */
 
 public class ConnectionContainer {
-    private Multimap<String, NetworkNodeConnection> connectionMap;
+    private final Multimap<String, NetworkNodeConnection> connectionMap;
 
     ConnectionContainer() {
         this.connectionMap = MultimapBuilder.hashKeys().linkedListValues().build();
@@ -30,13 +29,7 @@ public class ConnectionContainer {
     public void put(String bleAddress, NetworkNodeConnection connection) {
         // cleanup previous, now CLOSED, connections
         Collection<NetworkNodeConnection> connections = this.connectionMap.get(bleAddress);
-        Iterator<NetworkNodeConnection> it = connections.iterator();
-        while (it.hasNext()) {
-            NetworkNodeConnection nnc = it.next();
-            if (nnc.getState() == ConnectionState.CLOSED) {
-                it.remove();
-            }
-        }
+        connections.removeIf(nnc -> nnc.getState() == ConnectionState.CLOSED);
         // insert a new connection
         this.connectionMap.put(bleAddress, connection);
     }

@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.debuglog;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

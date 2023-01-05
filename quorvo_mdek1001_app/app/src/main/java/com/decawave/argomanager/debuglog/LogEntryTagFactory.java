@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.debuglog;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

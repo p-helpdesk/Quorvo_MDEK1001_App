@@ -13,6 +13,8 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.concurrent.ExecutionException;
 
 import javax.inject.Inject;
@@ -29,7 +31,7 @@ public class GattDecoderCache {
         this.cache = CacheBuilder.newBuilder()
                 .maximumSize(40).build(new CacheLoader<String, GattDecoder>() {
                     @Override
-                    public GattDecoder load(@NonNull String bleAddress) throws Exception {
+                    public @NotNull GattDecoder load(@NonNull String bleAddress) throws Exception {
                         return new GattDecoder(bleAddress, decodeContextManager.getOrCreateContext(bleAddress));
                     }
                 });

@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import androidx.annotation.CallSuper;
 import androidx.annotation.UiThread;
+import androidx.recyclerview.widget.RecyclerView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;

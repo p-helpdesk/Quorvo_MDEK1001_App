@@ -9,7 +9,7 @@ package com.decawave.argomanager.ui.fragment;
 import android.view.LayoutInflater;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.decawave.argomanager.ArgoApp;
 import com.decawave.argomanager.BuildConfig;
 import com.decawave.argomanager.Constants;
@@ -20,13 +20,14 @@ import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.prefs.ApplicationMode;
 import com.decawave.argomanager.prefs.LengthUnit;
 import com.decawave.argomanager.util.ToastUtil;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import javax.inject.Inject;
 
 import eu.kryl.android.common.ui.AbstractArgoPreferenceFragment;
 import eu.kryl.android.common.ui.prefs.ListPreference;
 import eu.kryl.android.common.ui.prefs.Preference;
-import io.fabric.sdk.android.Fabric;
+//import io.fabric.sdk.android.Fabric;
 
 /**
  * Argo project.
@@ -107,7 +108,7 @@ public class SettingsFragment extends AbstractArgoPreferenceFragment {
     }
 
     private String getVersionText() {
-        Crashlytics kit = Fabric.getKit(Crashlytics.class);
+        FirebaseCrashlytics kit = FirebaseCrashlytics.getInstance();
         try {
             StringBuilder version = new StringBuilder(BuildConfig.VERSION_NAME);
             version.append(" (" + BuildConfig.VERSION_CODE + ")");
@@ -129,7 +130,7 @@ public class SettingsFragment extends AbstractArgoPreferenceFragment {
             return version.toString();
         } catch (Exception e) {
             if (kit != null) {
-                Crashlytics.logException(e);
+                FirebaseCrashlytics.getInstance().log(e.toString());
             }
             return "";
         }
@@ -165,11 +166,11 @@ public class SettingsFragment extends AbstractArgoPreferenceFragment {
     private void onVersionClicked() {
         mVersionClickCount++;
         if (mVersionClickCount == 5) {
-            Crashlytics crashlytics = Fabric.getKit(Crashlytics.class);
+            FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
             if (crashlytics == null) {
                 ToastUtil.showToast(R.string.crashlytics_not_configured, Toast.LENGTH_LONG);
             } else {
-                Crashlytics.logException(new Exception());
+                FirebaseCrashlytics.getInstance().log(String.valueOf(new Exception()));
                 ToastUtil.showToast(R.string.crashreport_sent);
             }
         }

@@ -10,12 +10,16 @@ import android.app.Notification;
 
 import com.decawave.argomanager.ui.MainActivity;
 
+import org.jetbrains.annotations.NotNull;
+
 //import rx.functions.Action0;
 
 /**
  * Argo project.
  */
 public interface AndroidPermissionHelper {
+
+    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Notification.Action grantSuccessListener);
 
     /**
      * If services are not enabled and permissions are not granted, this returns false
@@ -32,6 +36,10 @@ public interface AndroidPermissionHelper {
     boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Notification.Action grantSuccessListener, Notification.Action grantFailListener);
 
     boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Runnable grantSuccessListener);
+
+    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Notification.Action grantSuccessListener, @NotNull Runnable grantFailListener);
+
+    boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Runnable grantSuccessListener, @NotNull Runnable grantFailListener);
 
     void startActivityToEnableLocationService(MainActivity mainActivity);
 

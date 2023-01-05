@@ -31,12 +31,12 @@ import java.util.function.Function;
  * @see AsynchronousGattOperation
  *
  */
-abstract class GattInteractionToConnectionWrapperCallback implements GattInteractionCallback {
+class GattInteractionToConnectionWrapperCallback implements GattInteractionCallback {
     @Nullable
     private final BiConsumer<NetworkNodeConnection,Fail> onFailCallback;
 
     // once we receive callback about successfully established link (onSetupDone), we store the connection here
-    private NetworkNodeConnectionWrapper connectionWrapper;
+    private final NetworkNodeConnectionWrapper connectionWrapper;
 
     GattInteractionToConnectionWrapperCallback(@NotNull NetworkNodeConnectionWrapper connectionWrapper,
                                                @Nullable BiConsumer<NetworkNodeConnection,Fail> onFailCallback) {
@@ -91,7 +91,7 @@ abstract class GattInteractionToConnectionWrapperCallback implements GattInterac
 
     //@Override
     public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        delegateFailToConnection(gatt, errorCode, failMessage, o -> GattInteractionCallback.onCharacteristicReadFailed(o));
+        delegateFailToConnection(gatt, errorCode, failMessage, GattInteractionCallback::onCharacteristicReadFailed);
     }
 
     //@Override
@@ -104,17 +104,17 @@ abstract class GattInteractionToConnectionWrapperCallback implements GattInterac
 
     //@Override
     public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        delegateFailToConnection(gatt, errorCode, failMessage, o -> GattInteractionCallback.onCharacteristicWriteFailed(o));
+        delegateFailToConnection(gatt, errorCode, failMessage, GattInteractionCallback::onCharacteristicWriteFailed);
     }
 
     //@Override
     public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        delegateFailToConnection(gatt, errorCode, failMessage, o -> GattInteractionCallback.onDescriptorReadFailed(o));
+        delegateFailToConnection(gatt, errorCode, failMessage, GattInteractionCallback::onDescriptorReadFailed);
     }
 
     //@Override
     public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
-        delegateFailToConnection(gatt, errorCode, failMessage, o -> GattInteractionCallback.onDescriptorWriteFailed(o));
+        delegateFailToConnection(gatt, errorCode, failMessage, GattInteractionCallback::onDescriptorWriteFailed);
     }
 
     //@Override
@@ -125,6 +125,36 @@ abstract class GattInteractionToConnectionWrapperCallback implements GattInterac
     @Override
     public void onCharacteristicChanged(SynchronousBleGatt gatt, BleGattCharacteristic characteristic, byte[] value) {
         connectionWrapper.onCharacteristicChanged(characteristic, value);
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onFail(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onCharacteristicReadFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onMtuChangeFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onCharacteristicWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onDescriptorReadFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
+    }
+
+    @Override
+    public Function<Integer, Consumer<String>> onDescriptorWriteFailed(SynchronousBleGatt synchronousBleGatt) {
+        return null;
     }
 
     //GattInteractionCallback, SynchronousBleGatt, Integer, String

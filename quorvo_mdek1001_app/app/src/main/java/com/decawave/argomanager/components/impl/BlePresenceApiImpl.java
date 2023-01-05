@@ -333,7 +333,7 @@ public class BlePresenceApiImpl implements BlePresenceApi, DiscoveryApiBleImpl.D
         Integer rssi = nodeRssiMap.get(bleAddress);
         if (rssi != null) {
             // adjust it based on the last-seen (we must have last-seen if we have non-null rssi)
-            long seenBeforeExtraPlus = networkNodeManager.getNode(bleAddress).getLastSeen() + BleConstants.BLE_DISCOVERY_NOSCAN_MIN_PERIOD_MS - System.currentTimeMillis();
+            long seenBeforeExtraPlus = networkNodeManager.getNode(Long.parseLong(bleAddress)).getLastSeen() + BleConstants.BLE_DISCOVERY_NOSCAN_MIN_PERIOD_MS - System.currentTimeMillis();
             if (seenBeforeExtraPlus > 0 && rssi > SignalStrengthInterpreterImpl.VERY_LOW_RSSI) {
                 // the stored rssi is now a bit deprecated (begin aging)
                 if (seenBeforeExtraPlus > AGING_PERIOD) {

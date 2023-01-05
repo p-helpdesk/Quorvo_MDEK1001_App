@@ -39,12 +39,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.BiConsumer;
 
 import javax.inject.Inject;
 
 import eu.kryl.android.common.Constants;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action2;
+//import rx.functions.Action2;
 
 /**
  * Network model storage/persistence.
@@ -93,8 +94,9 @@ public class NetworksNodesStorageImpl implements NetworksNodesStorage {
         }
     }
 
+
     @Override
-    public void load(Action2<Collection<NetworkNodeEnhanced>, Collection<NetworkModel>> callback) {
+    public void load(BiConsumer<Collection<NetworkNodeEnhanced>, Collection<NetworkModel>> callback) {
         StringBuilder sb = new StringBuilder();
         try {
             FileInputStream fis = ArgoApp.daApp.openFileInput(FILE_NAME);
@@ -106,7 +108,7 @@ public class NetworksNodesStorageImpl implements NetworksNodesStorage {
             br.close();
         } catch (FileNotFoundException e) {
             log.i(FILE_NAME + " not found, returning empty repository");
-            callback.call(new LinkedList<>(), new LinkedList<>());
+            callback.accept(new LinkedList<>(), new LinkedList<>());
             return;
         } catch (IOException e) {
             throw new IllegalStateException("should not occur");
@@ -125,7 +127,7 @@ public class NetworksNodesStorageImpl implements NetworksNodesStorage {
                 nodes.add(node.toNetworkNode());
             }
         }
-        callback.call(nodes, networks);
+        callback.accept(nodes, networks);
     }
 
     /**

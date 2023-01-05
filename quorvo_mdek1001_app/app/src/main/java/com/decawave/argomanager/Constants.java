@@ -13,9 +13,8 @@ import com.decawave.argomanager.argoapi.ble.SynchronousBleGatt;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 
 import java.util.Comparator;
-
-import rx.functions.Action1;
-import rx.functions.Action2;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 /**
  *
@@ -38,12 +37,12 @@ public class Constants {
     ///////////////////////////////////////////////////////////////////////////
     // self-documentation
     ///////////////////////////////////////////////////////////////////////////
-    public static final Action1<NetworkNode> VOID_NETWORK_NODE_ACTION = (node) -> {};
-    public static final Action1<SynchronousBleGatt> VOID_BLE_GATT_ACTION = (node) -> {};
-    public static final Action2<SynchronousBleGatt, Fail> VOID_BLE_GATT_FAIL = (bleGatt, node) -> {};
-    public static final Action2<NetworkNodeConnection, Integer> VOID_ON_DISCONNECT = (nnc, err) -> {};
-    public static final Action1<Fail> VOID_ON_FAIL = (fail) -> {};
-    public static final Action2<NetworkNodeConnection,Fail> VOID_ON_CONNECTION_FAIL = (connection,fail) -> {};
+    public static final Consumer<NetworkNode> VOID_NETWORK_NODE_ACTION = (node) -> {};
+    public static final Consumer<SynchronousBleGatt> VOID_BLE_GATT_ACTION = (node) -> {};
+    public static final BiConsumer<SynchronousBleGatt, Fail> VOID_BLE_GATT_FAIL = (bleGatt, node) -> {};
+    public static final BiConsumer<NetworkNodeConnection, Integer> VOID_ON_DISCONNECT = (nnc, err) -> {};
+    public static final Consumer<Fail> VOID_ON_FAIL = (fail) -> {};
+    public static final BiConsumer<NetworkNodeConnection,Fail> VOID_ON_CONNECTION_FAIL = (connection,fail) -> {};
 
     ///////////////////////////////////////////////////////////////////////////
     // network node comparator for ordering in UI

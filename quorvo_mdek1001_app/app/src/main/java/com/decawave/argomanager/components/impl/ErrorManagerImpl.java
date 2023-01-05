@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.components.impl;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;

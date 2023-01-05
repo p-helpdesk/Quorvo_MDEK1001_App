@@ -6,15 +6,18 @@
 
 package com.decawave.argomanager.ui.listadapter;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.annimon.stream.function.Consumer;
 import com.annimon.stream.function.Supplier;
@@ -52,8 +55,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.kryl.android.common.Pair;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  *

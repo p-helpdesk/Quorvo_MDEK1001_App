@@ -8,9 +8,9 @@ package com.decawave.argomanager.ioc;
 
 import com.decawave.argo.api.DiscoveryApi;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
+import com.decawave.argomanager.argoapi.ble.DiscoveryApiBleImpl;
 import com.decawave.argomanager.argoapi.ble.PeriodicBleScanner;
 import com.decawave.argomanager.argoapi.ble.PeriodicBleScannerImpl;
-import com.decawave.argomanager.argoapi.ble.DiscoveryApiBleImpl;
 import com.decawave.argomanager.argoapi.ble.connection.BleConnectionApiImpl;
 import com.decawave.argomanager.ble.signal.SignalStrengthInterpreter;
 import com.decawave.argomanager.ble.signal.SignalStrengthInterpreterImpl;
@@ -47,9 +47,6 @@ import com.decawave.argomanager.util.AndroidPermissionHelperImpl;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
 import com.decawave.argomanager.util.NetworkNodePropertyDecoratorImpl;
 
-import javax.inject.Singleton;
-
-import dagger.Binds;
 import dagger.Module;
 
 /**
@@ -60,63 +57,63 @@ import dagger.Module;
 @Module
 abstract class ArgoDependencyBindingsModule {
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract DiscoveryApi provideDiscoveryApi(DiscoveryApiBleImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract BlePresenceApi provideBlePresenceApi(BlePresenceApiImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract LocationDataObserver provideLocationDataObserver(LocationDataObserverImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract BleConnectionApi provideBleConnectionApi(BleConnectionApiImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract AppPreferenceAccessor provideAppPreferenceAccessor(AppPreferenceAccessorImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract NetworkNodeManager provideNetworkModelManager(NetworkNodeManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract PositionObservationManager provideObservationManager(PositionObservationManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract DiscoveryManager provideDiscoveryManager(DiscoveryManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract SignalStrengthInterpreter provideSignalStrengthInterpreter(SignalStrengthInterpreterImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract NetworkNodePropertyDecorator providePropertyDecorator(NetworkNodePropertyDecoratorImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract LocationDataLogger provideLocationDataLogger(LocationDataLoggerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract ErrorManager provideErrorManager(ErrorManagerImpl errorManager);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract AndroidPermissionHelper provideAndroidPermissionHelper(AndroidPermissionHelperImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract LogEntryCollector provideLogEntryCollector(LogEntryCollectorImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract NetworkModelManager provideNetworkModelRepository(NetworkModelManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract NetworksNodesStorage provideNetworkModelStorage(NetworksNodesStorageImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract AutoPositioningManager provideAutoPositioningManager(AutoPositioningManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract LogBlockStatus provideLogEntryCollectorBlockStatus(LogBlockStatusImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract DecodeContextManager providedDecodeContextManager(DecodeContextManagerImpl impl);
 
-    @Binds @Singleton
+    //@Binds @Singleton
     abstract PeriodicBleScanner providedBleScanner(PeriodicBleScannerImpl impl);
 }

@@ -6,15 +6,19 @@
 
 package com.decawave.argomanager.util;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.Manifest;
 import android.app.Activity;
+import android.app.Notification;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
+
+import androidx.annotation.RequiresApi;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.ble.BleAdapter;
@@ -30,9 +34,6 @@ import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  * AndroidPermissionHelper implementation.
@@ -48,8 +49,8 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
     private final LocationManager locationManager;
     //
     private boolean inProgress;
-    private Action0 currentGrantSuccessListener;
-    private Action0 currentGrantFailListener;
+    private Runnable currentGrantSuccessListener;
+    private Runnable currentGrantFailListener;
 
     private IhOnActivityResultListener onActivityResultListener = new IhOnActivityResultListener() {
         @Override
@@ -112,7 +113,7 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
     }
 
     @Override
-    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Action0 grantSuccessListener) {
+    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Notification.Action grantSuccessListener) {
         return mkSureServicesEnabledAndPermissionsGranted(mainActivity, grantSuccessListener, () -> {
             // on reject
             ToastUtil.showToast("ArgoManager cannot work without granted permissions and location/BT services!");
@@ -120,7 +121,22 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
     }
 
     @Override
-    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Action0 grantSuccessListener, @NotNull Action0 grantFailListener) {
+    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Notification.Action grantSuccessListener, Notification.Action grantFailListener) {
+        return false;
+    }
+
+    @Override
+    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Runnable grantSuccessListener) {
+        return false;
+    }
+
+    @Override
+    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, Notification.@NotNull Action grantSuccessListener, @NotNull Runnable grantFailListener) {
+        return false;
+    }
+
+    @Override
+    public boolean mkSureServicesEnabledAndPermissionsGranted(MainActivity mainActivity, @NotNull Runnable grantSuccessListener, @NotNull Runnable grantFailListener) {
         if (Constants.DEBUG) {
             Preconditions.checkState(!inProgress);
             Preconditions.checkState(currentGrantSuccessListener == null);
@@ -138,7 +154,7 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
             return false;
         } else {
             // all is set up, call the grant success listener immediately
-            grantSuccessListener.call();
+            grantSuccessListener.notify();
             return true;
         }
     }
@@ -147,12 +163,12 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
         if (Constants.DEBUG) {
             log.d("finalCallGrantListener: " + "success = [" + success + "]");
         }
-        final Action0 l = success ? currentGrantSuccessListener : currentGrantFailListener;
+        final Runnable l = success ? currentGrantSuccessListener : currentGrantFailListener;
         currentGrantFailListener = currentGrantSuccessListener = null;
         inProgress = false;
         InterfaceHub.unregisterHandler(onActivityResultListener);
         // finally notify the listener
-        l.call();
+        l.notify();
     }
 
     private void handleLocationServiceEnablementResult() {

@@ -73,8 +73,6 @@ import java.util.function.Consumer;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-//import rx.functions.Action0;
-//import rx.functions.Action1;
 
 /**
  * Network node connection implementation on top of GattInteractionFsm.
@@ -122,24 +120,24 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
     private SlidingWindowDataAccessor fwBinaryDataAccessor;
     private Object fwUploadBatchTag;
     // fw update cache
-    private WriteCharacteristicRequest.ByteArray fwUpdatePushRequest = new WriteCharacteristicRequest.ByteArray(
+    private final WriteCharacteristicRequest.ByteArray fwUpdatePushRequest = new WriteCharacteristicRequest.ByteArray(
             BleConstants.SERVICE_UUID_NETWORK_NODE, BleConstants.CHARACTERISTIC_FW_UPDATE_PUSH, WriteType.NO_RESPONSE, null);
-    private List<WriteCharacteristicRequest> fwUpdatePushRequestL = Collections.unmodifiableList(Lists.newArrayList(fwUpdatePushRequest));
+    private final List<WriteCharacteristicRequest> fwUpdatePushRequestL = Collections.unmodifiableList(Lists.newArrayList(fwUpdatePushRequest));
 
     // current location data changed callback
-    private Holder<LocationDataChangedCallback> currentLocationDataChangedCallbackWrapperHolder = new Holder<>();
-    private Holder<ProxyPositionDataChangedCallback> currentProxyPositionDataChangedCallbackWrapperHolder = new Holder<>();
+    private final Holder<LocationDataChangedCallback> currentLocationDataChangedCallbackWrapperHolder = new Holder<>();
+    private final Holder<ProxyPositionDataChangedCallback> currentProxyPositionDataChangedCallbackWrapperHolder = new Holder<>();
     private FwUpdatePollCallback currentFwUploadPollInternalCallback;
     private GattDecoder gattDecoder;
     private GattInteractionCallback gattInteractionCallback;
     // notify/listen capability
-    private NetworkNodeInterceptor networkNodeSystemInterceptor;
+    private final NetworkNodeInterceptor networkNodeSystemInterceptor;
     private NetworkNode lastNetworkNodeSnapshot;
     // current connection state
     @NotNull
     private ConnectionState state;
     // operation queue
-    private SequentialGattOperationQueue gattOperationQueue;
+    private final SequentialGattOperationQueue gattOperationQueue;
 
     interface NetworkNodeInterceptor {
 
@@ -154,7 +152,7 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
 
     }
 
-    private static NetworkNodeInterceptor VOID_INTERCEPTOR = new NetworkNodeInterceptor() {
+    private static final NetworkNodeInterceptor VOID_INTERCEPTOR = new NetworkNodeInterceptor() {
         @Override
         public void onNodeIntercepted(NetworkNode node) {
 
@@ -245,27 +243,27 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
                     throw new IllegalStateException("general onFail() callback invocation should get passed to the upper-most callback only!");
                 }
 
-                //@Override
+                @Override
                 public void onCharacteristicReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                //@Override
+                @Override
                 public void onCharacteristicWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                //@Override
+                @Override
                 public void onDescriptorReadFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                //@Override
+                @Override
                 public void onDescriptorWriteFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
 
-                //@Override
+                @Override
                 public void onMtuChangeFailed(SynchronousBleGatt gatt, int errorCode, String failMessage) {
                     onOperationFailed(gatt, errorCode, failMessage);
                 }
@@ -722,7 +720,7 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
                 }
 
                 // processing commands from FW update poll characteristic
-                PollPayloadVisitor fwCommandDispatcher = new PollPayloadVisitor() {
+                final PollPayloadVisitor fwCommandDispatcher = new PollPayloadVisitor() {
 
                     @Override
                     public void visit(FwPollCommand.UploadRefused uploadRefused) {
@@ -1275,7 +1273,6 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // tag-specific modifiable properties
         if (diffNode.isTag()) {
-            //noinspection ConstantConditions
             TagNodeDiffingWrapper tag = (TagNodeDiffingWrapper) diffNode;
             if (tag.isUpdateRateChanged() || tag.isStationaryUpdateRateChanged()) {
                 appLog.d("setting up (STATIONARY) UPDATE RATE");
@@ -1352,7 +1349,7 @@ abstract class NetworkNodeBleConnectionImpl implements NetworkNodeBleConnection 
     }
 
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return "NetworkNodeBleConnectionImpl{" + "bleAddress='" + bleAddress + '\'' +
                 ", state=" + state +
                 '}';

@@ -6,6 +6,10 @@
 
 package com.decawave.argomanager.argoapi.ble;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
+import android.app.Notification;
+
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.ble.BleAdapter;
 import com.decawave.argomanager.ble.BleDevice;
@@ -13,14 +17,14 @@ import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.function.Consumer;
+
 import javax.inject.Inject;
 
 import dagger.Lazy;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
-import rx.functions.Action1;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
+//import rx.functions.Action0;
+//import rx.functions.Action1;
 
 /**
  * Default implementation of PeriodicBleScanner.
@@ -31,7 +35,7 @@ public class PeriodicBleScannerImpl implements PeriodicBleScanner {
     private final Lazy<BleAdapter> bleAdapter;
     private final ScannerTimeAdaptor scannerTimeAdaptor;
     // state
-    private Action1<Action0> semaphore;
+    private Consumer<Notification.Action> semaphore;
     private Callback callback;
     // because we do not have asynchronous notification about successfully started scan
     private boolean bleScanning;
@@ -50,7 +54,7 @@ public class PeriodicBleScannerImpl implements PeriodicBleScanner {
      * @param callback notification about asynchronous events
      */
     @Override
-    public void startPeriodicScan(@NotNull Action1<Action0> semaphore,
+    public void startPeriodicScan(@NotNull Consumer<Notification.Action> semaphore,
                                   @NotNull Callback callback) {
         if (Constants.DEBUG) {
             log.d("startPeriodicScan()");
@@ -66,62 +70,61 @@ public class PeriodicBleScannerImpl implements PeriodicBleScanner {
         startBleAdapterScanAndScheduleStop(tag, true);
     }
 
-    private int[] scanAndSleepTime = new int[2];
+    private final int[] scanAndSleepTime = new int[2];
 
     private void startBleAdapterScanAndScheduleStop(Object tag, boolean callOnStarted) {
         if (Constants.DEBUG) log.d("startBleAdapterScanAndScheduleStop() called with: " + "callback = [" + callback + "], tag = [" + tag + "]");
-        //
+
         if (callOnStarted) {
             this.callback.onStarted();
         }
-        this.semaphore.call(() -> {
-            if (Constants.DEBUG) {
-                log.d("semaphore up, starting BLE scan");
-            }
-            // semaphore is notifying us that it is safe to start scan now
-            if (this.tag != tag) {
-                // we are not interested anymore
-                return;
-            }
-            BleAdapter bleAdapter = this.bleAdapter.get();
-            if (!bleAdapter.isEnabled()) {
-                // BLE is off
-                // post failure
-                uiHandler.post(this::genericOnFailed);
-                return;
-            }
-            bleAdapter.startServiceDataScan(BleConstants.SERVICE_UUID_NETWORK_NODE, new BleAdapter.ScanCallback() {
-                @Override
-                public void onServiceDataScan(BleDevice bluetoothDevice, int rssi, byte[] serviceData) {
-                    // fixing issue #223
-                    if (tag == PeriodicBleScannerImpl.this.tag) {
-                        callback.onServiceDataScan(bluetoothDevice, rssi, serviceData);
-                    }
-                }
+        this.semaphore.notify();
 
-                @Override
-                public void onScanFailed() {
-                    if (Constants.DEBUG) {
-                        log.d("onScanFailed");
-                    }
-                    genericOnFailed();
+        if (Constants.DEBUG) log.d("semaphore up, starting BLE scan");
+        // semaphore is notifying us that it is safe to start scan now
+        if (this.tag != tag) {
+            // we are not interested anymore
+            return;
+        }
+        BleAdapter bleAdapter = this.bleAdapter.get();
+        if (!bleAdapter.isEnabled()) {
+            // BLE is off
+            // post failure
+            uiHandler.post(this::genericOnFailed);
+            return;
+        }
+        bleAdapter.startServiceDataScan(BleConstants.SERVICE_UUID_NETWORK_NODE, new BleAdapter.ScanCallback() {
+            @Override
+            public void onServiceDataScan(BleDevice bluetoothDevice, int rssi, byte[] serviceData) {
+                // fixing issue #223
+                if (tag == PeriodicBleScannerImpl.this.tag) {
+                    callback.onServiceDataScan(bluetoothDevice, rssi, serviceData);
                 }
+            }
 
-            });
-            bleScanning = true;
-            // let the adaptor know
-            scannerTimeAdaptor.onScanStarted();
-            // notify the callback
-            this.callback.onScanStarted();
-            scannerTimeAdaptor.getScanAndSleepTime(callOnStarted, scanAndSleepTime);
-            // schedule stop
-            uiHandler.postDelayed(() -> {
-                // stop the scan
-                if (this.tag == tag) {
-                    stopBleAdapterScanAndScheduleStart(tag, scanAndSleepTime[1]);
+            @Override
+            public void onScanFailed() {
+                if (Constants.DEBUG) {
+                    log.d("onScanFailed");
                 }
-            }, scanAndSleepTime[0]);
+                genericOnFailed();
+            }
+
         });
+        bleScanning = true;
+        // let the adaptor know
+        scannerTimeAdaptor.onScanStarted();
+        // notify the callback
+        this.callback.onScanStarted();
+        scannerTimeAdaptor.getScanAndSleepTime(callOnStarted, scanAndSleepTime);
+        // schedule stop
+        uiHandler.postDelayed(() -> {
+            // stop the scan
+            if (this.tag == tag) {
+                stopBleAdapterScanAndScheduleStart(tag, scanAndSleepTime[1]);
+            }
+        }, scanAndSleepTime[0]);
+
     }
 
     private void genericOnFailed() {

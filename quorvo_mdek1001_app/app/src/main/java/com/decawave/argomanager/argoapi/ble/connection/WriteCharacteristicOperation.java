@@ -17,9 +17,6 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-//import rx.functions.Action1;
-//import rx.functions.Action2;
-
 /**
  * Argo project.
  */

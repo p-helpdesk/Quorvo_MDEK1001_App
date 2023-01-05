@@ -11,6 +11,8 @@ import com.decawave.argomanager.argoapi.ble.GattInteractionFsm;
 import com.decawave.argomanager.argoapi.ble.SynchronousBleGatt;
 import com.google.common.base.Preconditions;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -27,12 +29,12 @@ class SequentialGattOperationQueueImpl implements SequentialGattOperationQueue {
     // dependencies
     private final GattInteractionFsm gattInteractionFsm;
     // state
-    private Queue<OperationInfo> queue;
+    private final Queue<OperationInfo> queue;
     private OperationInfo currentOp;
     private boolean active;
 
     // enqueued operation
-    private class OperationInfo {
+    private static class OperationInfo {
         final StatefulToken token;
         final GenericOperation operation;
 
@@ -42,7 +44,7 @@ class SequentialGattOperationQueueImpl implements SequentialGattOperationQueue {
         }
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return "OperationInfo{" +
                     "token=" + token +
                     ", operation=" + operation +
@@ -70,7 +72,7 @@ class SequentialGattOperationQueueImpl implements SequentialGattOperationQueue {
         }
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return "StatefulToken{" +
                     "hashCode=" + hashCode() +
                     ",state=" + state +
@@ -175,6 +177,7 @@ class SequentialGattOperationQueueImpl implements SequentialGattOperationQueue {
         }
         while (!queue.isEmpty()) {
             currentOp = queue.poll();
+            assert currentOp != null;
             StatefulToken dependsOn = (StatefulToken) currentOp.operation.dependsOn();
             if (dependsOn != null) {
                 if (Constants.DEBUG) {

@@ -36,7 +36,6 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Predicate;
 
 import javax.inject.Inject;
 
@@ -105,7 +104,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
     /**
      * Complete node interaction context.
      */
-    private class NodeInteractionContext {
+    private static class NodeInteractionContext {
         BleDevice device;
         NetworkNodeConnection connection;
         ServiceData serviceData;
@@ -114,7 +113,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
         Boolean lastConnectEndedUpInError;
 
         @Override
-        public String toString() {
+        public @NotNull String toString() {
             return "NodeInteractionContext{" + "device=" + device +
                     ", connection=" + connection +
                     ", serviceData=" + serviceData +
@@ -178,6 +177,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                 if (Constants.DEBUG) {
                     Preconditions.checkNotNull(nodeIc, "missing node interaction context for " + connection.getOtherSideAddress());
                 }
+                assert nodeIc != null;
                 onGetOtherSideEntity.accept(possiblyIncompleteNetworkNode, nodeIc.serviceData);
             }
             // initiate disconnect in each case
@@ -280,6 +280,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
             sessionCommonCallbackSet.onDisconnected = (bleAddress) -> {
                 NodeInteractionContext nodeIc = sessionNodeInteractionContextMap.get(bleAddress);
                 // set error flag
+                assert nodeIc != null;
                 if (nodeIc.lastConnectEndedUpInError == null) {
                     nodeIc.lastConnectEndedUpInError = false;
                 }
@@ -300,6 +301,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                 }
                 // set the next connect attempt if appropriate
                 NodeInteractionContext nodeIc = sessionNodeInteractionContextMap.get(bleAddress);
+                assert nodeIc != null;
                 nodeIc.lastConnectEndedUpInError = true;
                 if (fail.errorCode == ErrorCode.BLE_CONNECTION_DROPPED) {
                     nodeIc.nextConnectAttempt = SystemClock.uptimeMillis() + NODE_REDISCOVER_DELAY_ON_SUDDEN_DISCONNECT;
@@ -531,10 +533,6 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
     public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> serviceDataListener, Consumer<Fail> onFailCallback, @NotNull BiConsumer<String, ConnectPriority> priorityResolver, @Nullable Map<String, ServiceData> initialServiceData) {
 
     }
-    @Override
-    public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> onNodeDiscoveredCallback, @NotNull Consumer<Fail> onFailCallback, @NotNull Predicate<String> priorityResolver, @Nullable Map<String, ServiceData> initialServiceData) {
-
-    }
 
     @Override
     public boolean isStopping() {
@@ -543,7 +541,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
 
     //@Override
     public void startDiscovery(@NotNull BiConsumer<ServiceData, NetworkNode> serviceDataListener,
-                               Consumer<Fail> onFailCallback,
+                               @NotNull Consumer<Fail> onFailCallback,
                                @NotNull Function<String, ConnectPriority> priorityResolver, // Func1
                                @Nullable Map<String, ServiceData> initialServiceData) {
         if (Constants.DEBUG) {

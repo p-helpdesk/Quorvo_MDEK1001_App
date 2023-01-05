@@ -18,7 +18,7 @@ import javax.inject.Inject;
  * Whenever an already existing is pushed at the top, the old instance in the stack is removed.
  */
 public class UniqueReorderingStack<T> {
-    private LinkedList<T> list;
+    private final LinkedList<T> list;
 
     @Inject
     public UniqueReorderingStack() {

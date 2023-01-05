@@ -6,21 +6,22 @@
 
 package com.decawave.argomanager.ui.view;
 
+import static com.decawave.argomanager.ArgoApp.daApp;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.decawave.argomanager.R;
 
+import org.jetbrains.annotations.Nullable;
+
 import butterknife.BindColor;
 import butterknife.ButterKnife;
 import eu.kryl.android.common.Animator;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
 
 /**
  * Argo project.

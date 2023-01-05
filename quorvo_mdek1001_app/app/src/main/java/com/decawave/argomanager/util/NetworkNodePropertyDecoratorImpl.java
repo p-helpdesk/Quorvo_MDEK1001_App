@@ -6,7 +6,10 @@
 
 package com.decawave.argomanager.util;
 
-import android.support.annotation.NonNull;
+import static com.decawave.argomanager.ArgoApp.daApp;
+import static com.decawave.argomanager.argoapi.ext.UpdateRate.getUpdateRateForValue;
+
+import androidx.annotation.NonNull;
 
 import com.decawave.argo.api.struct.LocationDataMode;
 import com.decawave.argo.api.struct.NetworkNodeProperty;
@@ -28,9 +31,6 @@ import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 import javax.inject.Inject;
-
-import static com.decawave.argomanager.ArgoApp.daApp;
-import static com.decawave.argomanager.argoapi.ext.UpdateRate.getUpdateRateForValue;
 
 /**
  * Argo project.

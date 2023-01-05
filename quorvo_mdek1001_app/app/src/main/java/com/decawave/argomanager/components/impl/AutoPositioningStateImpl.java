@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.components.impl;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.annimon.stream.function.BiFunction;
 import com.annimon.stream.function.Function;
@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.Set;
 
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
 
 /**
  * Argo project.
@@ -264,13 +263,13 @@ class AutoPositioningStateImpl implements AutoPositioningState {
     }
 
     private void genericSetNodeState(long nodeId, TaskState state, TaskStateSupplier taskStateSupplier,
-                                     Action0 taskStateCacheInvalidation, BiFunction<CompositeState, TaskState, TaskState> stateSetMethod) {
+                                     Runnable taskStateCacheInvalidation, BiFunction<CompositeState, TaskState, TaskState> stateSetMethod) {
         TaskState oldDcs = taskStateSupplier.getState();
         OverallState oldOverallStateState = getOverallState();
         boolean change = setNodeTaskState(nodeId, state, stateSetMethod);
         if (change) {
             if (oldDcs != state) {
-                taskStateCacheInvalidation.call();
+                taskStateCacheInvalidation.notify();
                 // this might lead to change of state
                 TaskState newDcs = taskStateSupplier.getState();
                 if (oldDcs != newDcs) {

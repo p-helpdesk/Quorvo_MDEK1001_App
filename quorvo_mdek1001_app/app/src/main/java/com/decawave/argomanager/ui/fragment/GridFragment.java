@@ -12,8 +12,6 @@ import android.graphics.Bitmap;
 import android.graphics.PointF;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
 import android.transition.Slide;
 import android.transition.TransitionManager;
 import android.transition.TransitionSet;
@@ -61,9 +59,11 @@ import com.decawave.argomanager.util.Fixme;
 import com.decawave.argomanager.util.IhOnActivityResultListener;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.common.base.Preconditions;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.IOUtil;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -73,9 +73,6 @@ import java.io.InputStream;
 import java.util.Collections;
 import java.util.Locale;
 
-import javax.inject.Inject;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
 import eu.kryl.android.common.hub.InterfaceHub;
@@ -96,66 +93,66 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
     private static final int MAX_FLOORPLAN_FILE_SIZE = 1024 * 1024 * 10;
 
     //
-    @BindView(R.id.noNetwork)
+    //@BindView(R.id.noNetwork)
     View noNetworkSelected;
 
-    @BindView(R.id.gridView)
+    //@BindView(R.id.gridView)
     GridView grid;
 
     // ***************************
     // * INPUT
     // ***************************
 
-    @BindView(R.id.floorplan_center_x)
+    //@BindView(R.id.floorplan_center_x)
     EditText etPxCenterX;
 
-    @BindView(R.id.floorplan_center_y)
+    //@BindView(R.id.floorplan_center_y)
     EditText etPxCenterY;
 
-    @BindView(R.id.floorplan_zoom_factor)
+    //@BindView(R.id.floorplan_zoom_factor)
     EditText etPx10m;
 
-    @BindView(R.id.floorplan_zoom_factor_hint)
+    //@BindView(R.id.floorplan_zoom_factor_hint)
     TextInputLayout tilZoom;
 
-    @BindView(R.id.floorPlanEts)
+    //@BindView(R.id.floorPlanEts)
     View etFloorplanProperties;
 
-    @BindView(R.id.rootView)
+    //@BindView(R.id.rootView)
     ViewGroup rootView;
 
-    @BindView(R.id.floorPlanControls)
+    //@BindView(R.id.floorPlanControls)
     ViewGroup floorPlanControls;
 
-    @BindView(R.id.floorplan_control_lock)
+    //@BindView(R.id.floorplan_control_lock)
     ImageView lockControl;
 
-    @BindView(R.id.floorplan_control_erase)
+    //@BindView(R.id.floorplan_control_erase)
     ImageView eraseControl;
 
-    @BindView(R.id.floorplan_control_rotate_left)
+    //@BindView(R.id.floorplan_control_rotate_left)
     ImageView rotateLeftControl;
 
     ///////////////////////////////////////////////////////////////////////////
     // dependencies
     ///////////////////////////////////////////////////////////////////////////
 
-    @Inject
+    //@Inject
     PositionObservationManager positionObservationManager;
 
-    @Inject
+    //@Inject
     NetworkNodeManager networkNodeManager;
 
-    @Inject
+    //@Inject
     DiscoveryManager discoveryManager;
 
-    @Inject
+    //@Inject
     AndroidPermissionHelper permissionHelper;
 
-    @Inject
+    //@Inject
     BlePresenceApi presenceApi;
 
-    @Inject
+    //@Inject
     AppPreferenceAccessor appPreferenceAccessor;
 
     // members/state
@@ -186,7 +183,7 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
     private NetworkModel networkModel;
     private float extraAnimatedZoomFactor = 1f;
 
-    private IhAppPreferenceListener ihActiveNetworkPreferenceListener = (IhAppPreferenceListener) (element, oldValue, newValue) -> {
+    private final IhAppPreferenceListener ihActiveNetworkPreferenceListener = (IhAppPreferenceListener) (element, oldValue, newValue) -> {
         if (element == AppPreference.Element.ACTIVE_NETWORK_ID) {
             NetworkModel prevNetworkModel = this.networkModel;
             networkModel = networkNodeManager.getActiveNetwork();
@@ -197,7 +194,7 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
 
     private MenuItem loadFloorplanMenuItem;
 
-    private IhPersistedNodeChangeListener nodeChangeListener = new IhPersistedNodeChangeListener() {
+    private final IhPersistedNodeChangeListener nodeChangeListener = new IhPersistedNodeChangeListener() {
 
         @Override
         public void onNodeUpdated(NetworkNodeEnhanced node) {
@@ -233,7 +230,7 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
     }
 
     //
-    private IhOnActivityResultListener onActivityResultListener = new IhOnActivityResultListener() {
+    private final IhOnActivityResultListener onActivityResultListener = new IhOnActivityResultListener() {
         @Override
         public void onActivityResult(MainActivity mainActivity, int requestCode, int resultCode, Intent data) {
             if (Constants.DEBUG) {
@@ -253,18 +250,16 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
                     BufferedOutputStream bos = null;
                     String tmpBitmapFilename = "floorplan_" + activeNetwork.getNetworkId() + TMP_FLOORPLAN_FILENAME_SUFFIX;
                     try {
-                        //noinspection ConstantConditions
                         inputStream = mainActivity.getContentResolver().openInputStream(uri);
                         // copy the stream elsewhere
                         File floorPlanFile = new File(ArgoApp.daApp.getFilesDir(), tmpBitmapFilename);
                         bos = new BufferedOutputStream(new FileOutputStream(floorPlanFile));
-                        //noinspection ConstantConditions
-                        int size = IOUtils.copy(inputStream, bos);
-                        if (size > MAX_FLOORPLAN_FILE_SIZE) {
-                            ToastUtil.showToast(ArgoApp.daApp.getString(R.string.floorplan_file_exceeeds_size, getMaxFloorplanSizeDesc()), Toast.LENGTH_LONG);
-                            resetFloorplanConfigurationIf(!floorPlanConfiguration.anyFloorPlan());
-                            return;
-                        }
+                        IOUtil.copy(inputStream, bos);
+//                        if (size > MAX_FLOORPLAN_FILE_SIZE) {
+//                            ToastUtil.showToast(ArgoApp.daApp.getString(R.string.floorplan_file_exceeeds_size, getMaxFloorplanSizeDesc()), Toast.LENGTH_LONG);
+//                            resetFloorplanConfigurationIf(!floorPlanConfiguration.anyFloorPlan());
+//                            return;
+//                        }
                     } catch (IOException e) {
                         log.w("cannot copy floorplan", e);
                         ToastUtil.showToast(R.string.floorplan_copy_failed, Toast.LENGTH_LONG);

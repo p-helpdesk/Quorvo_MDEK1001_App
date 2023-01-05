@@ -6,6 +6,8 @@
 
 package com.decawave.argomanager.components.impl;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import com.annimon.stream.Collectors;
 import com.annimon.stream.Stream;
 import com.decawave.argo.api.DiscoveryApi;
@@ -35,8 +37,6 @@ import javax.inject.Inject;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Argo project.
@@ -176,7 +176,7 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
                 (f) -> appLog.we("TAG/ANCHOR discovery failed", f),
                 // prefer nodes which we do not know at all
 //                (bleAddress) -> networkNodeManager.getNode(bleAddress) != null ? ConnectPriority.LOW : ConnectPriority.MEDIUM,
-                (bleAddress) -> networkNodeManager.getNode(bleAddress) != null ? ConnectPriority.LOW : ConnectPriority.MEDIUM,
+                (bleAddress) -> networkNodeManager.getNode(bleAddress) ? ConnectPriority.LOW : ConnectPriority.MEDIUM,
                 // pass service data cache?
                 !serviceDataCache.isEmpty() ? serviceDataCache : null);
     }
@@ -260,7 +260,7 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
             log.d("onNodePresent: " + "bleAddress = [" + bleAddress + "]");
         }
         // check if we know this node
-        if (networkNodeManager.getNode(bleAddress) == null) {
+        if (networkNodeManager.getNode(bleAddress)) {
             if (Constants.DEBUG) {
                 log.d("ignoring unknown node " + bleAddress);
             }
@@ -270,7 +270,7 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
         // check if the node is transient
         if (!networkNodeManager.isNodePersisted(bleAddress) && discoveredNodes.add(bleAddress)) {
             // broadcast that this node has been just discovered
-            NetworkNodeEnhanced nne = networkNodeManager.getNode(bleAddress);
+            NetworkNodeEnhanced nne = networkNodeManager.getNode(Long.parseLong(bleAddress));
             if (nne != null) {
                 if (discoveryApi.isDiscovering()) sessionLocalDiscoveredNodes.add(bleAddress);
                 InterfaceHub.getHandlerHub(IhNodeDiscoveryListener.class).onNodeDiscovered(nne.asPlainNode());
@@ -281,7 +281,7 @@ public class DiscoveryManagerImpl implements DiscoveryManager {
     public @NotNull
     List<NetworkNode> getDiscoveredTransientOnlyNodes() {
         return Objects.requireNonNull(Stream.of(discoveredNodes).
-                map((bleAddress) -> networkNodeManager.getNode(bleAddress).asPlainNode()).
+                map((bleAddress) -> networkNodeManager.getNode(Long.parseLong(bleAddress)).asPlainNode()).
                 collect(Collectors.toList()));
     }
 

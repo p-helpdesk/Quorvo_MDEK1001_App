@@ -13,7 +13,7 @@ import com.google.common.base.Preconditions;
 import java.util.UUID;
 
 import eu.kryl.android.common.Constants;
-import rx.functions.Func0;
+import kotlin.jvm.functions.Function0;
 
 /**
  * Converts the given request to setting appropriate content of the enclosed characteristic.
@@ -69,14 +69,14 @@ class WriteRequestToCharacteristicVisitor implements WriteCharacteristicRequestV
         doVisit(() -> characteristic.setBooleanValue(request.getValue()), "setBooleanValue()");
     }
 
-    private void doVisit(Func0<Boolean> setCharValueFunction, String setterName) {
+    private void doVisit(Function0<Boolean> setCharValueFunction, String setterName) {
         // try for the first time
-        boolean b = setCharValueFunction.call();
+        boolean b = setCharValueFunction.invoke();
         if (!b) {
             // reset the old value...
             this.characteristic.setByteValue(null);
             // ... and then set the value again
-            b = setCharValueFunction.call();
+            b = setCharValueFunction.invoke();
         }
         if (Constants.DEBUG) {
             Preconditions.checkState(b, setterName + " failed!");

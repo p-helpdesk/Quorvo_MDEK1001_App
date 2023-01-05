@@ -6,6 +6,8 @@
 
 package com.decawave.argomanager.runner;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import com.decawave.argo.api.interaction.ErrorCode;
 import com.decawave.argo.api.interaction.NetworkNodeConnection;
 import com.decawave.argo.api.struct.ConnectPriority;
@@ -32,12 +34,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.function.Consumer;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-import rx.functions.Action0;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Argo project.
@@ -229,17 +229,17 @@ public class FirmwareUpdateRunnerImpl implements FirmwareUpdateRunner {
                 + nodeInfo.connectAttemptCounter + " (limit " + nodeInfo.connectAttemptLimit + ")", nodeInfo.tag);
         boolean connected[] = { false };
         bleConnectionApi.connect(nodeInfo.bleAddress, ConnectPriority.HIGH,
-            (nnc) -> {
-                    // on connected
-                    connected[0] = true;
-                    // adjust the attempt counters
-                    if (nodeInfo.lastConnectFailAtCounter == nodeInfo.connectAttemptCounter - 1) {
-                        // previous connection attempt failed, something has changed, reset the limit now
-                        nodeInfo.connectAttemptLimit = nodeInfo.connectAttemptCounter + CONNECT_RETRY_LIMIT;
-                    }
-                    // main routine
-                    onConnectedToNode(nodeInfo, nnc);
-            }, (connection,fail) -> {
+                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                        // on connected
+                        connected[0] = true;
+                        // adjust the attempt counters
+                        if (nodeInfo.lastConnectFailAtCounter == nodeInfo.connectAttemptCounter - 1) {
+                            // previous connection attempt failed, something has changed, reset the limit now
+                            nodeInfo.connectAttemptLimit = nodeInfo.connectAttemptCounter + CONNECT_RETRY_LIMIT;
+                        }
+                        // main routine
+                        onConnectedToNode(nodeInfo, nnc);
+                }, (connection, fail) -> {
                     // onFail
                     genericOnFail(nodeInfo, "connection to " + nodeInfo.bleAddress + " failed");
             }, (nnc,err) -> {
@@ -517,7 +517,7 @@ public class FirmwareUpdateRunnerImpl implements FirmwareUpdateRunner {
     private void doUploadFirmware(NodeInfo nodeInfo,
                                            Firmware firmware,
                                            NodeUpdateStatus uploadStatus,
-                                           Action0 onSuccess) {
+                                           Runnable onSuccess) {
         NetworkNodeConnection nnc = nodeInfo.connection;
         // reset the byte counter
         nodeInfo.uploadByteCounter = 0;
@@ -526,7 +526,7 @@ public class FirmwareUpdateRunnerImpl implements FirmwareUpdateRunner {
             // firmware update succeeded
             if (nodeInfo.nodeUpdateStatus != NodeUpdateStatus.CANCELLED) {
                 //
-                onSuccess.call();
+                onSuccess.notify();
             } else {
                 // we are not interested anymore
                 nnc.disconnect();
