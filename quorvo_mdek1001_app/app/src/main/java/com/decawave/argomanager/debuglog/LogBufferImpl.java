@@ -17,14 +17,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 import javax.inject.Singleton;
 
 import eu.kryl.android.common.android.AndroidValidate;
-import kotlin.jvm.functions.Function2;
-import kotlin.jvm.functions.Function3;
 
 /**
  * Generic log buffer.
@@ -80,7 +77,7 @@ class LogBufferImpl implements LogBuffer {
     }
 
     //@Override
-    public final void saveLogToFile(File file, Function3<LogEntry, Long, StringBuilder, StringBuilder> logEntryFormatter, Consumer<Void> onSuccess, Consumer<Throwable> onFail) {
+    public final void saveLogToFile(File file, TriConsumer<LogEntry, Long, StringBuilder> logEntryFormatter, Consumer<Void> onSuccess, Consumer<Throwable> onFail) {
         // create a copy for asynchronous processing
         ArrayList<LogEntry> lst = new ArrayList<>(logEntries);
         // pass onto worker handler
@@ -96,7 +93,7 @@ class LogBufferImpl implements LogBuffer {
                     long firstTime = lst.get(0).timeInMillis;
                     for (LogEntry logEntry : lst) {
                         sb.setLength(0);
-                        logEntryFormatter.invoke(logEntry,firstTime,sb);
+                        logEntryFormatter.accept(logEntry,firstTime,sb);
                         bw.write(sb.toString());
                     }
                 }

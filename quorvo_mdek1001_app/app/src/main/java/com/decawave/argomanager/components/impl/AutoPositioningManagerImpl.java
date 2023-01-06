@@ -48,6 +48,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 import javax.inject.Inject;
@@ -270,7 +271,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         // connect & retrieve MAC status
         String bleAddress = node.getBleAddress();
         managedConnections.put(node.getBleAddress(),
-                bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM, (Consumer<NetworkNodeConnection>) connection -> {
+                (NetworkNodeBleConnection) bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM, connection -> {
                     if (this.tag != launchTag) {
                         // obsolete
                         connection.disconnect();
@@ -299,7 +300,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                             failed[0] = true;
                         }, NetworkNodeProperty.ANCHOR_MAC_STATS);
                     }
-                }, (connection, fail) -> {
+                }, (BiConsumer<NetworkNodeConnection, Fail>) (connection, fail) -> {
                     // onFail
                     if (failed[0] == null) {
                         failed[0] = true;
@@ -345,10 +346,10 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         state.setNodeDistanceCollectionState(initiatorNode.getId(), AutoPositioningState.TaskState.RUNNING);
         Boolean[] failed = {null};
         // start a new connection
-        managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
+        managedConnections.put(bleAddress, (NetworkNodeBleConnection) bleConnectionApi.connect(bleAddress,
                 ConnectPriority.MEDIUM,
                 // onSuccess (connected)
-                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                (nnc) -> {
                     if (tag != launchTag) {
                         // obsolete
                         nnc.disconnect();
@@ -439,13 +440,13 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                         NetworkNodeProperty.LOCATION_DATA_MODE
                     );
             },
-            (connection,fail) -> {
-                    // on fail (connect)
-                    if (failed[0] == null) {
-                        appLog.i("failed to put the network to auto-position mode: " + fail.message, deviceTag);
-                        failed[0] = true;
-                    }
-            }, (nnc,err) -> {
+                (BiConsumer<NetworkNodeConnection, Fail>) (connection,fail) -> {
+                        // on fail (connect)
+                        if (failed[0] == null) {
+                            appLog.i("failed to put the network to auto-position mode: " + fail.message, deviceTag);
+                            failed[0] = true;
+                        }
+                }, (nnc, err) -> {
                     // on disconnected
                     managedConnections.remove(bleAddress);
                     if (tag == launchTag) {
@@ -507,10 +508,10 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         state.setNodeDistanceCollectionState(nodeId, AutoPositioningState.TaskState.RUNNING);
         Boolean[] failed = {null};
         // we can safely start a new connection
-        managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
+        managedConnections.put(bleAddress, (NetworkNodeBleConnection) bleConnectionApi.connect(bleAddress,
                 ConnectPriority.MEDIUM,
                 // onSuccess (connected)
-                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                (nnc) -> {
                     if (tag != launchTag) {
                         // obsolete
                         nnc.disconnect();
@@ -586,7 +587,7 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                     );
                 },
                 // on fail (connect)
-                (connection,fail) -> {
+                (BiConsumer<NetworkNodeConnection, Fail>) (connection,fail) -> {
                     if (failed[0] == null) {
                         appLog.i("failed to retrieve distances: " + fail.message, deviceTag);
                         failed[0] = true;
@@ -791,10 +792,10 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
         // set the save position state to RUNNING
         state.setNodePositionSaveState(node.getId(), AutoPositioningState.TaskState.RUNNING);
         // start a new connection and save the position
-        managedConnections.put(bleAddress, bleConnectionApi.connect(bleAddress,
+        managedConnections.put(bleAddress, (NetworkNodeBleConnection) bleConnectionApi.connect(bleAddress,
                     ConnectPriority.MEDIUM,
                     // onConnected
-                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                (nnc) -> {
                     if (tag != launchTag) {
                         // obsolete
                         nnc.disconnect();
@@ -818,12 +819,12 @@ public class AutoPositioningManagerImpl implements AutoPositioningManager {
                     );
                 },
                     // onFail (connect)
-                    (connection,fail) -> {
-                        if (failed[0] == null) {
-                            appLog.i("failed to save position (connect problem): " + fail.message, deviceTag);
-                            failed[0] = true;
-                        } // else: ignore the fail
-                    }, (nnc,err) -> {
+                (BiConsumer<NetworkNodeConnection, Fail>) (connection,fail) -> {
+                    if (failed[0] == null) {
+                        appLog.i("failed to save position (connect problem): " + fail.message, deviceTag);
+                        failed[0] = true;
+                    } // else: ignore the fail
+                }, (nnc, err) -> {
                         // onDisconnected
                         managedConnections.remove(bleAddress);
                         if (launchTag == tag) {

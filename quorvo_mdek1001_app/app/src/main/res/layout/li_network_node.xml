@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.decawave.argomanager.ui.view.NodeStateView
+            <com.decawave.argomanager.error.ui.view.NodeStateView
                 android:id="@+id/nodeType"
                 android:layout_width="24dp"
                 android:layout_marginStart="@dimen/activity_horizontal_margin_3_4"
@@ -105,7 +105,7 @@
                 android:contentDescription="@string/track_mode_toggle"
                 />
 
-            <com.decawave.argomanager.ui.view.SignalStrengthView
+            <com.decawave.argomanager.error.ui.view.SignalStrengthView
                 android:id="@+id/signalStrength"
                 style="@style/signalIndicatorStyle"
                 android:layout_gravity="center_vertical"

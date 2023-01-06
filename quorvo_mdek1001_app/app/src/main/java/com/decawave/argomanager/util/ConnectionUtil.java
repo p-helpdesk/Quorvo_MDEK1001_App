@@ -49,7 +49,7 @@ public class ConnectionUtil {
                                           BiConsumer<NetworkNodeConnection.WriteEffect, NetworkNode> onSuccess,
                                           Consumer<Fail> onFail, Consumer<Integer> onFinished) {
         boolean[] failure = { false };
-        NetworkNodeConnection aConnection = bleConnectionApi.connect(bleAddress, ConnectPriority.HIGH, (Consumer<NetworkNodeConnection>) connection -> {
+        NetworkNodeConnection aConnection = bleConnectionApi.connect(bleAddress, ConnectPriority.HIGH, connection -> {
             // on connected
             if (node[0] == null) {
                 node[0] = updateNodeSupplier.get();
@@ -64,11 +64,11 @@ public class ConnectionUtil {
                 handleFail(fail, counter, attemptCount, onFail, failure);
                 // we will get disconnected automatically
             });
-        }, (networkNodeConnection, fail) -> {
+        }, (BiConsumer<NetworkNodeConnection, Fail>) (networkNodeConnection, fail) -> {
             // on fail
             handleFail(fail, counter, attemptCount, onFail, failure);
             // we will get disconnected automatically
-        }, (networkNodeConnection,errCode) -> {
+        }, (networkNodeConnection, errCode) -> {
             // on disconnected
             if (failure[0] && counter < attemptCount) {
                 // try again

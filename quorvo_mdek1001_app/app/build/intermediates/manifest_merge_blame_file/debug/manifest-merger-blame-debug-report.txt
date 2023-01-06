@@ -86,8 +86,8 @@
 51-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:38:9-40
 52        <activity
 52-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:41:9-53:20
-53            android:name="com.decawave.argomanager.ui.MainActivity"
-53-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:42:13-68
+53            android:name="com.decawave.argomanager.error.ui.MainActivity"
+53-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:42:13-74
 54            android:exported="true"
 54-->C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:43:13-36
 55            android:label="@string/app_name"

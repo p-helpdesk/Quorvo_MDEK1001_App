@@ -46,7 +46,7 @@ import com.google.common.collect.Maps;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -82,14 +82,14 @@ public class LocationDataObserverImpl implements LocationDataObserver {
     private final Comparator<NetworkNodeEnhanced> observableCandidateComparator;
     private final NodeFitnessEvaluator fitnessEvaluator;
     // members
-    private Map<Long, NetworkNodeConnection> connectionByNetworkNodeId = Maps.newHashMap();
+    private final Map<Long, NetworkNodeConnection> connectionByNetworkNodeId = Maps.newHashMap();
     private boolean observing = false;
     private Object tag;
     private int shortenObservePeriodBy;
     private String preferentiallyObservedNode;
     private long preferentiallyObservedNodeTimestamp;
 
-    private Runnable rescanObserveAndSchedule = new Runnable() {
+    private final Runnable rescanObserveAndSchedule = new Runnable() {
         @Override
         public void run() {
             if (Constants.DEBUG) log.d("rescanObserveAndSchedule");
@@ -338,7 +338,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         // connect and start observation
         NetworkNodeConnection newConnection = bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.MEDIUM,
                 // onConnected
-                (Consumer<NetworkNodeConnection>) (nodeConnection) -> {
+                (nodeConnection) -> {
                     if (tag != LocationDataObserverImpl.this.tag) {
                         // ignore
                         log.d("ignoring overlapping observe callback invocation");
@@ -397,7 +397,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
                     );
                 },
                 // onFail
-                (connection,fail) -> {
+                (BiConsumer<NetworkNodeConnection, Fail>) (connection, fail) -> {
                     if (tag == LocationDataObserverImpl.this.tag) {
                         log.w("failed to connect to " + node.getBleAddress() + ", " + fail.message + ", trying later");
                     } // else: completely ignore
@@ -429,7 +429,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
         // connect and start observation
         NetworkNodeConnection newConnection = bleConnectionApi.connect(node.getBleAddress(), ConnectPriority.HIGH,
                 // onConnected
-                (Consumer<NetworkNodeConnection>) (nodeConnection) -> {
+                (nodeConnection) -> {
                     if (tag != LocationDataObserverImpl.this.tag) {
                         // ignore
                         log.d("ignoring overlapping observe callback invocation");
@@ -469,7 +469,7 @@ public class LocationDataObserverImpl implements LocationDataObserver {
                     );
                 },
                 // onFail
-                (connection, fail) -> {
+                (BiConsumer<NetworkNodeConnection, Fail>) (connection, fail) -> {
                     if (tag == LocationDataObserverImpl.this.tag) {
                         log.w("failed to connect to " + node.getBleAddress() + ", " + fail.message + ", trying later");
                     } // else: completely ignore

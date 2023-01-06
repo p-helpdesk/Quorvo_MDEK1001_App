@@ -47,7 +47,7 @@
                 android:layout_marginEnd="@dimen/activity_horizontal_margin_3_4"
                 />
 
-            <com.decawave.argomanager.ui.view.NodeStateView
+            <com.decawave.argomanager.error.ui.view.NodeStateView
                 android:id="@+id/nodeType"
                 android:layout_width="24dp"
                 android:layout_marginStart="@dimen/activity_horizontal_margin_3_4"
@@ -139,7 +139,7 @@
     </LinearLayout>
 
     <!-- bottom separator -->
-    <com.decawave.argomanager.ui.view.SimpleProgressView
+    <com.decawave.argomanager.error.ui.view.SimpleProgressView
         android:id="@+id/progressView"
         android:layout_width="match_parent"
         android:layout_height="3dp"

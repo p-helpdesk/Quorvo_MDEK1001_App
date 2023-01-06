@@ -88,7 +88,7 @@
         android:layout_height="@dimen/network_node_bottom_margin_half"/>
 
     <!-- progress view -->
-    <com.decawave.argomanager.ui.view.SimpleProgressView
+    <com.decawave.argomanager.error.ui.view.SimpleProgressView
         android:id="@+id/progressView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/network_node_bottom_margin_half"

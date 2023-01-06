@@ -39,7 +39,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="com.decawave.argomanager.ui.MainActivity"
+            android:name="com.decawave.argomanager.error.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="nosensor"

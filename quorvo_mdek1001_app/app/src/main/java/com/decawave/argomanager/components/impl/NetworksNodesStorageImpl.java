@@ -22,7 +22,7 @@ import com.decawave.argomanager.components.NetworksNodesStorage;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhancedImpl;
 import com.decawave.argomanager.components.struct.TrackMode;
-import com.decawave.argomanager.ui.view.FloorPlan;
+import com.decawave.argomanager.error.ui.view.FloorPlan;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;

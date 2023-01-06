@@ -9,6 +9,7 @@ package com.decawave.argomanager.runner;
 import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 import com.decawave.argo.api.interaction.ErrorCode;
+import com.decawave.argo.api.interaction.Fail;
 import com.decawave.argo.api.interaction.NetworkNodeConnection;
 import com.decawave.argo.api.struct.ConnectPriority;
 import com.decawave.argo.api.struct.FirmwareMeta;
@@ -34,7 +35,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
@@ -229,7 +230,7 @@ public class FirmwareUpdateRunnerImpl implements FirmwareUpdateRunner {
                 + nodeInfo.connectAttemptCounter + " (limit " + nodeInfo.connectAttemptLimit + ")", nodeInfo.tag);
         boolean connected[] = { false };
         bleConnectionApi.connect(nodeInfo.bleAddress, ConnectPriority.HIGH,
-                (Consumer<NetworkNodeConnection>) (nnc) -> {
+                (nnc) -> {
                         // on connected
                         connected[0] = true;
                         // adjust the attempt counters
@@ -239,10 +240,10 @@ public class FirmwareUpdateRunnerImpl implements FirmwareUpdateRunner {
                         }
                         // main routine
                         onConnectedToNode(nodeInfo, nnc);
-                }, (connection, fail) -> {
+                }, (BiConsumer<NetworkNodeConnection, Fail>) (connection, fail) -> {
                     // onFail
                     genericOnFail(nodeInfo, "connection to " + nodeInfo.bleAddress + " failed");
-            }, (nnc,err) -> {
+            }, (nnc, err) -> {
                     // adjust attempt counters
                     if (!connected[0]) {
                         nodeInfo.lastConnectFailAtCounter = nodeInfo.connectAttemptCounter;

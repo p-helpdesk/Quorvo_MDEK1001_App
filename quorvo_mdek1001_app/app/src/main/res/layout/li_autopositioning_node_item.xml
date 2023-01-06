@@ -93,7 +93,7 @@
     </LinearLayout>
 
     <!-- bottom separator -->
-    <com.decawave.argomanager.ui.view.SimpleProgressView
+    <com.decawave.argomanager.error.ui.view.SimpleProgressView
         android:id="@+id/progressView"
         android:layout_width="match_parent"
         android:layout_height="3dp"

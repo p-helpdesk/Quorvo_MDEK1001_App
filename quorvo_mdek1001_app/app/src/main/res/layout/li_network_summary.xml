@@ -59,7 +59,7 @@
             android:paddingEnd="@dimen/activity_horizontal_margin"
             >
 
-            <com.decawave.argomanager.ui.view.NodeStateView
+            <com.decawave.argomanager.error.ui.view.NodeStateView
                 android:id="@+id/anchorPictogram"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -84,7 +84,7 @@
             android:paddingEnd="@dimen/activity_horizontal_margin"
             >
 
-            <com.decawave.argomanager.ui.view.NodeStateView
+            <com.decawave.argomanager.error.ui.view.NodeStateView
                 android:id="@+id/tagPictogram"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

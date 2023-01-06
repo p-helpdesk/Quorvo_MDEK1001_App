@@ -32,10 +32,10 @@ import com.decawave.argomanager.R;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.error.ErrorCodeInterpreter;
 import com.decawave.argomanager.prefs.LengthUnit;
-import com.decawave.argomanager.ui.IhMainActivityProvider;
-import com.decawave.argomanager.ui.MainActivity;
-import com.decawave.argomanager.ui.fragment.AbstractArgoFragment;
-import com.decawave.argomanager.ui.fragment.FragmentType;
+import com.decawave.argomanager.error.ui.IhMainActivityProvider;
+import com.decawave.argomanager.error.ui.MainActivity;
+import com.decawave.argomanager.error.ui.fragment.AbstractArgoFragment;
+import com.decawave.argomanager.error.ui.fragment.FragmentType;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 

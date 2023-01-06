@@ -37,7 +37,7 @@ import com.decawave.argomanager.components.struct.NetworkNodeEnhancedImpl;
 import com.decawave.argomanager.components.struct.NodeWarning;
 import com.decawave.argomanager.components.struct.TrackMode;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.ui.view.FloorPlan;
+import com.decawave.argomanager.error.ui.view.FloorPlan;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
 
@@ -463,7 +463,7 @@ public class NetworkNodeManagerImpl implements NetworkNodeManager {
 
     @Override
     public TrackMode getNodeTrackMode(String bleAddress) {
-        NetworkNodeEnhanced node = getNode(bleAddress);
+        NetworkNodeEnhanced node = getNode(Long.parseLong(bleAddress));
         return node == null ? null : node.getTrackMode();
     }
 
@@ -487,7 +487,7 @@ public class NetworkNodeManagerImpl implements NetworkNodeManager {
 
     @Override
     public boolean getNode(String bleAddress) {
-        return nodes.getNode(bleAddress);
+        return getNode(bleAddress);
     }
 
     @NotNull

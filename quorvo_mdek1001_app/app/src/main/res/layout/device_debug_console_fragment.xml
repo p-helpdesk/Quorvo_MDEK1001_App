@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <com.decawave.argomanager.ui.view.NodeStateView
+        <com.decawave.argomanager.error.ui.view.NodeStateView
             android:id="@+id/nodeTypeView"
             android:layout_width="30dp"
             android:layout_height="30dp"

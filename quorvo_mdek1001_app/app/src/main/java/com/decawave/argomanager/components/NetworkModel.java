@@ -6,7 +6,7 @@
 
 package com.decawave.argomanager.components;
 
-import com.decawave.argomanager.ui.view.FloorPlan;
+import com.decawave.argomanager.error.ui.view.FloorPlan;
 import com.google.common.base.Objects;
 
 /**

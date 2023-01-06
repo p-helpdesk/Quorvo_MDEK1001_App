@@ -6,7 +6,10 @@
 
 package com.decawave.argomanager.runner;
 
+import static com.decawave.argomanager.ArgoApp.uiHandler;
+
 import com.annimon.stream.Stream;
+import com.decawave.argo.api.interaction.Fail;
 import com.decawave.argo.api.interaction.NetworkNodeConnection;
 import com.decawave.argo.api.struct.ConnectPriority;
 import com.decawave.argo.api.struct.NetworkNodeProperty;
@@ -29,11 +32,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.BiConsumer;
 
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
-
-import static com.decawave.argomanager.ArgoApp.uiHandler;
 
 /**
  * Argo project.
@@ -191,20 +193,20 @@ public class NetworkAssignmentRunnerImpl implements NetworkAssignmentRunner {
                 + nodeInfo.connectAttemptCounter + " (limit " + nodeInfo.connectAttemptLimit + ")", nodeInfo.tag);
         boolean connected[] = { false };
         bleConnectionApi.connect(nodeInfo.bleAddress, ConnectPriority.HIGH,
-            (nnc) -> {
-                    // on connected
-                    connected[0] = true;
-                    // adjust the attempt counters
-                    if (nodeInfo.lastConnectFailAtCounter == nodeInfo.connectAttemptCounter - 1) {
-                        // previous connection attempt failed, something has changed, reset the limit now
-                        nodeInfo.connectAttemptLimit = nodeInfo.connectAttemptCounter + CONNECT_RETRY_LIMIT;
-                    }
-                    // main routine
-                    onConnectedToNode(nodeInfo, nnc);
-            }, (connection,fail) -> {
+                (nnc) -> {
+                        // on connected
+                        connected[0] = true;
+                        // adjust the attempt counters
+                        if (nodeInfo.lastConnectFailAtCounter == nodeInfo.connectAttemptCounter - 1) {
+                            // previous connection attempt failed, something has changed, reset the limit now
+                            nodeInfo.connectAttemptLimit = nodeInfo.connectAttemptCounter + CONNECT_RETRY_LIMIT;
+                        }
+                        // main routine
+                        onConnectedToNode(nodeInfo, nnc);
+                }, (BiConsumer<NetworkNodeConnection, Fail>) (connection, fail) -> {
                     // onFail
                     genericOnFail(nodeInfo, "connection to " + nodeInfo.bleAddress + " failed");
-            }, (nnc,err) -> {
+            }, (nnc, err) -> {
                     // on disconnected
                     if (!connected[0]) {
                         nodeInfo.lastConnectFailAtCounter = nodeInfo.connectAttemptCounter;

@@ -8,7 +8,7 @@ package com.decawave.argomanager.util;
 
 import android.content.Intent;
 
-import com.decawave.argomanager.ui.MainActivity;
+import com.decawave.argomanager.error.ui.MainActivity;
 
 import eu.kryl.android.common.hub.InterfaceHubHandler;
 

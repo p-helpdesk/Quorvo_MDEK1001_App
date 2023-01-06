@@ -22,8 +22,8 @@ import androidx.annotation.RequiresApi;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.ble.BleAdapter;
-import com.decawave.argomanager.ui.MainActivity;
-import com.decawave.argomanager.ui.dialog.TurnOnLocationServiceDialogFragment;
+import com.decawave.argomanager.error.ui.MainActivity;
+import com.decawave.argomanager.error.ui.dialog.TurnOnLocationServiceDialogFragment;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.NotNull;

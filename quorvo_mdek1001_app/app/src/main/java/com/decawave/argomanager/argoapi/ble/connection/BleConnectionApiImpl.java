@@ -56,6 +56,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
 
+import javax.inject.Inject;
+
 import eu.kryl.android.common.hub.InterfaceHub;
 import eu.kryl.android.common.log.ComponentLog;
 //import rx.functions.Action0;
@@ -65,7 +67,7 @@ import eu.kryl.android.common.log.ComponentLog;
 /**
  * Android BLE connection API implementation.
  */
-public abstract class BleConnectionApiImpl implements BleConnectionApi {
+public class BleConnectionApiImpl implements BleConnectionApi { //implements BleConnectionApi
     private static final ComponentLog log = new ComponentLog(BleConnectionApiImpl.class);
     // dependencies
     private final BleAdapter bleAdapter;
@@ -98,7 +100,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
 
     }
 
-    //@Inject
+    @Inject
     BleConnectionApiImpl(BleAdapter bleAdapter,
                          NetworkNodeManager networkNodeManager,
                          LogBlockStatus logBlockStatus,
@@ -205,7 +207,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
     }
 
     //@Override
-    public NetworkNodeBleConnection connect(@NotNull String address,
+    public NetworkNodeConnection connect(@NotNull String address,
                                             @NotNull ConnectPriority connectPriority,
                                             @NotNull Consumer<NetworkNodeConnection> onConnectedCallback,
                                             @Nullable BiConsumer<NetworkNodeConnection, Fail> onFailCallback,
@@ -473,12 +475,12 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
         return ConcurrentOperationQueue.Priority.values()[connectPriority.ordinal()];
     }
 
-    @Override
+    //@Override
     public Boolean lastSessionSuccessful(@NonNull String bleAddress) {
         return lastSessionSuccessful.get(bleAddress);
     }
 
-    @Override
+    //@Override
     public void ignoreSessionErrors(String deviceAddress) {
         if (Constants.DEBUG) {
             log.d("ignoreSessionErrors: " + "deviceAddress = [" + deviceAddress + "]");
@@ -486,29 +488,34 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
         ignoreSessionErrors.add(deviceAddress);
     }
 
-    @Override
+    //@Override
     public Set<String> getInProgressDevices() {
         return new HashSet<>(connections.values((nnc) -> nnc.getState().inProgress)
                 .map(NetworkNodeConnection::getOtherSideAddress)
                 .toList());
     }
 
-    @Override
+    //@Override
     public void blockConnectionRequests(Notification.Action onBlocked) {
         connectQueue.blockProcessing(onBlocked);
     }
 
-    @Override
+    //@Override
     public void unblockConnectionRequests() {
         connectQueue.unblockProcessing();
     }
 
-    @Override
+    //@Override
     public YesNoAsync connectionRequestsBlocked() {
         return connectQueue.isProcessingBlocked();
     }
 
-    @Override
+    //@Override
+    public NetworkNodeBleConnection connect(@NotNull String address, @NotNull ConnectPriority connectPriority, @NotNull Consumer<NetworkNodeConnection> onConnectedCallback, java.util.function.@Nullable BiConsumer<NetworkNodeConnection, Fail> onFailCallback, java.util.function.@Nullable BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback) {
+        return null;
+    }
+
+    //@Override
     public void onSessionError(@NonNull String bleAddress, int errorCode) {
         if (Constants.DEBUG) {
             log.d("onSessionError: " + "bleAddress = [" + bleAddress + "], errorCode = [" + errorCode + "]");
@@ -520,7 +527,7 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
         }
     }
 
-    @Override
+    //@Override
     public void limitLowPriorityConnections(int limit) {
         if (Constants.DEBUG) {
             Preconditions.checkState(limit <= BleConstants.MAX_CONCURRENT_CONNECTION_COUNT, "limit cannot be greater than " + BleConstants.MAX_CONCURRENT_CONNECTION_COUNT);
@@ -532,21 +539,21 @@ public abstract class BleConnectionApiImpl implements BleConnectionApi {
         this.concurrentQueue.limitOperationExecutionByPriority(ConcurrentOperationQueue.Priority.LOW, limit);
     }
 
-    @Override
+    //@Override
     public boolean isClosedOrPending(@NotNull String bleAddress) {
         NetworkNodeConnection nnc = this.connections.affinityGet(bleAddress);
         ConnectionState state = nnc == null ? null : nnc.getState();
         return state == null || state.disconnected;
     }
 
-    @Override
+    //@Override
     public boolean allConnectionsClosed() {
         // find first non-closed connection - negate
         return !connections.values((nnc) -> !isClosed(nnc.getState())).findFirst().isPresent();
     }
 
     @NonNull
-    @Override
+    //@Override
     public ConnectionState getConnectionState(@NotNull String bleAddress) {
         NetworkNodeConnection nnc = connections.affinityGet(bleAddress);
         return nnc == null ? ConnectionState.CLOSED : nnc.getState();

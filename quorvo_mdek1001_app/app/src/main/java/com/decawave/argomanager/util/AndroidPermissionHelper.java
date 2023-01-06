@@ -8,7 +8,7 @@ package com.decawave.argomanager.util;
 
 import android.app.Notification;
 
-import com.decawave.argomanager.ui.MainActivity;
+import com.decawave.argomanager.error.ui.MainActivity;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -29,16 +29,6 @@ import java.util.function.Consumer;
 public interface BleConnectionApi extends GenericConnectionApi<String> {
 
     ///////////////////////////////////////////////////////////////////////////
-    // main connection routine
-    ///////////////////////////////////////////////////////////////////////////
-    //@Override
-    NetworkNodeBleConnection connect(@NotNull String address,
-                                     @NotNull ConnectPriority connectPriority,
-                                     @NotNull Consumer<NetworkNodeConnection> onConnectedCallback,
-                                     @Nullable BiConsumer<NetworkNodeConnection, Fail> onFailCallback,
-                                     @Nullable BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback);
-
-    ///////////////////////////////////////////////////////////////////////////
     // additional notification/information routines
     ///////////////////////////////////////////////////////////////////////////
     void onSessionError(@NotNull String bleAddress, int errorCode);
@@ -72,6 +62,18 @@ public interface BleConnectionApi extends GenericConnectionApi<String> {
      */
     @NotNull
     ConnectionState getConnectionState(@NotNull String bleAddress);
+
+    NetworkNodeBleConnection connect(@NotNull String address,
+                                     @NotNull ConnectPriority connectPriority,
+                                     @NotNull Consumer<NetworkNodeConnection> onConnectedCallback,
+                                     @Nullable BiConsumer<NetworkNodeConnection, Fail> onFailCallback,
+                                     @Nullable BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback);
+
+    NetworkNodeConnection connect(@NotNull String address,
+                                  @NotNull ConnectPriority connectPriority,
+                                  @NotNull Consumer<NetworkNodeConnection> onConnectedCallback,
+                                  @Nullable com.annimon.stream.function.BiConsumer<NetworkNodeConnection, Fail> onFailCallback,
+                                  @Nullable com.annimon.stream.function.BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback);
 
     Boolean lastSessionSuccessful(@NotNull String bleAddress);
 

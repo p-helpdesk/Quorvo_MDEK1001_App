@@ -403,7 +403,7 @@ public class DiscoveryApiBleImpl implements DiscoveryApi {
                     // setup it's own connection (but with a common callback)
                     nodeIc.connection = bleConnectionApi.connect(bluetoothDevice.getAddress(), priorityResolver.apply(bleAddress),
                             (Consumer<NetworkNodeConnection>) sessionCommonCallbackSet::onConnected,
-                            sessionCommonCallbackSet::onFail,
+                            (BiConsumer<NetworkNodeConnection, Fail>) sessionCommonCallbackSet::onFail,
                             sessionCommonCallbackSet::onDisconnected);
                 }
 

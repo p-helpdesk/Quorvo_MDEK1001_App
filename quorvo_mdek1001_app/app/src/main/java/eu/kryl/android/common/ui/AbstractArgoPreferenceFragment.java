@@ -28,8 +28,8 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 
 import com.decawave.argomanager.R;
-import com.decawave.argomanager.ui.fragment.AbstractArgoFragment;
-import com.decawave.argomanager.ui.fragment.FragmentType;
+import com.decawave.argomanager.error.ui.fragment.AbstractArgoFragment;
+import com.decawave.argomanager.error.ui.fragment.FragmentType;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
