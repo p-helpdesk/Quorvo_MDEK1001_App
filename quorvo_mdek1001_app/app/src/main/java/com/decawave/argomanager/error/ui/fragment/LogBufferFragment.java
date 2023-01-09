@@ -28,10 +28,10 @@ import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;
 import com.decawave.argomanager.debuglog.LogEntry;
 import com.decawave.argomanager.debuglog.LogEntryCollector;
-import com.decawave.argomanager.error.ui.listadapter.DebugLogBufferEntryAdapter;
-import com.decawave.argomanager.error.ui.listadapter.LogMessageHolder;
-import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
+import com.decawave.argomanager.error.ui.listadapter.LogMessageHolder;
+import com.decawave.argomanager.error.ui.listadapter.PositionLogBufferEntryAdapter;
+import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
 
@@ -90,7 +90,7 @@ public abstract class LogBufferFragment extends AbstractArgoFragment {
     protected void handleOnCreate(Bundle savedInstanceState) {
     }
 
-    protected abstract DebugLogBufferEntryAdapter createAdapter();
+    protected abstract PositionLogBufferEntryAdapter createAdapter();
 
     // may be overridden
     protected void formatLogEntry(StringBuilder sb, LogEntry logEntry) {
@@ -156,7 +156,6 @@ public abstract class LogBufferFragment extends AbstractArgoFragment {
     public void onResume() {
         super.onResume();
         //
-        //noinspection unchecked
         getLogBuffer().setListener(new LogBuffer.Listener() {
 
             @Override

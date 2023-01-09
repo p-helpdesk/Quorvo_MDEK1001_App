@@ -8,7 +8,7 @@ package com.decawave.argomanager.error.ui.fragment;
 
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;
-import com.decawave.argomanager.error.ui.listadapter.DebugLogBufferEntryAdapter;
+import com.decawave.argomanager.error.ui.listadapter.PositionLogBufferEntryAdapter;
 
 /**
  * Fragment showing debug logs.
@@ -25,8 +25,14 @@ public class DebugLogBufferFragment extends LogBufferFragment {
     }
 
     @Override
-    protected DebugLogBufferEntryAdapter createAdapter() {
-        return new DebugLogBufferEntryAdapter(getLogBuffer());
+    protected PositionLogBufferEntryAdapter createAdapter() {
+        return new PositionLogBufferEntryAdapter(getLogBuffer());
     }
+
+//    @Override
+//    protected DebugLogBufferEntryAdapter createAdapter() {
+//        return new DebugLogBufferEntryAdapter(getLogBuffer());
+//    }
+
 
 }

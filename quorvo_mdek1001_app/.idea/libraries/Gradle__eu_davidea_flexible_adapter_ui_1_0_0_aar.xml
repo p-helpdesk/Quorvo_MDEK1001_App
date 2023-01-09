@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: eu.davidea:flexible-adapter-ui:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c8080c0cf36885783c2b4d63f201d011/transformed/jetified-flexible-adapter-ui-1.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/639e00c9f60a61cf3e3c3ea582f49eb2/transformed/jetified-flexible-adapter-ui-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c8080c0cf36885783c2b4d63f201d011/transformed/jetified-flexible-adapter-ui-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c8080c0cf36885783c2b4d63f201d011/transformed/jetified-flexible-adapter-ui-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/639e00c9f60a61cf3e3c3ea582f49eb2/transformed/jetified-flexible-adapter-ui-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/639e00c9f60a61cf3e3c3ea582f49eb2/transformed/jetified-flexible-adapter-ui-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/eu.davidea/flexible-adapter-ui/1.0.0/40ba068e48e0c5695e6438a7e912eab597abfa9f/flexible-adapter-ui-1.0.0-javadoc.jar!/" />

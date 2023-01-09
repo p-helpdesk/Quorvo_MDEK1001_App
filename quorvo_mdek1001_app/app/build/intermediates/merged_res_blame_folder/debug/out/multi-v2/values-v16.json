@@ -4,7 +4,7 @@
             "outputFile": "com.decawave.argomanager.app-mergeDebugResources-21:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\4a587316491366273efcd60e84d0e3d7\\transformed\\core-1.3.2\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\99d3a2b3f940e34d8c229a221ba731e9\\transformed\\core-1.3.2\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\8a2f2f9c2ce79c9c89fb27f8aa3c11ee\\transformed\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\444e81b41e778deb6f8c785dc3ceba0f\\transformed\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

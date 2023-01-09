@@ -13,8 +13,8 @@ import com.decawave.argo.api.struct.ConnectPriority;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import io.reactivex.functions.BiConsumer;
-import io.reactivex.functions.Consumer;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 //import rx.functions.Action1;
 //import rx.functions.Action2;
@@ -42,4 +42,13 @@ public interface GenericConnectionApi<AddressType> {
                                   @NotNull Consumer<NetworkNodeConnection> onConnectedCallback,
                                   @Nullable BiConsumer<NetworkNodeConnection,Fail> onFailCallback,
                                   @Nullable BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback);
+
+    ///////////////////////////////////////////////////////////////////////////
+    // main connection routine
+    ///////////////////////////////////////////////////////////////////////////
+//    com.decawave.argomanager.argoapi.ble.connection.NetworkNodeBleConnection connect(@NotNull String address,
+//                                                                                     @NotNull ConnectPriority connectPriority,
+//                                                                                     @NotNull java.util.function.Consumer<NetworkNodeConnection> onConnectedCallback,
+//                                                                                     @Nullable java.util.function.BiConsumer<NetworkNodeConnection, Fail> onFailCallback,
+//                                                                                     @Nullable java.util.function.BiConsumer<NetworkNodeConnection, Integer> onDisconnectedCallback);
 }

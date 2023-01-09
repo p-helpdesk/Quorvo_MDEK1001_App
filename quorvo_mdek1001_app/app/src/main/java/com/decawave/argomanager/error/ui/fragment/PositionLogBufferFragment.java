@@ -10,7 +10,6 @@ import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
 import com.decawave.argomanager.debuglog.LogBuffer;
 import com.decawave.argomanager.debuglog.LogEntry;
-import com.decawave.argomanager.error.ui.listadapter.DebugLogBufferEntryAdapter;
 import com.decawave.argomanager.error.ui.listadapter.PositionLogBufferEntryAdapter;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;

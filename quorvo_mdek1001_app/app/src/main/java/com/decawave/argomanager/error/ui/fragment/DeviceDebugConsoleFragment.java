@@ -38,9 +38,9 @@ import com.decawave.argomanager.debuglog.ApplicationComponentLog;
 import com.decawave.argomanager.debuglog.LogBuffer;
 import com.decawave.argomanager.debuglog.LogEntryTag;
 import com.decawave.argomanager.debuglog.LogEntryTagFactory;
-import com.decawave.argomanager.error.ui.listadapter.DebugLogBufferEntryAdapter;
-import com.decawave.argomanager.ioc.ArgoComponent;
+import com.decawave.argomanager.error.ui.listadapter.PositionLogBufferEntryAdapter;
 import com.decawave.argomanager.error.ui.view.NodeStateView;
+import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
 
@@ -124,9 +124,14 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
         return logEntryCollector.getDeviceDebugLog(deviceBleAddress);
     }
 
+//    @Override
+//    protected DebugLogBufferEntryAdapter createAdapter() {
+//        return new DebugLogBufferEntryAdapter(getLogBuffer());
+//    }
+
     @Override
-    protected DebugLogBufferEntryAdapter createAdapter() {
-        return new DebugLogBufferEntryAdapter(getLogBuffer());
+    protected PositionLogBufferEntryAdapter createAdapter() {
+        return new PositionLogBufferEntryAdapter(getLogBuffer());
     }
 
     @Override

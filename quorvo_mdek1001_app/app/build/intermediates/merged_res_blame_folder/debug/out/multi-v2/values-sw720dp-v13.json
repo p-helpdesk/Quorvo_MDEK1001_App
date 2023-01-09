@@ -4,7 +4,7 @@
             "outputFile": "com.decawave.argomanager.app-mergeDebugResources-21:/values-sw720dp-v13/values-sw720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\8bddfac469bc0c7b75d0cebf49915901\\transformed\\jetified-core-3.3.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\3ef42e8630837aa256326ef6048a77d2\\transformed\\jetified-core-3.3.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

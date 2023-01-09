@@ -18,9 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.InputStream;
 import java.util.List;
-
-import io.reactivex.functions.Action;
-import io.reactivex.functions.Consumer;
+import java.util.function.Consumer;
 
 //import rx.functions.Action0;
 //import rx.functions.Action1;
@@ -103,7 +101,7 @@ public interface NetworkNodeConnection  {
      * @param onFailCallback invoked if the firmware upload failed
      */
     void uploadFirmware(FirmwareMeta firmwareMeta, InputStream firmwareData,
-                        @Nullable Action onSuccessCallback,
+                        @Nullable Runnable onSuccessCallback,
                         @Nullable Consumer<Integer> progressListener,
                         @Nullable Consumer<Fail> onFailCallback);
 

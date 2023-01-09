@@ -1,526 +1,486 @@
 [
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_actionbar_indeterminate_progress.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\actionbar_indeterminate_progress.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_discovery_info.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_discovery_info.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_pref_preference_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\pref_preference_item.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_dlg_enable_location_service.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/dlg_enable_location_service.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_discovered_node.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_discovered_node.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_app_icon_white.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_app_icon_white.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_dlg_update_rate_picker.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_dlg_update_rate_picker.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_fragment_empty_prefs.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/fragment_empty_prefs.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_node_details.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\node_details.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-xxxhdpi_ic_drag_handle_grey_24dp.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-xxxhdpi/ic_drag_handle_grey_24dp.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_help.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_help.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_folder.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_folder.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_activity_main_drawer.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\activity_main_drawer.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_ab_spinner_anchor.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/ab_spinner_anchor.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_mode_edit.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_mode_edit.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_nav_header_main.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/nav_header_main.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_autopositioning_summary.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_autopositioning_summary.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_card_bottom_shadow.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/card_bottom_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_instructions.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\instructions.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_pref_checkbox_preference_item.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/pref_checkbox_preference_item.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-xhdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-xhdpi\\transparent_abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_settings_icon.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_settings_icon.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_pref_dlg_edit_text.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\pref_dlg_edit_text.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-xhdpi_ic_drag_handle_grey_24dp.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-xhdpi\\ic_drag_handle_grey_24dp.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-hdpi_ic_drag_handle_grey_24dp.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-hdpi/ic_drag_handle_grey_24dp.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_lock_open.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_lock_open.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_overview.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/overview.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\color_primary_text_w_light_selection_light.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\color\\primary_text_w_light_selection_light.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_lock_closed.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_lock_closed.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_track_disabled.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_track_disabled.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_pref_preference_item.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/pref_preference_item.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_log.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_log.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_log_message_info_bold_entry.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/log_message_info_bold_entry.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_app_bar_main.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\app_bar_main.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_discovered_network_generic.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_discovered_network_generic.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_refresh.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_refresh.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_dlg_item_picker.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/dlg_item_picker.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_footprint.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_footprint.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_floor_plan_et.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\floor_plan_et.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_help.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_help.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-xxhdpi_ic_drag_handle_grey_24dp.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-xxhdpi\\ic_drag_handle_grey_24dp.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/color_tint_action_icon.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/color/tint_action_icon.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_app_icon.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_app_icon.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_pref_dlg_edit_text.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/pref_dlg_edit_text.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_log_message_info_bold_entry.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\log_message_info_bold_entry.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_locate_icon.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_locate_icon.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_fragment_ap_preview.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\fragment_ap_preview.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_grid_bottom_shadow.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/grid_bottom_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-xxhdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-xxhdpi\\transparent_abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_activity_main_drawer.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/activity_main_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_fragment_empty_prefs.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\fragment_empty_prefs.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/raw_dwm_core_fw2.bin.flat",
+        "source": "com.decawave.argomanager.app-main-25:/raw/dwm_core_fw2.bin"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_discovery_multi_select_menu.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\discovery_multi_select_menu.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_location_with_ranging.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_location_with_ranging.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_card_bottom_shadow.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\card_bottom_shadow.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_refresh.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_refresh.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_overview.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\overview.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_log_message_warning_entry.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/log_message_warning_entry.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_device_errors.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_device_errors.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_app_icon_white.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_app_icon_white.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_abc_ic_menu_overflow_material.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_floor_plan_controls.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\floor_plan_controls.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_floorplan.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_floorplan.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-hdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-hdpi\\transparent_abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_settings_icon.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_settings_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_node_discovery.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\node_discovery.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_device_debug_console_fragment.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\device_debug_console_fragment.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_autopos_snackbar.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\autopos_snackbar.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_firmware_update.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\firmware_update.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_notedetail.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_notedetail.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_card_top_shadow.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\card_top_shadow.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-mdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-mdpi/transparent_abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_app_bar_main.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/app_bar_main.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_ble_log.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_ble_log.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-hdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-hdpi/transparent_abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_network.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_node_discovery.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/node_discovery.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_discovered_network_generic.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_discovered_network_generic.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/color_secondary_text_w_light_selection_light.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/color/secondary_text_w_light_selection_light.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-hdpi_ic_drag_handle_grey_24dp.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-hdpi\\ic_drag_handle_grey_24dp.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_discovery_section_title.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_discovery_section_title.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_side_nav_bar.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\side_nav_bar.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_dlg_network_picker.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_dlg_network_picker.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_network_summary.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_network_summary.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_done.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_done.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_transparent_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\transparent_abc_edit_text_material.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_declared_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_declared_network.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_dlg_zaxis.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\dlg_zaxis.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_firmware_update.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/firmware_update.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_network_node_table_row.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_network_node_table_row.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_device_errors_list.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\device_errors_list.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_exclamation_sign.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_exclamation_sign.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_autopos.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_autopos.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_track_disabled.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_track_disabled.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_lock_closed.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_lock_closed.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_log_message_error_entry.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/log_message_error_entry.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-mdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-mdpi\\transparent_abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_lock_open.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_lock_open.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_instructions.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/instructions.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\color_secondary_text_w_light_selection_light.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\color\\secondary_text_w_light_selection_light.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_transparent_abc_edit_text_material.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/transparent_abc_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_auto_positioning.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\auto_positioning.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_no_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/no_network.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_2018_decawave_logo_horizontal_with_text.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_2018_decawave_logo_horizontal_with_text.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/color_primary_text_w_light_selection_light.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/color/primary_text_w_light_selection_light.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-xhdpi_ic_drag_handle_grey_24dp.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-xhdpi/ic_drag_handle_grey_24dp.png"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_autopos_snackbar.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/autopos_snackbar.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-xxhdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-xxhdpi/transparent_abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_footer_buttonbar.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/footer_buttonbar.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_device_errors_list.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/device_errors_list.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-mdpi_ic_drag_handle_grey_24dp.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-mdpi/ic_drag_handle_grey_24dp.png"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_side_nav_bar.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/side_nav_bar.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_simple_popup_window.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/simple_popup_window.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_floor_plan_control.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/floor_plan_control.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_autopos.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_autopos.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_fragment_edit_node_details_frame.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/fragment_edit_node_details_frame.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_floor_plan_et.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/floor_plan_et.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_device_debug_console_fragment.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/device_debug_console_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_error_log.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_error_log.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_log_message_info_entry.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/log_message_info_entry.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_firmware_node_item.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/li_firmware_node_item.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_declared_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_declared_network.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_trash_bin.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_trash_bin.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_network_new_nodes_discovered.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_network_new_nodes_discovered.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\raw_dwm_core_fw2.bin.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\raw\\dwm_core_fw2.bin"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_rotate_left.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_rotate_left.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_fragment_edit_node_details_frame.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\fragment_edit_node_details_frame.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_development_tools.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_development_tools.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_folder.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_folder.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_discovery_info.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_discovery_info.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_2018_decawave_logo.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_2018_decawave_logo.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_firmware_summary.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_firmware_summary.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_2018_decawave_logo.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_2018_decawave_logo.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_autopositioning_node_item.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/li_autopositioning_node_item.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_log_message_error_entry.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\log_message_error_entry.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_discovery_multi_select_menu.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/discovery_multi_select_menu.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_ab_spinner_anchor.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\ab_spinner_anchor.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_grid.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_grid.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_grid.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_grid.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_help_white.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_help_white.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-mdpi_ic_drag_handle_grey_24dp.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-mdpi\\ic_drag_handle_grey_24dp.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_generic_log_fragment.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/generic_log_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_simple_popup_window.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\simple_popup_window.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_ble_log.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_ble_log.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_device_errors.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_device_errors.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_auto_positioning.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/auto_positioning.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-xxhdpi_ic_drag_handle_grey_24dp.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-xxhdpi/ic_drag_handle_grey_24dp.png"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/xml_paths.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/xml/paths.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_autopositioning_summary.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_autopositioning_summary.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_network_summary.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/li_network_summary.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_discovered_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_discovered_network.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_ab_spinner_popup_item.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/ab_spinner_popup_item.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_content_main.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/content_main.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable-xxxhdpi_ic_drag_handle_grey_24dp.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable-xxxhdpi\\ic_drag_handle_grey_24dp.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable-xhdpi_transparent_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable-xhdpi/transparent_abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_clear_white.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_clear_white.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/color_tint_floorplan_control_icon.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/color/tint_floorplan_control_icon.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_firmware_node_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_firmware_node_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_no_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\no_network.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_trash_bin.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_trash_bin.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_dlg_update_rate_picker.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_dlg_update_rate_picker.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_fragment_grid.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/fragment_grid.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_generic_log_fragment.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\generic_log_fragment.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_floor_plan_control.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\floor_plan_control.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_network_new_nodes_discovered.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_network_new_nodes_discovered.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_log.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_log.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_exclamation_sign.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_exclamation_sign.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_2018_decawave_logo_horizontal_with_text.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_2018_decawave_logo_horizontal_with_text.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_discovery_section_title.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_discovery_section_title.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_development_tools.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_development_tools.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_footer_buttonbar.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\footer_buttonbar.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_floor_plan_controls.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/floor_plan_controls.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_dlg_network_picker.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_dlg_network_picker.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_card_top_shadow.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/card_top_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_network_node.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_network_node.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_error_log.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_error_log.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\raw_dwm_core_fw1.bin.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\raw\\dwm_core_fw1.bin"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_dlg_zaxis.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/dlg_zaxis.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_autopositioning_node_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_autopositioning_node_item.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_pref_preference_group.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/pref_preference_group.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_done.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_done.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_pref_custom_preference_item.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/pref_custom_preference_item.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\xml_paths.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\xml\\paths.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.decawave.argomanager.app-main-25:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_pref_preference_group.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\pref_preference_group.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_error_log_entry.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/error_log_entry.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_fragment_ap_preview.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/fragment_ap_preview.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_dlg_item_picker.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\dlg_item_picker.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_rotate_left.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_rotate_left.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_dlg_enable_location_service.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\dlg_enable_location_service.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_overview.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_overview.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_help_white.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_help_white.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_dlg_new_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_dlg_new_network.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_log_message_info_entry.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\log_message_info_entry.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_mode_edit.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_mode_edit.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_fragment_grid.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\fragment_grid.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_actionbar_indeterminate_progress.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/actionbar_indeterminate_progress.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_track_enabled.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_track_enabled.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_node_details.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/node_details.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\color_tint_action_icon.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\color\\tint_action_icon.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_firmware_summary.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_firmware_summary.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_dlg_new_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_dlg_new_network.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_activity_main.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_location_with_ranging.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_location_with_ranging.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_track_enabled.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_track_enabled.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\menu_menu_overview.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\menu\\menu_overview.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_dlg_rename_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/dlg_rename_network.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_pref_checkbox_preference_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\pref_checkbox_preference_item.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_app_icon.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_app_icon.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_ab_spinner_popup_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\ab_spinner_popup_item.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/raw_dwm_core_fw1.bin.flat",
+        "source": "com.decawave.argomanager.app-main-25:/raw/dwm_core_fw1.bin"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_log_message_warning_entry.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\log_message_warning_entry.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_locate_icon.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_locate_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_dlg_rename_network.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\dlg_rename_network.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_li_network_node_table_row.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\li_network_node_table_row.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_pref_custom_preference_item.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\pref_custom_preference_item.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_notedetail.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_notedetail.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_network_node.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/li_network_node.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_content_main.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\content_main.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/menu_menu_floorplan.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/menu/menu_floorplan.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_ic_footprint.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\ic_footprint.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_discovered_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/layout/li_discovered_network.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_error_log_entry.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\error_log_entry.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_abc_ic_menu_overflow_material.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_clear_white.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_clear_white.xml"
     },
     {
         "merged": "com.decawave.argomanager.app-merged_res-23:/layout_li_discovered_node.xml.flat",
         "source": "com.decawave.argomanager.app-main-25:/layout/li_discovered_node.xml"
     },
     {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\layout_nav_header_main.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\layout\\nav_header_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\color_tint_floorplan_control_icon.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\color\\tint_floorplan_control_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-merged_res-23:\\drawable_grid_bottom_shadow.xml.flat",
-        "source": "C:\\Users\\T-Gamer\\.gradle\\daemon\\7.4\\com.decawave.argomanager.app-main-25:\\drawable\\grid_bottom_shadow.xml"
+        "merged": "com.decawave.argomanager.app-merged_res-23:/drawable_ic_network.xml.flat",
+        "source": "com.decawave.argomanager.app-main-25:/drawable/ic_network.xml"
     }
 ]
