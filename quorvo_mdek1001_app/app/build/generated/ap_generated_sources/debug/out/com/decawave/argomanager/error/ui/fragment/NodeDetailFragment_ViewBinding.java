@@ -17,15 +17,15 @@ import java.lang.Override;
 public class NodeDetailFragment_ViewBinding implements Unbinder {
   private NodeDetailFragment target;
 
-  private View view7f0801a5;
+  private View view6ab;
 
-  private View view7f08015f;
+  private View view660;
 
-  private View view7f080101;
+  private View view601;
 
-  private View view7f08010e;
+  private View view60e;
 
-  private View view7f0801ab;
+  private View view6b1;
 
   @UiThread
   public NodeDetailFragment_ViewBinding(final NodeDetailFragment target, View source) {
@@ -42,7 +42,7 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     target.updateRateLabel = Utils.findRequiredView(source, R.id.updateRateLabel, "field 'updateRateLabel'");
     view = Utils.findRequiredView(source, R.id.updateRateSelector, "field 'updateRateSelector' and method 'onUpdateRateClicked'");
     target.updateRateSelector = view;
-    view7f0801a5 = view;
+    view6ab = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     target.stationaryUpdateRateLabel = Utils.findRequiredView(source, R.id.stationaryUpdateRateLabel, "field 'stationaryUpdateRateLabel'");
     view = Utils.findRequiredView(source, R.id.stationaryUpdateRateSelector, "field 'stationaryUpdateRateSelector' and method 'onStationaryUpdateRateClicked'");
     target.stationaryUpdateRateSelector = view;
-    view7f08015f = view;
+    view660 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -67,7 +67,7 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     target.tvUwbMode = Utils.findRequiredViewAsType(source, R.id.tvUwbMode, "field 'tvUwbMode'", TextView.class);
     view = Utils.findRequiredView(source, R.id.networkNameSelector, "field 'networkViewGroup' and method 'onNetworkClicked'");
     target.networkViewGroup = view;
-    view7f080101 = view;
+    view601 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -76,7 +76,7 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.nodeTypeSelector, "field 'nodeTypeViewGroup' and method 'onNodeTypeClicked'");
     target.nodeTypeViewGroup = view;
-    view7f08010e = view;
+    view60e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -85,7 +85,7 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.uwbModeSelector, "field 'uwbModeViewGroup' and method 'onUwbModeClicked'");
     target.uwbModeViewGroup = view;
-    view7f0801ab = view;
+    view6b1 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -153,15 +153,15 @@ public class NodeDetailFragment_ViewBinding implements Unbinder {
     target.anchorSpecificViews = null;
     target.tagSpecificViews = null;
 
-    view7f0801a5.setOnClickListener(null);
-    view7f0801a5 = null;
-    view7f08015f.setOnClickListener(null);
-    view7f08015f = null;
-    view7f080101.setOnClickListener(null);
-    view7f080101 = null;
-    view7f08010e.setOnClickListener(null);
-    view7f08010e = null;
-    view7f0801ab.setOnClickListener(null);
-    view7f0801ab = null;
+    view6ab.setOnClickListener(null);
+    view6ab = null;
+    view660.setOnClickListener(null);
+    view660 = null;
+    view601.setOnClickListener(null);
+    view601 = null;
+    view60e.setOnClickListener(null);
+    view60e = null;
+    view6b1.setOnClickListener(null);
+    view6b1 = null;
   }
 }

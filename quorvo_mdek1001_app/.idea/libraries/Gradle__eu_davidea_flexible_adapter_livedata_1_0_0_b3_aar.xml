@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: eu.davidea:flexible-adapter-livedata:1.0.0-b3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/354e7469d6c40a8b1121344e34ce80f8/transformed/jetified-flexible-adapter-livedata-1.0.0-b3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/354e7469d6c40a8b1121344e34ce80f8/transformed/jetified-flexible-adapter-livedata-1.0.0-b3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d84c1fb9fc15ede27a9ee0dfd809c769/transformed/jetified-flexible-adapter-livedata-1.0.0-b3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d84c1fb9fc15ede27a9ee0dfd809c769/transformed/jetified-flexible-adapter-livedata-1.0.0-b3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/eu.davidea/flexible-adapter-livedata/1.0.0-b3/d26cc19f9862d37d8ec67193bfa6dddd5ca6c1ac/flexible-adapter-livedata-1.0.0-b3-javadoc.jar!/" />

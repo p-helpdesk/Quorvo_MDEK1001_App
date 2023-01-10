@@ -17,7 +17,7 @@ import java.lang.Override;
 public class FirmwareUpdateFragment_ViewBinding implements Unbinder {
   private FirmwareUpdateFragment target;
 
-  private View view7f0801a2;
+  private View view6a8;
 
   @UiThread
   public FirmwareUpdateFragment_ViewBinding(final FirmwareUpdateFragment target, View source) {
@@ -26,7 +26,7 @@ public class FirmwareUpdateFragment_ViewBinding implements Unbinder {
     View view;
     view = Utils.findRequiredView(source, R.id.updateButton, "field 'btnUpdate' and method 'onUpdateButtonClicked'");
     target.btnUpdate = Utils.castView(view, R.id.updateButton, "field 'btnUpdate'", Button.class);
-    view7f0801a2 = view;
+    view6a8 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,7 +50,7 @@ public class FirmwareUpdateFragment_ViewBinding implements Unbinder {
     target.refreshLayout = null;
     target.noNodesView = null;
 
-    view7f0801a2.setOnClickListener(null);
-    view7f0801a2 = null;
+    view6a8.setOnClickListener(null);
+    view6a8 = null;
   }
 }

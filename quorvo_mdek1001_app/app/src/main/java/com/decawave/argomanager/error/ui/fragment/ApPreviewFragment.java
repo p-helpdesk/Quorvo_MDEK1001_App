@@ -17,16 +17,17 @@ import com.annimon.stream.Stream;
 import com.decawave.argo.api.struct.AnchorNode;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ext.NodeFactory;
 import com.decawave.argomanager.components.AutoPositioningManager;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.components.struct.ComputedPosition;
 import com.decawave.argomanager.components.struct.TrackMode;
-import com.decawave.argomanager.ioc.ArgoComponent;
-import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.error.ui.view.FloorPlan;
 import com.decawave.argomanager.error.ui.view.GridView;
+import com.decawave.argomanager.ioc.ArgoComponent;
+import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -47,7 +48,7 @@ public class ApPreviewFragment extends AbstractArgoFragment {
     private static final String BK_EXTRA_ANIMATED_ZOOM = "ANIMATED_ZOOM";
 
     //
-    @BindView(R.id.gridView)
+    @BindView(R2.id.gridView)
     GridView grid;
 
     @Inject

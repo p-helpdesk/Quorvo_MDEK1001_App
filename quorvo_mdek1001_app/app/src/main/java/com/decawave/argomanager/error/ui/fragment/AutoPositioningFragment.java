@@ -26,6 +26,7 @@ import com.annimon.stream.Stream;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.argoapi.ble.IhConnectionStateListener;
 import com.decawave.argomanager.components.AutoPositioningManager;
@@ -33,13 +34,13 @@ import com.decawave.argomanager.components.AutoPositioningState;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.components.impl.AutoPositioningAlgorithm;
+import com.decawave.argomanager.error.ui.MainActivity;
+import com.decawave.argomanager.error.ui.dialog.ZaxisValueDialogFragment;
+import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.error.ui.listadapter.AutoPositioningNodeListAdapter;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.runner.IhAutoPositioningManagerListener;
-import com.decawave.argomanager.error.ui.MainActivity;
-import com.decawave.argomanager.error.ui.dialog.ZaxisValueDialogFragment;
-import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
@@ -75,17 +76,17 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
     AppPreferenceAccessor appPreferenceAccessor;
 
     // view references
-    @BindView(R.id.footerButtonBar)
+    @BindView(R2.id.footerButtonBar)
     View footerButtonBar;
-    @BindView(R.id.measureButton)
+    @BindView(R2.id.measureButton)
     Button measureBtn;
-    @BindView(R.id.saveButton)
+    @BindView(R2.id.saveButton)
     Button saveBtn;
-    @BindView(R.id.nodeList)
+    @BindView(R2.id.nodeList)
     RecyclerView nodeList;
-    @BindView(R.id.contentView)
+    @BindView(R2.id.contentView)
     View contentView;
-    @BindView(R.id.tvNoNodes)
+    @BindView(R2.id.tvNoNodes)
     View noNodesView;
 
     // adapter + node list
@@ -226,7 +227,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
                 autoPositioningManager.getApplicationState() == AutoPositioningState.ApplicationState.DISTANCE_COLLECTION_FAILED;
     }
 
-    @OnClick(R.id.measureButton)
+    @OnClick(R2.id.measureButton)
     void onMeasureButtonClicked() {
         // this button changes state from: measure to cancel
         AutoPositioningState.ApplicationState applicationState = autoPositioningManager.getApplicationState();
@@ -247,7 +248,7 @@ public class AutoPositioningFragment extends DiscoveryProgressAwareFragment
         }
     }
 
-    @OnClick(R.id.saveButton)
+    @OnClick(R2.id.saveButton)
     void onSaveButtonClicked() {
         AutoPositioningState.ApplicationState appState = autoPositioningManager.getApplicationState();
         if (appState == AutoPositioningState.ApplicationState.SAVING_POSITIONS) {

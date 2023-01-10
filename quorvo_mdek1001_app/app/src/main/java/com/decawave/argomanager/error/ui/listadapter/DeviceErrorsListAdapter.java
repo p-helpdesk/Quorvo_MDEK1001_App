@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.ErrorManager;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.error.DeviceErrors;
@@ -174,11 +175,11 @@ public class DeviceErrorsListAdapter extends RecyclerView.Adapter<DeviceErrorsLi
 
     abstract class ViewHolder extends RecyclerView.ViewHolder {
         // common stuff here
-        @BindView(R.id.bottomSeparator)
+        @BindView(R2.id.bottomSeparator)
         View nodeSeparator;
-        @BindView(R.id.cardTop)
+        @BindView(R2.id.cardTop)
         View cardTop;
-        @BindView(R.id.lastNodeBottomSeparator)
+        @BindView(R2.id.lastNodeBottomSeparator)
         View lastNodeSeparator;
 
 
@@ -192,9 +193,9 @@ public class DeviceErrorsListAdapter extends RecyclerView.Adapter<DeviceErrorsLi
 
     class DeviceErrorsHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.nodeBleAddress)
+        @BindView(R2.id.nodeBleAddress)
         TextView tvBleAddress;
-        @BindView(R.id.cardContent)
+        @BindView(R2.id.cardContent)
         LinearLayout cardContent;
         // identification of the device
         String bleAddress;

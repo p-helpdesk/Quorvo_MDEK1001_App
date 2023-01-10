@@ -25,6 +25,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.argoapi.ble.IhDiscoveryStateListener;
 import com.decawave.argomanager.components.DiscoveryManager;
@@ -34,16 +35,16 @@ import com.decawave.argomanager.components.ih.IhNetworkChangeListener;
 import com.decawave.argomanager.components.ih.IhNodeDiscoveryListener;
 import com.decawave.argomanager.components.ih.IhPersistedNodeChangeListener;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
-import com.decawave.argomanager.ioc.ArgoComponent;
-import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.runner.IhNetworkAssignmentRunnerListener;
-import com.decawave.argomanager.runner.NetworkAssignmentRunner;
-import com.decawave.argomanager.runner.NetworkAssignmentRunnerImpl;
 import com.decawave.argomanager.error.ui.dialog.NetworkPickerDialogFragment;
 import com.decawave.argomanager.error.ui.dialog.NewNetworkNameDialogFragment;
 import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.error.ui.listadapter.discovery.DiscoveryListAdapter;
 import com.decawave.argomanager.error.ui.view.FloorPlan;
+import com.decawave.argomanager.ioc.ArgoComponent;
+import com.decawave.argomanager.prefs.AppPreferenceAccessor;
+import com.decawave.argomanager.runner.IhNetworkAssignmentRunnerListener;
+import com.decawave.argomanager.runner.NetworkAssignmentRunner;
+import com.decawave.argomanager.runner.NetworkAssignmentRunnerImpl;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.NetworkIdGenerator;
 import com.decawave.argomanager.util.ToastUtil;
@@ -58,6 +59,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.SelectableAdapter;
@@ -117,7 +119,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
     @Inject
     BleConnectionApi bleConnectionApi;
 
-    //@BindView(R.id.swipeRefreshLayout)
+    @BindView(R2.id.swipeRefreshLayout)
     SwipeRefreshLayout refreshLayout;
 
     // state
@@ -163,7 +165,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
         recyclerView.setLayoutManager(new NpaLinearLayoutManager(getActivity()));
         // decorate with proper spacing
         recyclerView.addItemDecoration(
-                new FlexibleItemDecoration(Objects.requireNonNull(getActivity()))
+                new FlexibleItemDecoration(requireActivity())
                 .addItemViewType(R.layout.li_discovery_info, 0, 0, 0, 4)
                 .addItemViewType(R.layout.li_discovered_network, 0, 4, 0, 4)
                 .withSectionGapOffset(16)
@@ -205,7 +207,7 @@ public class DiscoveryFragment extends DiscoveryProgressAwareFragment
     }
 
     void initializeActionModeHelper() {
-        mActionModeHelper = new ActionModeHelper((FlexibleAdapter) adapter, R.menu.discovery_multi_select_menu, (androidx.appcompat.view.ActionMode.Callback) this) {
+        mActionModeHelper = new ActionModeHelper(adapter, R.menu.discovery_multi_select_menu, (androidx.appcompat.view.ActionMode.Callback) this) {
 
             @Override
             public void updateContextTitle(int count) {

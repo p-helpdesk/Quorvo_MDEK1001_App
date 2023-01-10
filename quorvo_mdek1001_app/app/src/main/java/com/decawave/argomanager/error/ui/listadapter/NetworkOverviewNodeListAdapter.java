@@ -36,6 +36,7 @@ import com.decawave.argo.api.struct.TagNode;
 import com.decawave.argo.api.struct.UwbMode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.argoapi.ble.BleConstants;
 import com.decawave.argomanager.ble.signal.SignalStrength;
@@ -48,8 +49,6 @@ import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 import com.decawave.argomanager.components.struct.NodeWarning;
 import com.decawave.argomanager.components.struct.PresenceStatus;
 import com.decawave.argomanager.components.struct.TrackMode;
-import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.prefs.ApplicationMode;
 import com.decawave.argomanager.error.ui.IhMainActivityProvider;
 import com.decawave.argomanager.error.ui.MainActivity;
 import com.decawave.argomanager.error.ui.fragment.DeviceDebugConsoleFragment;
@@ -58,6 +57,8 @@ import com.decawave.argomanager.error.ui.fragment.GridFragment;
 import com.decawave.argomanager.error.ui.fragment.NodeDetailFragment;
 import com.decawave.argomanager.error.ui.view.NodeStateView;
 import com.decawave.argomanager.error.ui.view.SignalStrengthView;
+import com.decawave.argomanager.prefs.AppPreferenceAccessor;
+import com.decawave.argomanager.prefs.ApplicationMode;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
 import com.decawave.argomanager.util.ToastUtil;
@@ -213,7 +214,7 @@ public class NetworkOverviewNodeListAdapter extends RecyclerView.Adapter<Network
 
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public @NotNull ViewHolder onCreateViewHolder(@NotNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mainActivity);
         switch (viewType) {
             case ITEM_TYPE_SUMMARY:
@@ -430,32 +431,32 @@ public class NetworkOverviewNodeListAdapter extends RecyclerView.Adapter<Network
 
     public class NetworkNodeListItemHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.nodeName)
+        @BindView(R2.id.nodeName)
         TextView nodeName;
-        @BindView(R.id.bleAddress)
+        @BindView(R2.id.bleAddress)
         TextView tvNodeBleAddress;
-        @BindView(R.id.cardTop)
+        @BindView(R2.id.cardTop)
         View cardTop;
-        @BindView(R.id.cardTopSeparator)
+        @BindView(R2.id.cardTopSeparator)
         View cardTopSeparator;
-        @BindView(R.id.bottomSeparator)
+        @BindView(R2.id.bottomSeparator)
         View nodeSeparator;
-        @BindView(R.id.lastNodeBottomSeparator)
+        @BindView(R2.id.lastNodeBottomSeparator)
         View lastNodeSeparator;
-        @BindView(R.id.nodeType)
+        @BindView(R2.id.nodeType)
         NodeStateView nodeStateView;
-        @BindView(R.id.signalStrength)
+        @BindView(R2.id.signalStrength)
         SignalStrengthView signalStrengthView;
-        @BindView(R.id.warningIcon)
+        @BindView(R2.id.warningIcon)
         TextView warningIcon;
-        @BindView(R.id.trackModeIcon)
+        @BindView(R2.id.trackModeIcon)
         ImageView trackModeIcon;
-        @BindView(R.id.locateIcon)
+        @BindView(R2.id.locateIcon)
         ImageView locateIcon;
-        @BindView(R.id.editIcon)
+        @BindView(R2.id.editIcon)
         ImageView editIcon;
         // this table is to be filled in onBind()
-        @BindView(R.id.detailsTable)
+        @BindView(R2.id.detailsTable)
         TableLayout detailsTable;
 
 
@@ -620,7 +621,6 @@ public class NetworkOverviewNodeListAdapter extends RecyclerView.Adapter<Network
                                 break;
                         }
                     }
-                    //noinspection unchecked
                     setupTableRow(tableRow, daApp.getString(R.string.overview_node_warning), sb.toString(), R.style.NodeDetailsWarning);
                     detailsTable.addView(tableRow);
                 }
@@ -657,7 +657,6 @@ public class NetworkOverviewNodeListAdapter extends RecyclerView.Adapter<Network
             if (property == NetworkNodeProperty.UWB_MODE && propertyValue == UwbMode.PASSIVE && networkNode.isAnchor()) {
                 extraStyleId = R.style.AnchorDetailsPassiveUwb;
             }
-            //noinspection unchecked
             setupTableRow(tableRow, decoratedProperty.label,
                     propertyValue == null ? daApp.getString(R.string.value_not_known_tabular) : decoratedProperty.formatValue(propertyValue),
                     extraStyleId);
@@ -754,17 +753,17 @@ public class NetworkOverviewNodeListAdapter extends RecyclerView.Adapter<Network
 
     class NetworkSummaryItemHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.networkName)
+        @BindView(R2.id.networkName)
         TextView networkName;
-        @BindView(R.id.infoNumberOfAnchors)
+        @BindView(R2.id.infoNumberOfAnchors)
         TextView numberOfAnchors;
-        @BindView(R.id.infoNumberOfTags)
+        @BindView(R2.id.infoNumberOfTags)
         TextView numberOfTags;
-        @BindView(R.id.infoNetworkId)
+        @BindView(R2.id.infoNetworkId)
         TextView networkId;
-        @BindView(R.id.tagPictogram)
+        @BindView(R2.id.tagPictogram)
         NodeStateView tagPictogram;
-        @BindView(R.id.anchorPictogram)
+        @BindView(R2.id.anchorPictogram)
         NodeStateView anchorPictogram;
         //
         NetworkModel network;

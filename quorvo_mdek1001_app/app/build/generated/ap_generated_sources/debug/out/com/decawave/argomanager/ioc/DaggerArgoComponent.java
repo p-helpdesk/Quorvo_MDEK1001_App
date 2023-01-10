@@ -22,6 +22,7 @@ import com.decawave.argomanager.components.LocationDataLogger;
 import com.decawave.argomanager.components.NetworkModelManager;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.components.NetworksNodesStorage;
+import com.decawave.argomanager.components.PositionObservationManager;
 import com.decawave.argomanager.components.impl.AutoPositioningManagerImpl;
 import com.decawave.argomanager.components.impl.AutoPositioningManagerImpl_Factory;
 import com.decawave.argomanager.components.impl.BlePresenceApiImpl;
@@ -38,6 +39,8 @@ import com.decawave.argomanager.components.impl.NetworkModelManagerImpl_Factory;
 import com.decawave.argomanager.components.impl.NetworkNodeManagerImpl;
 import com.decawave.argomanager.components.impl.NetworkNodeManagerImpl_Factory;
 import com.decawave.argomanager.components.impl.NetworksNodesStorageImpl_Factory;
+import com.decawave.argomanager.components.impl.PositionObservationManagerImpl;
+import com.decawave.argomanager.components.impl.PositionObservationManagerImpl_Factory;
 import com.decawave.argomanager.components.impl.UniqueReorderingStack;
 import com.decawave.argomanager.components.impl.UniqueReorderingStack_Factory;
 import com.decawave.argomanager.debuglog.ApplicationComponentLog;
@@ -72,6 +75,7 @@ import com.decawave.argomanager.error.ui.fragment.DiscoveryProgressAwareFragment
 import com.decawave.argomanager.error.ui.fragment.FirmwareUpdateFragment;
 import com.decawave.argomanager.error.ui.fragment.FirmwareUpdateFragment_MembersInjector;
 import com.decawave.argomanager.error.ui.fragment.GridFragment;
+import com.decawave.argomanager.error.ui.fragment.GridFragment_MembersInjector;
 import com.decawave.argomanager.error.ui.fragment.InstructionsFragment;
 import com.decawave.argomanager.error.ui.fragment.InstructionsFragment_MembersInjector;
 import com.decawave.argomanager.error.ui.fragment.LogBufferFragment;
@@ -193,6 +197,12 @@ public final class DaggerArgoComponent {
 
     private Provider<AndroidPermissionHelper> provideAndroidPermissionHelperProvider;
 
+    private Provider<LocationDataObserverImpl> locationDataObserverImplProvider;
+
+    private Provider<PositionObservationManagerImpl> positionObservationManagerImplProvider;
+
+    private Provider<PositionObservationManager> provideObservationManagerProvider;
+
     private Provider<SignalStrengthInterpreter> provideSignalStrengthInterpreterProvider;
 
     private Provider<NetworkNodePropertyDecoratorImpl> networkNodePropertyDecoratorImplProvider;
@@ -202,8 +212,6 @@ public final class DaggerArgoComponent {
     private Provider<AutoPositioningManagerImpl> autoPositioningManagerImplProvider;
 
     private Provider<AutoPositioningManager> provideAutoPositioningManagerProvider;
-
-    private Provider<LocationDataObserverImpl> locationDataObserverImplProvider;
 
     private ArgoComponentImpl(ArgoDependencyProvider argoDependencyProviderParam) {
 
@@ -238,12 +246,14 @@ public final class DaggerArgoComponent {
       this.provideDiscoveryManagerProvider = DoubleCheck.provider((Provider) discoveryManagerImplProvider);
       this.androidPermissionHelperImplProvider = AndroidPermissionHelperImpl_Factory.create(provideAdapterProvider);
       this.provideAndroidPermissionHelperProvider = DoubleCheck.provider((Provider) androidPermissionHelperImplProvider);
+      this.locationDataObserverImplProvider = DoubleCheck.provider(LocationDataObserverImpl_Factory.create(provideBleConnectionApiProvider, provideDiscoveryManagerProvider, provideNetworkModelManagerProvider, ((Provider) blePresenceApiImplProvider), ((Provider) appPreferenceAccessorImplProvider)));
+      this.positionObservationManagerImplProvider = PositionObservationManagerImpl_Factory.create(((Provider) locationDataObserverImplProvider));
+      this.provideObservationManagerProvider = DoubleCheck.provider((Provider) positionObservationManagerImplProvider);
       this.provideSignalStrengthInterpreterProvider = DoubleCheck.provider((Provider) SignalStrengthInterpreterImpl_Factory.create());
       this.networkNodePropertyDecoratorImplProvider = NetworkNodePropertyDecoratorImpl_Factory.create(((Provider) appPreferenceAccessorImplProvider));
       this.providePropertyDecoratorProvider = DoubleCheck.provider((Provider) networkNodePropertyDecoratorImplProvider);
       this.autoPositioningManagerImplProvider = AutoPositioningManagerImpl_Factory.create(provideBleConnectionApiProvider, provideNetworkModelManagerProvider);
       this.provideAutoPositioningManagerProvider = DoubleCheck.provider((Provider) autoPositioningManagerImplProvider);
-      this.locationDataObserverImplProvider = DoubleCheck.provider(LocationDataObserverImpl_Factory.create(provideBleConnectionApiProvider, provideDiscoveryManagerProvider, provideNetworkModelManagerProvider, ((Provider) blePresenceApiImplProvider), ((Provider) appPreferenceAccessorImplProvider)));
     }
 
     @Override
@@ -436,6 +446,12 @@ public final class DaggerArgoComponent {
       DiscoveryProgressAwareFragment_MembersInjector.injectErrorManager(instance, provideErrorManagerProvider.get());
       DiscoveryProgressAwareFragment_MembersInjector.injectAppPreferenceAccessor(instance, appPreferenceAccessorImplProvider.get());
       MainScreenFragment_MembersInjector.injectNetworkNodeManager(instance, provideNetworkModelManagerProvider.get());
+      GridFragment_MembersInjector.injectPositionObservationManager(instance, provideObservationManagerProvider.get());
+      GridFragment_MembersInjector.injectNetworkNodeManager(instance, provideNetworkModelManagerProvider.get());
+      GridFragment_MembersInjector.injectDiscoveryManager(instance, provideDiscoveryManagerProvider.get());
+      GridFragment_MembersInjector.injectPermissionHelper(instance, provideAndroidPermissionHelperProvider.get());
+      GridFragment_MembersInjector.injectPresenceApi(instance, blePresenceApiImplProvider.get());
+      GridFragment_MembersInjector.injectAppPreferenceAccessor(instance, appPreferenceAccessorImplProvider.get());
       return instance;
     }
 

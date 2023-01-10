@@ -19,14 +19,15 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.ErrorManager;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.error.ErrorDetail;
 import com.decawave.argomanager.error.IhErrorManagerListener;
+import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.error.ui.listadapter.DeviceErrorsListAdapter;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -49,10 +50,10 @@ public class DeviceErrorFragment extends AbstractArgoFragment implements IhError
     @Inject
     AppPreferenceAccessor appPreferenceAccessor;
 
-    @BindView(R.id.elementList)
+    @BindView(R2.id.elementList)
     RecyclerView elementList;
 
-    @BindView(R.id.noErrors)
+    @BindView(R2.id.noErrors)
     TextView noErrors;
 
     ItemTouchHelper.Callback callback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.END) {

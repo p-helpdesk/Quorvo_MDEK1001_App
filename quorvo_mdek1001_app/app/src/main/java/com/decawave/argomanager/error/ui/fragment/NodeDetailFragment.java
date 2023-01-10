@@ -31,6 +31,7 @@ import com.decawave.argo.api.struct.Position;
 import com.decawave.argo.api.struct.TagNode;
 import com.decawave.argo.api.struct.UwbMode;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.argoapi.ext.NodeFactory;
 import com.decawave.argomanager.argoapi.ext.UpdateRate;
@@ -38,22 +39,24 @@ import com.decawave.argomanager.components.DiscoveryManager;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
-import com.decawave.argomanager.ioc.ArgoComponent;
-import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.prefs.LengthUnit;
 import com.decawave.argomanager.error.ui.dialog.NetworkPickerDialogFragment;
 import com.decawave.argomanager.error.ui.dialog.NewNetworkNameDialogFragment;
 import com.decawave.argomanager.error.ui.dialog.NodeTypePickerDialogFragment;
 import com.decawave.argomanager.error.ui.dialog.UpdateRatePickerDialogFragment;
 import com.decawave.argomanager.error.ui.dialog.UwbModePickerDialogFragment;
 import com.decawave.argomanager.error.ui.uiutil.DecimalDigitsInputFilter;
+import com.decawave.argomanager.ioc.ArgoComponent;
+import com.decawave.argomanager.prefs.AppPreferenceAccessor;
+import com.decawave.argomanager.prefs.LengthUnit;
 import com.decawave.argomanager.util.ToastUtil;
 import com.decawave.argomanager.util.Util;
 import com.google.common.base.Preconditions;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -115,100 +118,100 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // members - views
-    @BindView(R.id.node_detail_position_x)
+    @BindView(R2.id.node_detail_position_x)
     EditText etPosX;
 
-    @BindView(R.id.node_detail_position_y)
+    @BindView(R2.id.node_detail_position_y)
     EditText etPosY;
 
-    @BindView(R.id.node_detail_position_z)
+    @BindView(R2.id.node_detail_position_z)
     EditText etPosZ;
 
-    @BindView(R.id.etNodeLabel)
+    @BindView(R2.id.etNodeLabel)
     EditText etNodeLabel;
 
-    @BindView(R.id.tvNodeId)
+    @BindView(R2.id.tvNodeId)
     TextView tvNodeId;
 
-    @BindView(R.id.tvNodeBleAddress)
+    @BindView(R2.id.tvNodeBleAddress)
     TextView tvNodeBleAddress;
 
-    @BindView(R.id.tvNetworkName)
+    @BindView(R2.id.tvNetworkName)
     TextView tvNetworkName;
 
-    @BindView(R.id.updateRateLabel)
+    @BindView(R2.id.updateRateLabel)
     View updateRateLabel;
 
-    @BindView(R.id.updateRateSelector)
+    @BindView(R2.id.updateRateSelector)
     View updateRateSelector;
 
-    @BindView(R.id.tvUpdateRate)
+    @BindView(R2.id.tvUpdateRate)
     TextView tvUpdateRate;
 
-    @BindView(R.id.arrowUpdateRate)
+    @BindView(R2.id.arrowUpdateRate)
     View arrowUpdateRate;
 
-    @BindView(R.id.stationaryUpdateRateLabel)
+    @BindView(R2.id.stationaryUpdateRateLabel)
     View stationaryUpdateRateLabel;
 
-    @BindView(R.id.stationaryUpdateRateSelector)
+    @BindView(R2.id.stationaryUpdateRateSelector)
     View stationaryUpdateRateSelector;
 
-    @BindView(R.id.tvStationaryUpdateRate)
+    @BindView(R2.id.tvStationaryUpdateRate)
     TextView tvStationaryUpdateRate;
 
-    @BindView(R.id.arrowStationaryUpdateRate)
+    @BindView(R2.id.arrowStationaryUpdateRate)
     View arrowStationaryUpdateRate;
 
-    @BindView(R.id.tvNodeType)
+    @BindView(R2.id.tvNodeType)
     TextView tvNodeType;
 
-    @BindView(R.id.tvUwbMode)
+    @BindView(R2.id.tvUwbMode)
     TextView tvUwbMode;
 
-    @BindView(R.id.networkNameSelector)
+    @BindView(R2.id.networkNameSelector)
     View networkViewGroup;
 
-    @BindView(R.id.nodeTypeSelector)
+    @BindView(R2.id.nodeTypeSelector)
     View nodeTypeViewGroup;
 
-    @BindView(R.id.uwbModeSelector)
+    @BindView(R2.id.uwbModeSelector)
     View uwbModeViewGroup;
 
-    @BindView(R.id.chboxInitiator)
+    @BindView(R2.id.chboxInitiator)
     CheckBox chboxInitiator;
 
-    @BindView(R.id.chboxFirmwareUpdate)
+    @BindView(R2.id.chboxFirmwareUpdate)
     CheckBox chboxFirmwareUpdate;
 
-    @BindView(R.id.chboxAccelerometer)
+    @BindView(R2.id.chboxAccelerometer)
     CheckBox chboxAccelerometer;
 
-    @BindView(R.id.chboxLedIndication)
+    @BindView(R2.id.chboxLedIndication)
     CheckBox chboxLedIndication;
 
-    @BindView(R.id.chboxResponsiveMode)
+    @BindView(R2.id.chboxResponsiveMode)
     CheckBox chboxResponsiveMode;
 
-    @BindView(R.id.chboxBleEnabled)
+    @BindView(R2.id.chboxBleEnabled)
     CheckBox chboxBleEnabled;
 
-    @BindView(R.id.chboxLocationEngine)
+    @BindView(R2.id.chboxLocationEngine)
     CheckBox chboxLocationEngine;
 
-    @BindView(R.id.progressFrame)
+    @BindView(R2.id.progressFrame)
     View progressFrame;
 
-    @BindView(R.id.contentFrame)
+    @BindView(R2.id.contentFrame)
     View contentFrame;
 
-    @BindView(R.id.tvPositionTitle)
+    @BindView(R2.id.tvPositionTitle)
     TextView tvPositionTitle;
 
-    @BindViews({ R.id.chboxInitiator, R.id.tvPositionTitle, R.id.tvPositionContainer })
+    @BindViews({ R2.id.chboxInitiator, R2.id.tvPositionTitle, R2.id.tvPositionContainer })
     List<View> anchorSpecificViews;
 
-    @BindViews({ R.id.updateRateContainer, R.id.chboxAccelerometer, R.id.chboxResponsiveMode, R.id.chboxLocationEngine })
+    @BindViews({ R2.id.updateRateContainer, R2.id.chboxAccelerometer, R2.id.chboxResponsiveMode, R2.id.chboxLocationEngine })
     List<View> tagSpecificViews;
 
     //
@@ -281,23 +284,23 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
         unbinder.unbind();
     }
 
-    @OnClick(R.id.nodeTypeSelector)
+    @OnClick(R2.id.nodeTypeSelector)
     void onNodeTypeClicked() {
         NodeTypePickerDialogFragment.showDialog(getMainActivity().getSupportFragmentManager(), selectedNodeType);
     }
 
-    @OnClick(R.id.uwbModeSelector)
+    @OnClick(R2.id.uwbModeSelector)
     void onUwbModeClicked() {
         UwbModePickerDialogFragment.showDialog(getMainActivity().getSupportFragmentManager(), selectedUwbMode);
     }
 
-    @OnClick(R.id.updateRateSelector)
+    @OnClick(R2.id.updateRateSelector)
     void onUpdateRateClicked() {
         UpdateRatePickerDialogFragment.showDialog(getMainActivity().getSupportFragmentManager(),
                 selectedUpdateRate, true);
     }
 
-    @OnClick(R.id.stationaryUpdateRateSelector)
+    @OnClick(R2.id.stationaryUpdateRateSelector)
     void onStationaryUpdateRateClicked() {
         UpdateRatePickerDialogFragment.showDialog(getMainActivity().getSupportFragmentManager(),
                 selectedStationaryUpdateRate, false);
@@ -317,7 +320,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
         stationaryUpdateRateLabel.setEnabled(enable);
     }
 
-    @OnClick(R.id.networkNameSelector)
+    @OnClick(R2.id.networkNameSelector)
     void onNetworkClicked() {
         if (selectedNetworkId != null) {
             NetworkPickerDialogFragment.showDialog(getMainActivity().getSupportFragmentManager(),
@@ -351,6 +354,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
             Preconditions.checkNotNull(args, "must specify node details to show!");
             Preconditions.checkState(args.getLong(BK_NODE_ID, 0) == 0, "must specify node ID in args!");
         }
+        assert args != null;
         nodeId = args.getLong(BK_NODE_ID);
         NetworkNodeEnhanced nne = networkNodeManager.getNode(nodeId);
         Preconditions.checkNotNull(nne, "must specify valid node ID in arguments!");
@@ -408,7 +412,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NotNull Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_notedetail, menu);
         menu.findItem(R.id.action_save).setOnMenuItemClickListener(menuItem -> onSaveClick());
     }
@@ -487,7 +491,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
     }
 
     private static boolean asBoolean(Boolean value) {
-        return value == null ? false : value;
+        return value != null && value;
     }
 
     @Nullable
@@ -537,7 +541,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
         handleFrames();
         // handle TV network name content
         if (selectedNetworkId != null) {
-            tvNetworkName.setText(networkNodeManager.getNetworks().get(selectedNetworkId).getNetworkName());
+            tvNetworkName.setText(Objects.requireNonNull(networkNodeManager.getNetworks().get(selectedNetworkId)).getNetworkName());
         } else if (selectedNewNetworkName != null) {
             tvNetworkName.setText(selectedNewNetworkName);
         } else {
@@ -788,7 +792,7 @@ public class NodeDetailFragment extends AbstractArgoFragment implements NetworkP
 
     @Override
     public void onNetworkPicked(short networkId) {
-        tvNetworkName.setText(networkNodeManager.getNetworks().get(networkId).getNetworkName());
+        tvNetworkName.setText(Objects.requireNonNull(networkNodeManager.getNetworks().get(networkId)).getNetworkName());
         selectedNetworkId = networkId;
         selectedNewNetworkName = null;
     }

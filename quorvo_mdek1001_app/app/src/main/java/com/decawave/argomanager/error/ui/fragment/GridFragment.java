@@ -36,6 +36,7 @@ import com.decawave.argo.api.struct.UwbMode;
 import com.decawave.argomanager.ArgoApp;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.BlePresenceApi;
 import com.decawave.argomanager.components.DiscoveryManager;
 import com.decawave.argomanager.components.NetworkModel;
@@ -45,15 +46,15 @@ import com.decawave.argomanager.components.ih.IhPersistedNodeChangeListener;
 import com.decawave.argomanager.components.ih.IhPresenceApiListener;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 import com.decawave.argomanager.components.struct.TrackMode;
+import com.decawave.argomanager.error.ui.MainActivity;
+import com.decawave.argomanager.error.ui.view.FloorPlan;
+import com.decawave.argomanager.error.ui.view.GridView;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreference;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.prefs.ApplicationMode;
 import com.decawave.argomanager.prefs.IhAppPreferenceListener;
 import com.decawave.argomanager.prefs.LengthUnit;
-import com.decawave.argomanager.error.ui.MainActivity;
-import com.decawave.argomanager.error.ui.view.FloorPlan;
-import com.decawave.argomanager.error.ui.view.GridView;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.Fixme;
 import com.decawave.argomanager.util.IhOnActivityResultListener;
@@ -73,6 +74,9 @@ import java.io.InputStream;
 import java.util.Collections;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
 import eu.kryl.android.common.hub.InterfaceHub;
@@ -93,66 +97,66 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
     private static final int MAX_FLOORPLAN_FILE_SIZE = 1024 * 1024 * 10;
 
     //
-    //@BindView(R.id.noNetwork)
+    @BindView(R2.id.noNetwork)
     View noNetworkSelected;
 
-    //@BindView(R.id.gridView)
+    @BindView(R2.id.gridView)
     GridView grid;
 
     // ***************************
     // * INPUT
     // ***************************
 
-    //@BindView(R.id.floorplan_center_x)
+    @BindView(R2.id.floorplan_center_x)
     EditText etPxCenterX;
 
-    //@BindView(R.id.floorplan_center_y)
+    @BindView(R2.id.floorplan_center_y)
     EditText etPxCenterY;
 
-    //@BindView(R.id.floorplan_zoom_factor)
+    @BindView(R2.id.floorplan_zoom_factor)
     EditText etPx10m;
 
-    //@BindView(R.id.floorplan_zoom_factor_hint)
+    @BindView(R2.id.floorplan_zoom_factor_hint)
     TextInputLayout tilZoom;
 
-    //@BindView(R.id.floorPlanEts)
+    @BindView(R2.id.floorPlanEts)
     View etFloorplanProperties;
 
-    //@BindView(R.id.rootView)
+    @BindView(R2.id.rootView)
     ViewGroup rootView;
 
-    //@BindView(R.id.floorPlanControls)
+    @BindView(R2.id.floorPlanControls)
     ViewGroup floorPlanControls;
 
-    //@BindView(R.id.floorplan_control_lock)
+    @BindView(R2.id.floorplan_control_lock)
     ImageView lockControl;
 
-    //@BindView(R.id.floorplan_control_erase)
+    @BindView(R2.id.floorplan_control_erase)
     ImageView eraseControl;
 
-    //@BindView(R.id.floorplan_control_rotate_left)
+    @BindView(R2.id.floorplan_control_rotate_left)
     ImageView rotateLeftControl;
 
     ///////////////////////////////////////////////////////////////////////////
     // dependencies
     ///////////////////////////////////////////////////////////////////////////
 
-    //@Inject
+    @Inject
     PositionObservationManager positionObservationManager;
 
-    //@Inject
+    @Inject
     NetworkNodeManager networkNodeManager;
 
-    //@Inject
+    @Inject
     DiscoveryManager discoveryManager;
 
-    //@Inject
+    @Inject
     AndroidPermissionHelper permissionHelper;
 
-    //@Inject
+    @Inject
     BlePresenceApi presenceApi;
 
-    //@Inject
+    @Inject
     AppPreferenceAccessor appPreferenceAccessor;
 
     // members/state
@@ -256,7 +260,7 @@ public class GridFragment extends MainScreenFragment implements IhPresenceApiLis
                         bos = new BufferedOutputStream(new FileOutputStream(floorPlanFile));
                         IOUtil.copy(inputStream, bos);
 //                        if (size > MAX_FLOORPLAN_FILE_SIZE) {
-//                            ToastUtil.showToast(ArgoApp.daApp.getString(R.string.floorplan_file_exceeeds_size, getMaxFloorplanSizeDesc()), Toast.LENGTH_LONG);
+//                            ToastUtil.showToast(ArgoApp.daApp.getString(Rstring.floorplan_file_exceeeds_size, getMaxFloorplanSizeDesc()), Toast.LENGTH_LONG);
 //                            resetFloorplanConfigurationIf(!floorPlanConfiguration.anyFloorPlan());
 //                            return;
 //                        }

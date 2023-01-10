@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.decawave.argomanager.app-mergeDebugResources-21:/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+            "outputFile": "com.decawave.argomanager.app-mergeDebugResources-36:/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\3ef42e8630837aa256326ef6048a77d2\\transformed\\jetified-core-3.3.0\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+                    "source": "C:\\Users\\T-Gamer\\.gradle\\caches\\transforms-3\\c835e810ee2070e491e2d25354138457\\transformed\\jetified-core-3.3.0\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

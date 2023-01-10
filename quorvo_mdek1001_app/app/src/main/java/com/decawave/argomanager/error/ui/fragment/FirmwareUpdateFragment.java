@@ -23,6 +23,7 @@ import com.decawave.argo.api.struct.FirmwareMeta;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.components.BlePresenceApi;
 import com.decawave.argomanager.components.DiscoveryManager;
@@ -31,6 +32,7 @@ import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.components.ih.IhPersistedNodeChangeListener;
 import com.decawave.argomanager.components.ih.IhPresenceApiListener;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
+import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.error.ui.listadapter.FirmwareUpdateNodeListAdapter;
 import com.decawave.argomanager.firmware.Firmware;
 import com.decawave.argomanager.firmware.FirmwareRepository;
@@ -38,11 +40,11 @@ import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.runner.FirmwareUpdateRunner;
 import com.decawave.argomanager.runner.FirmwareUpdateRunnerImpl;
 import com.decawave.argomanager.runner.IhFwUpdateRunnerListener;
-import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
 import com.google.common.base.Preconditions;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
@@ -115,20 +117,20 @@ public class FirmwareUpdateFragment extends DiscoveryProgressAwareFragment {
     BleConnectionApi bleConnectionApi;
 
     // view references
-    @BindView(R.id.updateButton)
+    @BindView(R2.id.updateButton)
     Button btnUpdate;
-    @BindView(R.id.nodeList)
+    @BindView(R2.id.nodeList)
     RecyclerView nodeList;
-    @BindView(R.id.swipeRefreshLayout)
+    @BindView(R2.id.swipeRefreshLayout)
     SwipeRefreshLayout refreshLayout;
-    @BindView(R.id.tvNoNodes)
+    @BindView(R2.id.tvNoNodes)
     View noNodesView;
 
     // adapter + node list
     private FirmwareUpdateNodeListAdapter adapter;
     private Bundle savedAdapterState;
 
-    private IhPresenceApiListener presenceApiListener = new IhPresenceApiListener() {
+    private final IhPresenceApiListener presenceApiListener = new IhPresenceApiListener() {
         @Override
         public void onNodePresent(String bleAddress) {
             if (networkNodeManager.activeNetworkContainsNode(bleAddress)) {
@@ -264,7 +266,7 @@ public class FirmwareUpdateFragment extends DiscoveryProgressAwareFragment {
         return v;
     }
 
-    @OnClick(R.id.updateButton)
+    @OnClick(R2.id.updateButton)
     void onUpdateButtonClicked() {
         if (firmwareUpdateRunner != null) {
             FirmwareUpdateRunner.OverallStatus fwUpdateStatus = firmwareUpdateRunner.getOverallStatus();
@@ -275,6 +277,7 @@ public class FirmwareUpdateFragment extends DiscoveryProgressAwareFragment {
                 firmwareUpdateRunner = null;
                 NetworkModel network = networkNodeManager.getActiveNetwork();
                 // recreate the adapter with no node selected
+                assert network != null;
                 setupAdapter(network, FirmwareUpdateNodeListAdapter.getState(Collections.emptySet()));
                 updateUi();
             } else {
@@ -338,7 +341,6 @@ public class FirmwareUpdateFragment extends DiscoveryProgressAwareFragment {
     private void setupAdapter(NetworkModel network, Bundle savedAdapterState) {
         Firmware firmware1 = FirmwareRepository.DEFAULT_FIRMWARE[0];
         Firmware firmware2 = FirmwareRepository.DEFAULT_FIRMWARE[1];
-        //noinspection Convert2MethodRef
         Collection<NetworkNodeEnhanced> nodes = networkNodeManager.getNetworkNodes(network.getNetworkId());
         boolean fwUpdateStarted = firmwareUpdateRunner != null && firmwareUpdateRunner.getOverallStatus() != FirmwareUpdateRunner.OverallStatus.NOT_STARTED;
         if (fwUpdateStarted) {
@@ -449,7 +451,7 @@ public class FirmwareUpdateFragment extends DiscoveryProgressAwareFragment {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NotNull Bundle outState) {
         super.onSaveInstanceState(outState);
         if (adapter != null) {
             outState.putBundle(BK_ADAPTER_STATE, adapter.saveState());

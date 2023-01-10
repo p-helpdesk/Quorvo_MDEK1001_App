@@ -29,17 +29,18 @@ import com.annimon.stream.Stream;
 import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.AutoPositioningManager;
 import com.decawave.argomanager.components.AutoPositioningState;
 import com.decawave.argomanager.components.impl.AutoPositioningAlgorithm;
 import com.decawave.argomanager.components.struct.ComputedPosition;
-import com.decawave.argomanager.prefs.AppPreferenceAccessor;
-import com.decawave.argomanager.prefs.LengthUnit;
 import com.decawave.argomanager.error.ui.MainActivity;
 import com.decawave.argomanager.error.ui.dialog.ZaxisValueDialogFragment;
 import com.decawave.argomanager.error.ui.fragment.AutoPositioningFragment;
 import com.decawave.argomanager.error.ui.fragment.FragmentType;
 import com.decawave.argomanager.error.ui.view.SimpleProgressView;
+import com.decawave.argomanager.prefs.AppPreferenceAccessor;
+import com.decawave.argomanager.prefs.LengthUnit;
 import com.decawave.argomanager.util.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
@@ -195,19 +196,19 @@ public class AutoPositioningNodeListAdapter extends RecyclerView.Adapter<AutoPos
 
     class AutoPosNodeListItemHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.btnDragHandle)
+        @BindView(R2.id.btnDragHandle)
         View btnDragHandle;
-        @BindView(R.id.nodeName)
+        @BindView(R2.id.nodeName)
         TextView nodeName;
-        @BindView(R.id.bleAddress)
+        @BindView(R2.id.bleAddress)
         TextView tvNodeBleAddress;
-        @BindView(R.id.tvNodeState)
+        @BindView(R2.id.tvNodeState)
         TextView tvNodeState;
-        @BindView(R.id.cardContent)
+        @BindView(R2.id.cardContent)
         View cardContent;
-        @BindView(R.id.progressView)
+        @BindView(R2.id.progressView)
         SimpleProgressView progressViewSeparator;
-        @BindView(R.id.tvPosition)
+        @BindView(R2.id.tvPosition)
         TextView tvPosition;
 
         // identification of the network node
@@ -356,10 +357,10 @@ public class AutoPositioningNodeListAdapter extends RecyclerView.Adapter<AutoPos
     }
 
     class AutoPositioningSummaryItemHolder extends ViewHolder {
-        @BindView(R.id.tvLegend)
+        @BindView(R2.id.tvLegend)
         TextView tvLegend;
 
-        @BindView(R.id.actionButtonContainer)
+        @BindView(R2.id.actionButtonContainer)
         LinearLayout buttonContainer;
 
         //
@@ -371,13 +372,13 @@ public class AutoPositioningNodeListAdapter extends RecyclerView.Adapter<AutoPos
             ButterKnife.bind(this, itemView);
         }
 
-        @OnClick(R.id.btnPreview)
+        @OnClick(R2.id.btnPreview)
         void onPreviewClicked() {
             // show a new fragment
             mainActivity.showFragment(FragmentType.AP_PREVIEW);
         }
 
-        @OnClick(R.id.btnSetupZaxis)
+        @OnClick(R2.id.btnSetupZaxis)
         void onSetupZaxisClicked() {
             ZaxisValueDialogFragment.showDialog(mainActivity.getSupportFragmentManager(),
                     Util.formatLength(autoPositioningManager.getZaxis(), appPreferenceAccessor.getLengthUnit()));

@@ -31,6 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.NetworkModel;
 import com.decawave.argomanager.components.NetworkNodeManager;
 import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
@@ -44,6 +45,7 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.kryl.android.appcompat.dialogs.AlertDialog;
 import eu.kryl.android.common.hub.InterfaceHub;
@@ -309,13 +311,13 @@ public class NetworkPickerDialogFragment extends DialogFragment {
      * View holder
      */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //@BindView(R.id.radio)
+        @BindView(R2.id.radio)
         RadioButton rb;
-        //@BindView(R.id.tvNetworkName) @Nullable
+        @BindView(R2.id.tvNetworkName) @Nullable
         TextView tvNetworkName;
-        //@BindView(R.id.etNewNetworkName) @Nullable
+        @BindView(R2.id.etNewNetworkName) @Nullable
         EditText etNewNetworkName;
-        //@BindView(R.id.focusableView) @Nullable
+        @BindView(R2.id.focusableView) @Nullable
         View focusableView;
         private View container;
         // data bean

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 
@@ -33,7 +34,7 @@ public class InstructionsFragment extends AbstractArgoFragment {
     @Inject
     AppPreferenceAccessor appPreferenceAccessor;
 
-    @BindView(R.id.htmlInstructions)
+    @BindView(R2.id.htmlInstructions)
     WebView webView;
 
     public InstructionsFragment() {

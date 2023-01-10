@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.util.Util;
 
 import butterknife.BindView;
@@ -22,9 +22,9 @@ import butterknife.ButterKnife;
  */
 public class LogMessageHolder extends RecyclerView.ViewHolder {
     // references to views
-    @BindView(R.id.logEntryTime)
+    @BindView(R2.id.logEntryTime)
     TextView msgTime;
-    @BindView(R.id.logEntryText)
+    @BindView(R2.id.logEntryText)
     TextView msgText;
 
 

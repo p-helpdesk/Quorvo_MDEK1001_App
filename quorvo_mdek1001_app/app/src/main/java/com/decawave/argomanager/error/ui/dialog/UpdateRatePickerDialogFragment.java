@@ -21,6 +21,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ext.UpdateRate;
 import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 
@@ -173,9 +174,9 @@ public class UpdateRatePickerDialogFragment extends DialogFragment {
      * View holder
      */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.radio)
+        @BindView(R2.id.radio)
         RadioButton rb;
-        @BindView(R.id.tvUpdateRate)
+        @BindView(R2.id.tvUpdateRate)
         TextView tvUpdateRate;
 
         private View container;

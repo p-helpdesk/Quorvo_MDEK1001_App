@@ -26,6 +26,7 @@ import com.decawave.argo.api.struct.NetworkNode;
 import com.decawave.argo.api.struct.UwbMode;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.argoapi.ble.BleConnectionApi;
 import com.decawave.argomanager.argoapi.ble.IhConnectionStateListener;
 import com.decawave.argomanager.argoapi.ble.IhFirmwareUploadListener;
@@ -79,22 +80,22 @@ public class DeviceDebugConsoleFragment extends LogBufferFragment implements IhC
     LocationDataLogger locationDataLogger;
 
     // UI elements
-    @BindView(R.id.connectButton)
+    @BindView(R2.id.connectButton)
     Button btnConnect;
 
-    @BindView(R.id.disconnectButton)
+    @BindView(R2.id.disconnectButton)
     Button btnDisconnect;
 
-    @BindView(R.id.fetchButton)
+    @BindView(R2.id.fetchButton)
     Button btnFetch;
 
-    @BindView(R.id.observePositionButton)
+    @BindView(R2.id.observePositionButton)
     Button btnObserve;
 
-    @BindView(R.id.observePositionFiller)
+    @BindView(R2.id.observePositionFiller)
     View observeFiller;
 
-    @BindView(R.id.nodeTypeView)
+    @BindView(R2.id.nodeTypeView)
     NodeStateView nodeStateView;
 
     // members

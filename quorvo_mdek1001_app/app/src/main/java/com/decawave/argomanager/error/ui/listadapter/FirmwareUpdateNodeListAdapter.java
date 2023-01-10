@@ -27,14 +27,15 @@ import com.decawave.argo.api.struct.NetworkNodeProperty;
 import com.decawave.argo.api.struct.OperatingFirmware;
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.components.BlePresenceApi;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
-import com.decawave.argomanager.runner.FirmwareUpdateRunner;
 import com.decawave.argomanager.error.ui.MainActivity;
 import com.decawave.argomanager.error.ui.fragment.DeviceDebugConsoleFragment;
 import com.decawave.argomanager.error.ui.fragment.FragmentType;
 import com.decawave.argomanager.error.ui.view.NodeStateView;
 import com.decawave.argomanager.error.ui.view.SimpleProgressView;
+import com.decawave.argomanager.runner.FirmwareUpdateRunner;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
 import com.decawave.argomanager.util.Util;
 
@@ -352,31 +353,31 @@ public class FirmwareUpdateNodeListAdapter extends RecyclerView.Adapter<Firmware
 
     class FwNodeListItemHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.nodeCheckbox)
+        @BindView(R2.id.nodeCheckbox)
         CheckBox nodeCheckbox;
-        @BindView(R.id.nodeType)
+        @BindView(R2.id.nodeType)
         NodeStateView nodeTypeView;
-        @BindView(R.id.nodeName)
+        @BindView(R2.id.nodeName)
         TextView nodeName;
-        @BindView(R.id.bleAddress)
+        @BindView(R2.id.bleAddress)
         TextView tvNodeBleAddress;
-        @BindView(R.id.tvFirmware1VersionAndChecksum)
+        @BindView(R2.id.tvFirmware1VersionAndChecksum)
         TextView tvFirmware1VersionChecksum;
-        @BindView(R.id.tvFirmware2VersionAndChecksum)
+        @BindView(R2.id.tvFirmware2VersionAndChecksum)
         TextView tvFirmware2VersionChecksum;
-        @BindView(R.id.uploadProgress)
+        @BindView(R2.id.uploadProgress)
         View uploadProgressContainer;
-        @BindView(R.id.uploadFwType)
+        @BindView(R2.id.uploadFwType)
         TextView tvUploadFwType;
-        @BindView(R.id.uploadPercentage)
+        @BindView(R2.id.uploadPercentage)
         TextView tvUploadPercentage;
-        @BindView(R.id.cardContent)
+        @BindView(R2.id.cardContent)
         View cardContent;
-        @BindView(R.id.cardTop)
+        @BindView(R2.id.cardTop)
         View cardTop;
-        @BindView(R.id.progressView)
+        @BindView(R2.id.progressView)
         SimpleProgressView progressViewSeparator;
-        @BindView(R.id.lastNodeBottomSeparator)
+        @BindView(R2.id.lastNodeBottomSeparator)
         View lastNodeSeparator;
 
         // identification of the network node
@@ -539,9 +540,9 @@ public class FirmwareUpdateNodeListAdapter extends RecyclerView.Adapter<Firmware
 
     class FirmwareSummaryItemHolder extends ViewHolder {
         // references to views
-        @BindView(R.id.tvFirmware1VersionAndChecksum)
+        @BindView(R2.id.tvFirmware1VersionAndChecksum)
         TextView tvFirmware1VersionChecksum;
-        @BindView(R.id.tvFirmware2VersionAndChecksum)
+        @BindView(R2.id.tvFirmware2VersionAndChecksum)
         TextView tvFirmware2VersionChecksum;
         //
         FirmwareMeta firmware1;

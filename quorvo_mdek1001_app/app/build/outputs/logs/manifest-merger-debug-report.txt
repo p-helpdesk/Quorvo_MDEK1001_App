@@ -6,78 +6,85 @@ INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\a
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:8:1-69:12
 MERGED from [:android-dialogs] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:1-31:12
 MERGED from [:android-commons] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-commons\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:1-29:12
-MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8edd7006bf93128127068e95c42fa2bf\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:2:1-11:12
-MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\639e00c9f60a61cf3e3c3ea582f49eb2\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:2:1-11:12
-MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\354e7469d6c40a8b1121344e34ce80f8\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:2:1-11:12
-MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0f6b02cdf530895daf0f3b09535c68f\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:2:1-11:12
-MERGED from [eu.davidea:flipview:1.1.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\adafc813c2bfc2c50acc6cb59574e35b\transformed\jetified-flipview-1.1.3\AndroidManifest.xml:2:1-12:12
-MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\43dc26202866265ac6832330f8cfe56b\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:2:1-7:12
-MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3bd18f692340fb83d8040da325908672\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:17:1-26:12
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a817f0f28672b311a8638ea19d3c5e5c\transformed\material-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3ef42e8630837aa256326ef6048a77d2\transformed\jetified-core-3.3.0\AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\444e81b41e778deb6f8c785dc3ceba0f\transformed\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\714cdf647653a1a884b675576e3fb237\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e402b899763a1bb29e1b8ea90c687302\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:2:1-23:12
-MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\52f872b08d7d2d829ab921d678cca3ee\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55784901ad00321c4964a7e0ce64975a\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\41182e8b75b2d935ceb5781917668738\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\19b6f0a87110f9c92a1ae7f61215fd4f\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c227d2070adcb7e35838299fcae09870\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70f696deff904ee071eb73c58cdc61fb\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91502c7e56467969c29c7ca6e76fe785\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\be33c7408c573ce99acb017e645c1bd9\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7457d78bc139a9c69ac8a260c2c83ac0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fb16a9016de351ba74c754994b80e6dc\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:17:1-32:12
-MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\3e8256f805459afc5fedfb812563ef8c\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55b7c6c2119231ee2945783129509b0c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3784592dd653b785ae31d635f7ac31d6\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40f37186fda5aea2cc1f537b2e197b48\transformed\transition-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:2:1-23:12
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\083059c60a91164d8de01766c5991cf0\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:15:1-22:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\474f6760c6c2260210d56b801eadc0ef\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\68e08d48b0d4db5ed59d29aa2b61abe2\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f411a6e54c74914e46ae33f8aa610648\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\618650c01133e42d21c085e8394521ed\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ad6a3e1f247657a9e3f1005b06f70d\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1437cc709fcd7513233cfd847ea48647\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b06e982db090c3854d252b1d57e56d8e\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7966220846b7e644c7f89546a0601dac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\79bde05ea1e1f3561bb5ca06bbe53a59\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2595a4fcf3c7cf6711a8725441d01bcb\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b2e1134a01fe0c0b5052122e5826e0ea\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4d3a7208d28b07097a76c8d4bcd9b1b3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\215b97b561cd0648ff6edbd75e867d7c\transformed\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70152f84965601cf8784f7ab28a02202\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\ef5ebaa736cf7e40c959bf901a0bc83a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4716ee9a54f1964165a03dbe234283d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:17:1-26:12
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\95aaca6c2a5fa20dc67b76417de8bb81\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\46604720189ed738c904055da660b3e4\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e13cc8fc135c5b4b32d0061e92022a46\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6902578f76f25486ca8e67b6850254b1\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\acf0194d31cad0f20283ad4c388f845d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\da6aeaa85d85a098a9ba4bec435dabec\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0b76b5062be0c40dfaf9123ac3bf688c\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4595a113116556d87f9c0fad97e1e31f\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f1b00c912093408078019094379d9a48\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\362d2bdd9b952e345b61f818133f0f93\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\662c6ffef77e062be23b115ef88445f4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bb05636e0d840d15d2d3896c8ebef2ca\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\22a6b8e812ea9293c968d7223e5ba9fe\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\42396d62df24eeabd3fde4cd8214a46d\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\96f56c882d557a280d9615d7ac58ebc2\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960f70d2eb72a890d2ce3658017ef81c\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\eb8a87e990dd09ec3e6df4aa77e1bc2c\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960702cf0b8a2ae21b0602a0b68cc3f7\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\d84c1fb9fc15ede27a9ee0dfd809c769\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:2:1-11:12
+MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e249e27162a22292802be6ff95a8bd15\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [eu.davidea:flipview:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f2d45d964358671327db01f25c21175e\transformed\jetified-flipview-1.2.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\19407ecf8a813bd07ec303bfac6ce002\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9f5501cc33dceb9ac1f5ecd35a9b04c8\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\cf8fabe688a7f0f271dea20aa886b64b\transformed\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c835e810ee2070e491e2d25354138457\transformed\jetified-core-3.3.0\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\60e90392c6e022d9f6af85f50b982cfc\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ee050c31ed2e22e52301f1b8628a7558\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77b1d1fdee35aa1718a04b11c1f54024\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\aa74cd148c771671b068e74fd86e49f8\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4587ab85d4846aad8e57d2ef1a03ed2b\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bf60e38ef495ffa13dd319c6c4d2af28\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\2395c1c2ed2f3aac08052580c7adf534\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\20861e4ddb44cd2cfedd2a9a714c7d83\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\132bc837e66208b3072439786cbbf4ff\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\c197d6728f6cf36a0dfd153848927ebd\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b868d5db83050cbd4dba0ec11e9b4afe\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a179f43e0e04280a811ebf65b4d02946\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\753ba6fa28a78a9954df718ff828da35\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\97039e4d2c0f5865a2e754174d436df5\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\T-Gamer\.gradle\caches\transforms-3\3f00ca0436e77451f2b9c8a58253ac1e\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e642494ce216c824164fb856568390ac\transformed\jetified-activity-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fa2393a258561b6127256b10beb68def\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5c636ebaa47aa49c9a6eef3ecca0b8d0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df35544e1c7054a6ac713a67e1933407\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e0a7c8ee5cbc869e4a360c8fb7a6d4ca\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\67f67fbf9d5f2f25ad9963dce1a0bb5c\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9390fca5d28dcc39eeb783330f91a0f6\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a9d8d2ca84a01240508026ee9b99ef2\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\0484031453faf960626c325fd80b7820\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8abe62dba3f544537131721be8c2d3e9\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b395ee05b972fcd764c05ef387911e9f\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\66cfb6d231646f0df34279dea719ac02\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ff31e0e0fc80d24f032c8908b517ac\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77850be06a139739feb98e6163774608\transformed\transition-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1a54fe5060bb69dbc4e237de302f715f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a305013fc92c71fd8bbe27a674871fb2\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\316645774e365454e91247dc3b907a3f\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\50c2b6812bd70b382c9092844af7fc80\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\261c43b76052f923ea67a74009c159ac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92fead8f0809ad26a950fed1e0516317\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\73b4f20c391bab57985618dbe5449c18\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\44b8fef534ba0c0a5d5fd1267468e166\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8840ae56d38c764cc886061ae74bfe0c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\547a4b12e27f78074bd62b061f6569e4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92151b6df1bfd3014463cceb2c585b82\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ecc9795388f4866daa7a994f270436aa\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\177e8ae5a99c2dc52b8c3d63268dd2f4\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4265ae0579ac3d75e5a4b9d2c2369f8\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\15b6415fac8894246be494a28548bba5\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\99a0d27a6fb4bfa6ece0c369c69c4b0d\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4311b79f4a24110a8ba2db545f9b2f7\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3d838dfa30a88c0822d08c8e85a25f6c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\641e93305f3a61abb98a5caf693e390d\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1f88148d6848445bdfb8cb71c8f0393e\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\003e4df5cacb9627f4769e097c69fc03\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\272790b5bf23786f6710e6e1f5e600cb\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\081cfc412fdf937537d1d17687942bb5\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\7d04683c1453f2709c321500c29dcf6e\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ada40d5f1e7ac09de6ae3b0898d5478\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e705dd23dd7b360242d11b9519692c01\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:8:1-69:12
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:8:1-69:12
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:8:1-69:12
@@ -123,20 +130,20 @@ ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\
 		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:24:22-76
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:9:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
 	android:name
 		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:26:22-64
 uses-feature#android.hardware.bluetooth_le
@@ -151,54 +158,58 @@ MERGED from [:android-dialogs] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quor
 MERGED from [:android-dialogs] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:5-29:19
 MERGED from [:android-commons] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-commons\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-27:19
 MERGED from [:android-commons] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-commons\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:5-27:19
-MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3bd18f692340fb83d8040da325908672\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:24:5-20
-MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3bd18f692340fb83d8040da325908672\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a817f0f28672b311a8638ea19d3c5e5c\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a817f0f28672b311a8638ea19d3c5e5c\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3ef42e8630837aa256326ef6048a77d2\transformed\jetified-core-3.3.0\AndroidManifest.xml:11:5-47
-MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3ef42e8630837aa256326ef6048a77d2\transformed\jetified-core-3.3.0\AndroidManifest.xml:11:5-47
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:13:5-21:19
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:13:5-21:19
-MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\52f872b08d7d2d829ab921d678cca3ee\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\52f872b08d7d2d829ab921d678cca3ee\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c227d2070adcb7e35838299fcae09870\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c227d2070adcb7e35838299fcae09870\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fb16a9016de351ba74c754994b80e6dc\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fb16a9016de351ba74c754994b80e6dc\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:29:5-30:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:29:5-30:19
-MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\3e8256f805459afc5fedfb812563ef8c\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\3e8256f805459afc5fedfb812563ef8c\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\474f6760c6c2260210d56b801eadc0ef\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\474f6760c6c2260210d56b801eadc0ef\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\68e08d48b0d4db5ed59d29aa2b61abe2\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\68e08d48b0d4db5ed59d29aa2b61abe2\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f411a6e54c74914e46ae33f8aa610648\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f411a6e54c74914e46ae33f8aa610648\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:24:5-89
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0b76b5062be0c40dfaf9123ac3bf688c\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0b76b5062be0c40dfaf9123ac3bf688c\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:22:5-28:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:22:5-28:19
+MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9f5501cc33dceb9ac1f5ecd35a9b04c8\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9f5501cc33dceb9ac1f5ecd35a9b04c8\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\cf8fabe688a7f0f271dea20aa886b64b\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\cf8fabe688a7f0f271dea20aa886b64b\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c835e810ee2070e491e2d25354138457\transformed\jetified-core-3.3.0\AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c835e810ee2070e491e2d25354138457\transformed\jetified-core-3.3.0\AndroidManifest.xml:11:5-47
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4587ab85d4846aad8e57d2ef1a03ed2b\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4587ab85d4846aad8e57d2ef1a03ed2b\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\20861e4ddb44cd2cfedd2a9a714c7d83\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\20861e4ddb44cd2cfedd2a9a714c7d83\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\c197d6728f6cf36a0dfd153848927ebd\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\c197d6728f6cf36a0dfd153848927ebd\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b868d5db83050cbd4dba0ec11e9b4afe\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b868d5db83050cbd4dba0ec11e9b4afe\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:29:5-30:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:29:5-30:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a179f43e0e04280a811ebf65b4d02946\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a179f43e0e04280a811ebf65b4d02946\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\753ba6fa28a78a9954df718ff828da35\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\753ba6fa28a78a9954df718ff828da35\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\97039e4d2c0f5865a2e754174d436df5\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\97039e4d2c0f5865a2e754174d436df5\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\003e4df5cacb9627f4769e097c69fc03\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\003e4df5cacb9627f4769e097c69fc03\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
 		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml:37:9-35
 	android:label
@@ -261,150 +272,164 @@ MERGED from [:android-dialogs] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quor
 MERGED from [:android-dialogs] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-dialogs\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:5-24:41
 MERGED from [:android-commons] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-commons\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-22:41
 MERGED from [:android-commons] C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\android-commons\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-22:41
-MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8edd7006bf93128127068e95c42fa2bf\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8edd7006bf93128127068e95c42fa2bf\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\639e00c9f60a61cf3e3c3ea582f49eb2\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\639e00c9f60a61cf3e3c3ea582f49eb2\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\354e7469d6c40a8b1121344e34ce80f8\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\354e7469d6c40a8b1121344e34ce80f8\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0f6b02cdf530895daf0f3b09535c68f\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0f6b02cdf530895daf0f3b09535c68f\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [eu.davidea:flipview:1.1.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\adafc813c2bfc2c50acc6cb59574e35b\transformed\jetified-flipview-1.1.3\AndroidManifest.xml:8:5-10:41
-MERGED from [eu.davidea:flipview:1.1.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\adafc813c2bfc2c50acc6cb59574e35b\transformed\jetified-flipview-1.1.3\AndroidManifest.xml:8:5-10:41
-MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\43dc26202866265ac6832330f8cfe56b\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\43dc26202866265ac6832330f8cfe56b\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
-MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3bd18f692340fb83d8040da325908672\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3bd18f692340fb83d8040da325908672\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a817f0f28672b311a8638ea19d3c5e5c\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a817f0f28672b311a8638ea19d3c5e5c\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3ef42e8630837aa256326ef6048a77d2\transformed\jetified-core-3.3.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3ef42e8630837aa256326ef6048a77d2\transformed\jetified-core-3.3.0\AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\444e81b41e778deb6f8c785dc3ceba0f\transformed\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\444e81b41e778deb6f8c785dc3ceba0f\transformed\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\714cdf647653a1a884b675576e3fb237\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\714cdf647653a1a884b675576e3fb237\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e402b899763a1bb29e1b8ea90c687302\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e402b899763a1bb29e1b8ea90c687302\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\52f872b08d7d2d829ab921d678cca3ee\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\52f872b08d7d2d829ab921d678cca3ee\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55784901ad00321c4964a7e0ce64975a\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55784901ad00321c4964a7e0ce64975a\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\41182e8b75b2d935ceb5781917668738\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\41182e8b75b2d935ceb5781917668738\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\19b6f0a87110f9c92a1ae7f61215fd4f\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\19b6f0a87110f9c92a1ae7f61215fd4f\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c227d2070adcb7e35838299fcae09870\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c227d2070adcb7e35838299fcae09870\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70f696deff904ee071eb73c58cdc61fb\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:22:5-44
-MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70f696deff904ee071eb73c58cdc61fb\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:22:5-44
-MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91502c7e56467969c29c7ca6e76fe785\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:22:5-44
-MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\91502c7e56467969c29c7ca6e76fe785\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:22:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\be33c7408c573ce99acb017e645c1bd9\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\be33c7408c573ce99acb017e645c1bd9\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7457d78bc139a9c69ac8a260c2c83ac0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7457d78bc139a9c69ac8a260c2c83ac0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fb16a9016de351ba74c754994b80e6dc\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fb16a9016de351ba74c754994b80e6dc\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\3e8256f805459afc5fedfb812563ef8c\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\3e8256f805459afc5fedfb812563ef8c\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55b7c6c2119231ee2945783129509b0c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\55b7c6c2119231ee2945783129509b0c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3784592dd653b785ae31d635f7ac31d6\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3784592dd653b785ae31d635f7ac31d6\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40f37186fda5aea2cc1f537b2e197b48\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40f37186fda5aea2cc1f537b2e197b48\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\083059c60a91164d8de01766c5991cf0\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\083059c60a91164d8de01766c5991cf0\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\474f6760c6c2260210d56b801eadc0ef\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\474f6760c6c2260210d56b801eadc0ef\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\68e08d48b0d4db5ed59d29aa2b61abe2\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\68e08d48b0d4db5ed59d29aa2b61abe2\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f411a6e54c74914e46ae33f8aa610648\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f411a6e54c74914e46ae33f8aa610648\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\618650c01133e42d21c085e8394521ed\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\618650c01133e42d21c085e8394521ed\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ad6a3e1f247657a9e3f1005b06f70d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ad6a3e1f247657a9e3f1005b06f70d\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1437cc709fcd7513233cfd847ea48647\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1437cc709fcd7513233cfd847ea48647\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b06e982db090c3854d252b1d57e56d8e\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b06e982db090c3854d252b1d57e56d8e\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7966220846b7e644c7f89546a0601dac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\7966220846b7e644c7f89546a0601dac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\79bde05ea1e1f3561bb5ca06bbe53a59\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\79bde05ea1e1f3561bb5ca06bbe53a59\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2595a4fcf3c7cf6711a8725441d01bcb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\2595a4fcf3c7cf6711a8725441d01bcb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b2e1134a01fe0c0b5052122e5826e0ea\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b2e1134a01fe0c0b5052122e5826e0ea\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4d3a7208d28b07097a76c8d4bcd9b1b3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4d3a7208d28b07097a76c8d4bcd9b1b3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\215b97b561cd0648ff6edbd75e867d7c\transformed\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\215b97b561cd0648ff6edbd75e867d7c\transformed\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70152f84965601cf8784f7ab28a02202\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\70152f84965601cf8784f7ab28a02202\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\ef5ebaa736cf7e40c959bf901a0bc83a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\ef5ebaa736cf7e40c959bf901a0bc83a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4716ee9a54f1964165a03dbe234283d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4716ee9a54f1964165a03dbe234283d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\99d3a2b3f940e34d8c229a221ba731e9\transformed\core-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\95aaca6c2a5fa20dc67b76417de8bb81\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\95aaca6c2a5fa20dc67b76417de8bb81\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\46604720189ed738c904055da660b3e4\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\46604720189ed738c904055da660b3e4\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e13cc8fc135c5b4b32d0061e92022a46\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e13cc8fc135c5b4b32d0061e92022a46\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6902578f76f25486ca8e67b6850254b1\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6902578f76f25486ca8e67b6850254b1\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\acf0194d31cad0f20283ad4c388f845d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\acf0194d31cad0f20283ad4c388f845d\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\da6aeaa85d85a098a9ba4bec435dabec\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\da6aeaa85d85a098a9ba4bec435dabec\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0b76b5062be0c40dfaf9123ac3bf688c\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0b76b5062be0c40dfaf9123ac3bf688c\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4595a113116556d87f9c0fad97e1e31f\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4595a113116556d87f9c0fad97e1e31f\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f1b00c912093408078019094379d9a48\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f1b00c912093408078019094379d9a48\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\362d2bdd9b952e345b61f818133f0f93\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\362d2bdd9b952e345b61f818133f0f93\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\662c6ffef77e062be23b115ef88445f4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\662c6ffef77e062be23b115ef88445f4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bb05636e0d840d15d2d3896c8ebef2ca\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bb05636e0d840d15d2d3896c8ebef2ca\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\22a6b8e812ea9293c968d7223e5ba9fe\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\22a6b8e812ea9293c968d7223e5ba9fe\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\42396d62df24eeabd3fde4cd8214a46d\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\42396d62df24eeabd3fde4cd8214a46d\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\96f56c882d557a280d9615d7ac58ebc2\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\96f56c882d557a280d9615d7ac58ebc2\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960f70d2eb72a890d2ce3658017ef81c\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960f70d2eb72a890d2ce3658017ef81c\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\eb8a87e990dd09ec3e6df4aa77e1bc2c\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter:5.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\eb8a87e990dd09ec3e6df4aa77e1bc2c\transformed\jetified-flexible-adapter-5.1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960702cf0b8a2ae21b0602a0b68cc3f7\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\960702cf0b8a2ae21b0602a0b68cc3f7\transformed\jetified-flexible-adapter-ui-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\d84c1fb9fc15ede27a9ee0dfd809c769\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-livedata:1.0.0-b3] C:\Users\T-Gamer\.gradle\caches\transforms-3\d84c1fb9fc15ede27a9ee0dfd809c769\transformed\jetified-flexible-adapter-livedata-1.0.0-b3\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e249e27162a22292802be6ff95a8bd15\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flexible-adapter-databinding:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e249e27162a22292802be6ff95a8bd15\transformed\jetified-flexible-adapter-databinding-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flipview:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f2d45d964358671327db01f25c21175e\transformed\jetified-flipview-1.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [eu.davidea:flipview:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\f2d45d964358671327db01f25c21175e\transformed\jetified-flipview-1.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\19407ecf8a813bd07ec303bfac6ce002\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\19407ecf8a813bd07ec303bfac6ce002\transformed\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9f5501cc33dceb9ac1f5ecd35a9b04c8\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.nisrulz:sensey:1.9.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9f5501cc33dceb9ac1f5ecd35a9b04c8\transformed\jetified-sensey-1.9.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\cf8fabe688a7f0f271dea20aa886b64b\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\cf8fabe688a7f0f271dea20aa886b64b\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c835e810ee2070e491e2d25354138457\transformed\jetified-core-3.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c835e810ee2070e491e2d25354138457\transformed\jetified-core-3.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\60e90392c6e022d9f6af85f50b982cfc\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\60e90392c6e022d9f6af85f50b982cfc\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ee050c31ed2e22e52301f1b8628a7558\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ee050c31ed2e22e52301f1b8628a7558\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77b1d1fdee35aa1718a04b11c1f54024\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77b1d1fdee35aa1718a04b11c1f54024\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\aa74cd148c771671b068e74fd86e49f8\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\aa74cd148c771671b068e74fd86e49f8\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4587ab85d4846aad8e57d2ef1a03ed2b\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\4587ab85d4846aad8e57d2ef1a03ed2b\transformed\jetified-firebase-analytics-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bf60e38ef495ffa13dd319c6c4d2af28\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\bf60e38ef495ffa13dd319c6c4d2af28\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\2395c1c2ed2f3aac08052580c7adf534\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\2395c1c2ed2f3aac08052580c7adf534\transformed\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\20861e4ddb44cd2cfedd2a9a714c7d83\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\20861e4ddb44cd2cfedd2a9a714c7d83\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\132bc837e66208b3072439786cbbf4ff\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\132bc837e66208b3072439786cbbf4ff\transformed\jetified-firebase-installations-interop-17.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\c197d6728f6cf36a0dfd153848927ebd\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\c197d6728f6cf36a0dfd153848927ebd\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b868d5db83050cbd4dba0ec11e9b4afe\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b868d5db83050cbd4dba0ec11e9b4afe\transformed\jetified-play-services-measurement-sdk-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a179f43e0e04280a811ebf65b4d02946\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a179f43e0e04280a811ebf65b4d02946\transformed\jetified-play-services-measurement-base-21.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\753ba6fa28a78a9954df718ff828da35\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\753ba6fa28a78a9954df718ff828da35\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\97039e4d2c0f5865a2e754174d436df5\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\97039e4d2c0f5865a2e754174d436df5\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\T-Gamer\.gradle\caches\transforms-3\3f00ca0436e77451f2b9c8a58253ac1e\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\T-Gamer\.gradle\caches\transforms-3\3f00ca0436e77451f2b9c8a58253ac1e\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e642494ce216c824164fb856568390ac\transformed\jetified-activity-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e642494ce216c824164fb856568390ac\transformed\jetified-activity-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fa2393a258561b6127256b10beb68def\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fa2393a258561b6127256b10beb68def\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5c636ebaa47aa49c9a6eef3ecca0b8d0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5c636ebaa47aa49c9a6eef3ecca0b8d0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df35544e1c7054a6ac713a67e1933407\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df35544e1c7054a6ac713a67e1933407\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e0a7c8ee5cbc869e4a360c8fb7a6d4ca\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\e0a7c8ee5cbc869e4a360c8fb7a6d4ca\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\67f67fbf9d5f2f25ad9963dce1a0bb5c\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\67f67fbf9d5f2f25ad9963dce1a0bb5c\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9390fca5d28dcc39eeb783330f91a0f6\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9390fca5d28dcc39eeb783330f91a0f6\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a9d8d2ca84a01240508026ee9b99ef2\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a9d8d2ca84a01240508026ee9b99ef2\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\0484031453faf960626c325fd80b7820\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\0484031453faf960626c325fd80b7820\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8abe62dba3f544537131721be8c2d3e9\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-adapters:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8abe62dba3f544537131721be8c2d3e9\transformed\databinding-adapters-3.2.0\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b395ee05b972fcd764c05ef387911e9f\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b395ee05b972fcd764c05ef387911e9f\transformed\databinding-runtime-3.2.0\AndroidManifest.xml:22:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\66cfb6d231646f0df34279dea719ac02\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\T-Gamer\.gradle\caches\transforms-3\66cfb6d231646f0df34279dea719ac02\transformed\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ff31e0e0fc80d24f032c8908b517ac\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\40ff31e0e0fc80d24f032c8908b517ac\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77850be06a139739feb98e6163774608\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\77850be06a139739feb98e6163774608\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1a54fe5060bb69dbc4e237de302f715f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1a54fe5060bb69dbc4e237de302f715f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a305013fc92c71fd8bbe27a674871fb2\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\a305013fc92c71fd8bbe27a674871fb2\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\316645774e365454e91247dc3b907a3f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\316645774e365454e91247dc3b907a3f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\50c2b6812bd70b382c9092844af7fc80\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\50c2b6812bd70b382c9092844af7fc80\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\261c43b76052f923ea67a74009c159ac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\261c43b76052f923ea67a74009c159ac\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92fead8f0809ad26a950fed1e0516317\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92fead8f0809ad26a950fed1e0516317\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\73b4f20c391bab57985618dbe5449c18\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\73b4f20c391bab57985618dbe5449c18\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\44b8fef534ba0c0a5d5fd1267468e166\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\44b8fef534ba0c0a5d5fd1267468e166\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8840ae56d38c764cc886061ae74bfe0c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\8840ae56d38c764cc886061ae74bfe0c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\547a4b12e27f78074bd62b061f6569e4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\547a4b12e27f78074bd62b061f6569e4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\0153eb15e6bf981d35a6be47a98eb96d\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92151b6df1bfd3014463cceb2c585b82\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\92151b6df1bfd3014463cceb2c585b82\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ecc9795388f4866daa7a994f270436aa\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\ecc9795388f4866daa7a994f270436aa\transformed\jetified-firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\177e8ae5a99c2dc52b8c3d63268dd2f4\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\177e8ae5a99c2dc52b8c3d63268dd2f4\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4265ae0579ac3d75e5a4b9d2c2369f8\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b4265ae0579ac3d75e5a4b9d2c2369f8\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\15b6415fac8894246be494a28548bba5\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\15b6415fac8894246be494a28548bba5\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\99a0d27a6fb4bfa6ece0c369c69c4b0d\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\99a0d27a6fb4bfa6ece0c369c69c4b0d\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4311b79f4a24110a8ba2db545f9b2f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c4311b79f4a24110a8ba2db545f9b2f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3d838dfa30a88c0822d08c8e85a25f6c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\3d838dfa30a88c0822d08c8e85a25f6c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\641e93305f3a61abb98a5caf693e390d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\641e93305f3a61abb98a5caf693e390d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1f88148d6848445bdfb8cb71c8f0393e\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1f88148d6848445bdfb8cb71c8f0393e\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\003e4df5cacb9627f4769e097c69fc03\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\003e4df5cacb9627f4769e097c69fc03\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\272790b5bf23786f6710e6e1f5e600cb\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\272790b5bf23786f6710e6e1f5e600cb\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\081cfc412fdf937537d1d17687942bb5\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\081cfc412fdf937537d1d17687942bb5\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\7d04683c1453f2709c321500c29dcf6e\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\7d04683c1453f2709c321500c29dcf6e\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ada40d5f1e7ac09de6ae3b0898d5478\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ada40d5f1e7ac09de6ae3b0898d5478\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e705dd23dd7b360242d11b9519692c01\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\e705dd23dd7b360242d11b9519692c01\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -416,160 +441,176 @@ INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\a
 		ADDED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\T-Gamer\Desktop\Programação\LMCodes\quorvo_mdek1001_app\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:14:9-20:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
-MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
 	android:exported
-		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:16:13-37
+		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:16:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:36:13-32
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:36:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:15:13-84
+		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:15:13-84
 meta-data#com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar
-ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:17:13-19:85
+ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:17:13-19:85
 	android:value
-		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:19:17-82
+		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:19:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\c495926d3a4f271d74df09038fd831df\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:18:17-115
+		ADDED from [com.google.firebase:firebase-crashlytics:18.3.2] C:\Users\T-Gamer\.gradle\caches\transforms-3\30042d939ccd6de01acd5297654c6688\transformed\jetified-firebase-crashlytics-18.3.2\AndroidManifest.xml:18:17-115
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
-MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:24:22-76
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:25:5-68
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:25:22-65
-uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:26:5-110
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:22-107
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
-	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\5ca1d5eb758fa644415235ea303c3c8a\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:22-65
 uses-permission#com.google.android.gms.permission.AD_ID
-ADDED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c2a727479df0cb20939ad7e4e446df10\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\27c59af1fae9e3d896889bb64bff3451\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:26:5-79
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:27:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:27:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\24990d05edd152867f261ef06e7d5bee\transformed\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\13ede91c4f2250d089f416f71bee6050\transformed\jetified-play-services-measurement-sdk-api-21.2.0\AndroidManifest.xml:26:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\1ac658ff1b7b42bdfe721c874d062a9d\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:27:22-76
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:22-76
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\d0c7f9d9f97636cad1e05f34ebcd45e8\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fe4f6f6b5b570727a3df9da2ca7a61b7\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
-ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
 	android:value
-		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\c0439dc67c22895d431475d2133963c8\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6a126370d7c04f772fd6bc27c4225eb1\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\df4f9ac28951b1be0b29e1f959577397\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.firebase:firebase-common:20.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\b87535864384f5350dc509ce60975fd4\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\266b0d2e50f9f4041e69cb45dc5defe6\transformed\jetified-play-services-measurement-impl-21.2.0\AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\fecd6797a0e02552c4922b58ca7c1e53\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
-ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
-meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
-ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
-	android:value
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
-	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\a1b24cbf437411f29a19340e5345bdf4\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
-service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
-ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
 	android:permission
-		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
 	android:name
-		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\83cdeb26ffe4ff365d69df5135a2bf41\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\278bcbea09996b12f54e90863a3e45d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\c5fb1e2dc6546113afb1e17457c4da33\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
 receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
-ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\cd1665554cd3c235cff6856469807d89\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
-provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\T-Gamer\.gradle\caches\transforms-3\f0eee7a42749f2e6b88fd0e5ffc735df\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\d59add7483e1330933a3f7be11a20e0a\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-	android:multiprocess
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\9d317d2b05685b65490bc63bc2fbe375\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\T-Gamer\.gradle\caches\transforms-3\6bbc7b388917afee34d4e760d98a7898\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\T-Gamer\.gradle\caches\transforms-3\4a33fa34740f25552295d9d2c800c9a5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78

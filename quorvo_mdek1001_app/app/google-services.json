@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565634745743",
+    "project_id": "pushappnotification-test",
+    "storage_bucket": "pushappnotification-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565634745743:android:ca9d83e6d2a296b5c5f7fa",
+        "android_client_info": {
+          "package_name": "com.decawave.argomanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565634745743-fetvih7tce45bhs7l6bmtvik76g1up3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2MixzavznrThlj4XVsCBQ9os76O2xPRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565634745743-fetvih7tce45bhs7l6bmtvik76g1up3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

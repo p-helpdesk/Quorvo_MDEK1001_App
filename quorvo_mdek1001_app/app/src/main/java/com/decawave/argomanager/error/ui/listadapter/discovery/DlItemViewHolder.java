@@ -9,7 +9,7 @@ package com.decawave.argomanager.error.ui.listadapter.discovery;
 import android.view.View;
 import android.widget.TextView;
 
-import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.error.ui.view.NodeStateView;
 import com.decawave.argomanager.error.ui.view.SimpleProgressView;
 
@@ -38,17 +38,17 @@ class DlItemViewHolder {
     static class DiscoveredNode extends Generic {
         // references to views
         // common stuff here
-        @BindView(R.id.progressView)
+        @BindView(R2.id.progressView)
         SimpleProgressView progress;
-        @BindView(R.id.nodeName)
+        @BindView(R2.id.nodeName)
         TextView nodeName;
-        @BindView(R.id.nodeId)
+        @BindView(R2.id.nodeId)
         TextView tvNodeId;
-        @BindView(R.id.nodeBleAddress)
+        @BindView(R2.id.nodeBleAddress)
         TextView bleAddress;
-        @BindView(R.id.nodeTypeView)
+        @BindView(R2.id.nodeTypeView)
         FlipView flipView;
-        @BindView(R.id.failIndicator)
+        @BindView(R2.id.failIndicator)
         TextView failIndicator;
         //
         NodeStateView nodeTypeView;
@@ -73,11 +73,11 @@ class DlItemViewHolder {
 
     static class UnknownNetwork extends Generic {
         // references to views
-        @BindView(R.id.networkId)
+        @BindView(R2.id.networkId)
         TextView networkName;
-        @BindView(R.id.networkAnchors)
+        @BindView(R2.id.networkAnchors)
         TextView anchorNodes;
-        @BindView(R.id.networkTags)
+        @BindView(R2.id.networkTags)
         TextView tagNodes;
 
         UnknownNetwork(View itemView,
@@ -102,11 +102,11 @@ class DlItemViewHolder {
 
     static class DeclaredNetwork extends Generic {
         // references to views
-        @BindView(R.id.networkId)
+        @BindView(R2.id.networkId)
         TextView networkName;
-        @BindView(R.id.networkAnchors)
+        @BindView(R2.id.networkAnchors)
         TextView anchorNodes;
-        @BindView(R.id.networkTags)
+        @BindView(R2.id.networkTags)
         TextView tagNodes;
 
         DeclaredNetwork(View itemView,
@@ -130,7 +130,7 @@ class DlItemViewHolder {
     }
 
     static class Title extends FlexibleViewHolder {
-        @BindView(R.id.discoveryInfo)
+        @BindView(R2.id.discoveryInfo)
         TextView discoveryInfo;
 
         Title(View view, FlexibleAdapter adapter) {
@@ -152,7 +152,7 @@ class DlItemViewHolder {
     }
 
     static class SectionHeader extends FlexibleViewHolder {
-        @BindView(R.id.tvTitle)
+        @BindView(R2.id.tvTitle)
         TextView tvTitle;
 
         SectionHeader(View view, FlexibleAdapter adapter, boolean stickyHeader) {

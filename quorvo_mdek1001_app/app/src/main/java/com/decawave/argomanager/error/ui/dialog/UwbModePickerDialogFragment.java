@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.decawave.argo.api.struct.UwbMode;
 import com.decawave.argomanager.R;
+import com.decawave.argomanager.R2;
 import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.util.Util;
 
@@ -170,9 +171,9 @@ public class UwbModePickerDialogFragment extends DialogFragment {
      * View holder
      */
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.radio)
+        @BindView(R2.id.radio)
         RadioButton rb;
-        @BindView(R.id.tvUpdateRate)
+        @BindView(R2.id.tvUpdateRate)
         TextView tvNodeType;
         //
         private View container;
