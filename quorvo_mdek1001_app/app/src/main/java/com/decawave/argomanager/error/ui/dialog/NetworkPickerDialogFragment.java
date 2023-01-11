@@ -300,7 +300,8 @@ public class NetworkPickerDialogFragment extends DialogFragment {
                         InputMethodManager.SHOW_IMPLICIT
                 );
             }
-        }}
+        }
+    }
 
 
     private void setSelectedNetworkId(@Nullable Integer selectedUuid) {
@@ -317,7 +318,7 @@ public class NetworkPickerDialogFragment extends DialogFragment {
         TextView tvNetworkName;
         @BindView(R2.id.etNewNetworkName) @Nullable
         EditText etNewNetworkName;
-        @BindView(R2.id.focusableView) @Nullable
+        @BindView(R2.id.focusableView) //@Nullable
         View focusableView;
         private View container;
         // data bean

@@ -24,6 +24,7 @@ public class NetworkPickerDialogFragment$ViewHolder_ViewBinding implements Unbin
     target.rb = Utils.findRequiredViewAsType(source, R.id.radio, "field 'rb'", RadioButton.class);
     target.tvNetworkName = Utils.findOptionalViewAsType(source, R.id.tvNetworkName, "field 'tvNetworkName'", TextView.class);
     target.etNewNetworkName = Utils.findOptionalViewAsType(source, R.id.etNewNetworkName, "field 'etNewNetworkName'", EditText.class);
+    target.focusableView = Utils.findRequiredView(source, R.id.focusableView, "field 'focusableView'");
   }
 
   @Override
@@ -36,5 +37,6 @@ public class NetworkPickerDialogFragment$ViewHolder_ViewBinding implements Unbin
     target.rb = null;
     target.tvNetworkName = null;
     target.etNewNetworkName = null;
+    target.focusableView = null;
   }
 }
