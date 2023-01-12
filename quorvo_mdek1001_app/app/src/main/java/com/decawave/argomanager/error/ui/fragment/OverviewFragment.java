@@ -53,14 +53,14 @@ import com.decawave.argomanager.components.ih.IhPresenceApiListener;
 import com.decawave.argomanager.components.struct.NetworkNodeEnhanced;
 import com.decawave.argomanager.error.ErrorDetail;
 import com.decawave.argomanager.error.IhErrorManagerListener;
+import com.decawave.argomanager.error.ui.MainActivity;
+import com.decawave.argomanager.error.ui.dialog.RenameNetworkDialogFragment;
+import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.error.ui.listadapter.NetworkOverviewNodeListAdapter;
 import com.decawave.argomanager.ioc.ArgoComponent;
 import com.decawave.argomanager.prefs.AppPreference;
 import com.decawave.argomanager.prefs.AppPreferenceAccessor;
 import com.decawave.argomanager.prefs.IhAppPreferenceListener;
-import com.decawave.argomanager.error.ui.MainActivity;
-import com.decawave.argomanager.error.ui.dialog.RenameNetworkDialogFragment;
-import com.decawave.argomanager.error.ui.layout.NpaLinearLayoutManager;
 import com.decawave.argomanager.util.AndroidPermissionHelper;
 import com.decawave.argomanager.util.ConnectionUtil;
 import com.decawave.argomanager.util.NetworkNodePropertyDecorator;
@@ -234,7 +234,7 @@ public class OverviewFragment extends MainScreenFragment implements IhAppPrefere
 
         @Override
         public int getSwipeDirs(@NotNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-            int position = viewHolder.getBindingAdapterPosition();
+            int position = viewHolder.getAdapterPosition();
             if (position == 0) {
                 // swipe not allowed on summary
                 return 0;

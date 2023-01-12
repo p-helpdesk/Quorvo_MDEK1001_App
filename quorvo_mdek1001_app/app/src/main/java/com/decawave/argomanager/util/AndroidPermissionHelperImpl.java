@@ -18,8 +18,6 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
 
-import androidx.annotation.RequiresApi;
-
 import com.decawave.argomanager.Constants;
 import com.decawave.argomanager.ble.BleAdapter;
 import com.decawave.argomanager.error.ui.MainActivity;
@@ -52,7 +50,7 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
     private Runnable currentGrantSuccessListener;
     private Runnable currentGrantFailListener;
 
-    private IhOnActivityResultListener onActivityResultListener = new IhOnActivityResultListener() {
+    private final IhOnActivityResultListener onActivityResultListener = new IhOnActivityResultListener() {
         @Override
         public void onActivityResult(MainActivity mainActivity, int requestCode, int resultCode, Intent data) {
             if (Constants.DEBUG) {
@@ -222,7 +220,6 @@ public class AndroidPermissionHelperImpl implements AndroidPermissionHelper {
             || locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     private boolean checkMarshmallowPermissions() {
         // we are on M+
         // check that fine location permission is granted

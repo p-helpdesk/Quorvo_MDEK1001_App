@@ -16,9 +16,9 @@ import java.lang.Override;
 public class AutoPositioningFragment_ViewBinding implements Unbinder {
   private AutoPositioningFragment target;
 
-  private View view5ec;
+  private View view5e2;
 
-  private View view638;
+  private View view62e;
 
   @UiThread
   public AutoPositioningFragment_ViewBinding(final AutoPositioningFragment target, View source) {
@@ -28,7 +28,7 @@ public class AutoPositioningFragment_ViewBinding implements Unbinder {
     target.footerButtonBar = Utils.findRequiredView(source, R.id.footerButtonBar, "field 'footerButtonBar'");
     view = Utils.findRequiredView(source, R.id.measureButton, "field 'measureBtn' and method 'onMeasureButtonClicked'");
     target.measureBtn = Utils.castView(view, R.id.measureButton, "field 'measureBtn'", Button.class);
-    view5ec = view;
+    view5e2 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -37,7 +37,7 @@ public class AutoPositioningFragment_ViewBinding implements Unbinder {
     });
     view = Utils.findRequiredView(source, R.id.saveButton, "field 'saveBtn' and method 'onSaveButtonClicked'");
     target.saveBtn = Utils.castView(view, R.id.saveButton, "field 'saveBtn'", Button.class);
-    view638 = view;
+    view62e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,9 +63,9 @@ public class AutoPositioningFragment_ViewBinding implements Unbinder {
     target.contentView = null;
     target.noNodesView = null;
 
-    view5ec.setOnClickListener(null);
-    view5ec = null;
-    view638.setOnClickListener(null);
-    view638 = null;
+    view5e2.setOnClickListener(null);
+    view5e2 = null;
+    view62e.setOnClickListener(null);
+    view62e = null;
   }
 }

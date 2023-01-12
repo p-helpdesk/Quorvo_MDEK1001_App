@@ -18,14 +18,12 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion Integer.parseInt(project.SDK_VERSION_TARGET)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    //buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
     publishNonDefault true
 
     defaultConfig {
         minSdkVersion Integer.parseInt(project.SDK_VERSION_MIN)
         targetSdkVersion Integer.parseInt(project.SDK_VERSION_TARGET)
-        versionCode 1
-        versionName "1.0"
     }
 
     compileOptions {
@@ -51,9 +49,12 @@ dependencies {
     implementation project(':android-commons')
 
     //implementation 'com.android.support:support-v4:' + project.ANDROID_SUPPORT_LIBRARY_VERSION
-    implementation "com.android.support:support-core-utils:28.0.0"
+    implementation 'com.android.support:support-v4:28.0.0'
+    //implementation "com.android.support:support-compat:28.0.0"
     //implementation 'com.android.support:appcompat-v7:' + project.ANDROID_SUPPORT_LIBRARY_VERSION
-    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //implementation "androidx.appcompat:appcompat:1.5.1"
     //implementation 'com.android.support:recyclerview-v7:' + project.ANDROID_SUPPORT_LIBRARY_VERSION
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+//    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }

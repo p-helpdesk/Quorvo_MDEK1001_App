@@ -26,8 +26,6 @@ android {
         minSdkVersion Integer.parseInt(project.SDK_VERSION_MIN)
         targetSdkVersion Integer.parseInt(project.SDK_VERSION_TARGET)
         // we will keep this the same regardless of the app version code/name
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -50,14 +48,20 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+
     //yjbernard
     api 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.13.2'
     // guava
-    api 'com.google.guava:guava:31.1-jre'
+    api 'com.google.guava:guava:31.1-android'
+    //api 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
     // intellij annotations
     //api  'com.intellij:annotations:12.0'
     api 'org.jetbrains:annotations:16.0.2'
